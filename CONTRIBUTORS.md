@@ -12,6 +12,5 @@
 - [pyllyukko](https://github.com/pyllyukko)
 - [Chaim Sanders](https://github.com/csanders-git)
 - [Federico G. Schwindt](https://github.com/fgsch)
-- [Jozef Sudolský](https://github.com/azurit)
 - [Timo](https://github.com/ntimo)
 - [Felipe Zipitría](https://github.com/fzipi)
