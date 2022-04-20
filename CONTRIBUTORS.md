@@ -14,3 +14,4 @@
 - [Federico G. Schwindt](https://github.com/fgsch)
 - [Timo](https://github.com/ntimo)
 - [Felipe Zipitría](https://github.com/fzipi)
+- [Max Leske](https://github.com/theseion)
