@@ -1,0 +1,6 @@
+---
+on: [push, pull_request]
+
+jobs:
+  plugin-lint:
+    uses: coreruleset/crs-plugin-test-action/.github/workflows/lint.yaml@main
