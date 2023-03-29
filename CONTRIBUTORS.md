@@ -16,3 +16,4 @@
 - [Jozef Sudolský](https://github.com/azurit)
 - [Timo](https://github.com/ntimo)
 - [Felipe Zipitría](https://github.com/fzipi)
+- [Jitendra Patro](https://github.com/Xhoenix)
