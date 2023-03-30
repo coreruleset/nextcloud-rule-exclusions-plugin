@@ -15,4 +15,5 @@
 - [Federico G. Schwindt](https://github.com/fgsch)
 - [Jozef Sudolský](https://github.com/azurit)
 - [Timo](https://github.com/ntimo)
+- [Xhoenix](https://github.com/Xhoenix)
 - [Felipe Zipitría](https://github.com/fzipi)
