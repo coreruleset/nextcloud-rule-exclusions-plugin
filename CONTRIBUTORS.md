@@ -1,6 +1,7 @@
 # Contributors to Nextcloud Rule Exclusions Plugin
 
 - [Franziska Bühler](https://github.com/franbuehler)
+- [Esad Cetiner](https://github.com/esadcetiner)
 - [Abu Dawud](https://github.com/abudawud)
 - [Christian Folini](https://github.com/dune73)
 - [Christoph Hansen](https://github.com/emphazer)
