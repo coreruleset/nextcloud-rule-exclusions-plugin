@@ -24,7 +24,16 @@ SecRule REQUEST_URI "@endsWith /index.php/apps/files/ajax/upload.php" \
 ctl:requestBodyLimit is not supported in libmodsecurity3, Nginx users can increase max upload size
 by using the following:
 
-```location /index.php/apps/files/ajax/upload.php { modsecurity_rules 'SecRequestBodyLimit 1073741824'; }```
+```
+location /index.php/apps/files/ajax/upload.php { modsecurity_rules 'SecRequestBodyLimit 1073741824'; }
+```
+
+Apache libmodsecurity3 Example:
+```
+ <location "/index.php/apps/files/ajax/upload.php">
+    modsecurity_rules 'SecRequestBodyLimit 1073741824'
+</location>
+```
 
 ## Relaxing file upload restrictions
 
@@ -54,6 +63,13 @@ Apache modsecurity2 Example:
 ```
 <location "/remote.php/dav/files/">
    SecRequestBodyNoFilesLimit 144384
+</location>
+```
+
+Apache libmodsecurity3 Example:
+```
+<location "/remote.php/dav/files/">
+   modsecurity_rules 'SecRequestBodyNoFilesLimit 144384'
 </location>
 ```
 
