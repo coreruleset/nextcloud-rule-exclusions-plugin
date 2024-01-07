@@ -1,0 +1,23 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508176.yaml
+tests:
+  - test_title: 9508176-1
+    desc: Allow the if header when uploading files from Window's desktop client
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              if: stuff
+            port: 80
+            method: POST
+            uri: /remote.php/dav/uploads/username/123/random123
+          output:
+            no_log_contains: id "920450"
