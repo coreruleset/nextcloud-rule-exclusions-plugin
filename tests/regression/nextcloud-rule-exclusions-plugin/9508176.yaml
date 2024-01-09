@@ -18,6 +18,6 @@ tests:
               if: stuff
             port: 80
             method: POST
-            uri: /remote.php/dav/uploads/username/123/random123
+            uri: /remote.php/dav/uploads/username/123/.file
           output:
             no_log_contains: id "920450"
