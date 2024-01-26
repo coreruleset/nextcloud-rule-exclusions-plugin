@@ -6,7 +6,11 @@ meta:
   name: 9508991.yaml
 tests:
   - test_title: 9508991-1
-    desc: Drafing an email with "formatting" option disabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: disabled
+      Target: json.body
     stages:
       - stage:
           input:
@@ -22,7 +26,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-2
-    desc: Drafing an email with "formatting" option disabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: disabled
+      Target: json.data.body.value
     stages:
       - stage:
           input:
@@ -38,7 +46,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-3
-    desc: Drafing an email with "formatting" option enabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: enabled
+      Target: json.data.editorBody
     stages:
       - stage:
           input:
@@ -54,7 +66,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-4
-    desc: Drafing an email with "formatting" option enabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: enabled
+      Target: json.editorBody
     stages:
       - stage:
           input:
@@ -70,7 +86,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-5
-    desc: Drafing an email with "formatting" option disabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: disabled
+      Target: json.body
     stages:
       - stage:
           input:
@@ -86,7 +106,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-6
-    desc: Drafing an email with "formatting" option disabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: disabled
+      Target: json.data.body.value
     stages:
       - stage:
           input:
@@ -102,7 +126,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-7
-    desc: Drafing an email with "formatting" option enabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: enabled
+      Target: json.data.editorBody
     stages:
       - stage:
           input:
@@ -118,7 +146,11 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-8
-    desc: Drafing an email with "formatting" option enabled, email content could be anything
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: enabled
+      Target: json.editorBody
     stages:
       - stage:
           input:
@@ -134,7 +166,10 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-9
-    desc: Drafing an email, email subject could be anything
+    desc: |
+      Drafting an email, subject could be anything. 
+      Draft ID set: no
+      Target: json.subject
     stages:
       - stage:
           input:
@@ -150,7 +185,10 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-10
-    desc: Drafing an email, email subject could be anything
+    desc: |
+      Drafting an email, subject could be anything.
+      Draft ID set: yes
+      Target: json.subject
     stages:
       - stage:
           input:
