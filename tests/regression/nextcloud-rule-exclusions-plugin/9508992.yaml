@@ -1,0 +1,103 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508992.yaml
+tests:
+  - test_title: 9508992-1
+    desc: Sending an email with "formatting" option enabled, email content could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: "json.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508992-2
+    desc: Sending an email with "formatting" option disabled, email content could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: "json.body=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508992-3
+    desc: Sending an email, email subject could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: "json.subject=<script>"
+          output:
+            no_log_contains: id "941101"
+    - test_title: 9508992-4
+    desc: Modifying email from outbox with "formatting" option enabled, email content could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: "json.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508992-5
+    desc: Modifying email from outbox with "formatting" option disabled, email content could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: "json.body=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508992-6
+    desc: Modifying email from outbox, email subject could be anything
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: "json.subject=<script>"
+          output:
+            no_log_contains: id "941101"
