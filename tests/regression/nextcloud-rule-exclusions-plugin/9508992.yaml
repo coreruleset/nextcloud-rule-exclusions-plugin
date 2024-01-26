@@ -53,7 +53,7 @@ tests:
             data: "json.subject=<script>"
           output:
             no_log_contains: id "941101"
-    - test_title: 9508992-4
+  - test_title: 9508992-4
     desc: Modifying email from outbox with "formatting" option enabled, email content could be anything
     stages:
       - stage:

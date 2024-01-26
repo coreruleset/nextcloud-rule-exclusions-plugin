@@ -20,4 +20,3 @@ tests:
             uri: /apps/mail/api/messages/1/flags?json.flags.$notjunk=1
           output:
             no_log_contains: id "942290"
-
