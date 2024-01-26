@@ -167,7 +167,7 @@ tests:
             no_log_contains: id "941101"
   - test_title: 9508991-9
     desc: |
-      Drafting an email, subject could be anything. 
+      Drafting an email, subject could be anything.
       Draft ID set: no
       Target: json.subject
     stages:
