@@ -1,0 +1,205 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508991.yaml
+tests:
+  - test_title: 9508991-1
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: disabled
+      Target: json.body
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/1
+            data: "json.body=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-2
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: disabled
+      Target: json.data.body.value
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/1
+            data: "json.data.body.value=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-3
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: enabled
+      Target: json.data.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/1
+            data: "json.data.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-4
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: yes
+      Formatting option: enabled
+      Target: json.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/1
+            data: "json.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-5
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: disabled
+      Target: json.body
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/{id}
+            data: "json.body=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-6
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: disabled
+      Target: json.data.body.value
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/{id}
+            data: "json.data.body.value=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-7
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: enabled
+      Target: json.data.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/{id}
+            data: "json.data.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-8
+    desc: |
+      Drafting an email, content could be anything.
+      Draft ID set: no
+      Formatting option: enabled
+      Target: json.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/{id}
+            data: "json.editorBody=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-9
+    desc: |
+      Drafting an email, subject could be anything.
+      Draft ID set: no
+      Target: json.subject
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/{id}
+            data: "json.subject=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-10
+    desc: |
+      Drafting an email, subject could be anything.
+      Draft ID set: yes
+      Target: json.subject
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/drafts/1
+            data: "json.subject=<script>"
+          output:
+            no_log_contains: id "941101"
