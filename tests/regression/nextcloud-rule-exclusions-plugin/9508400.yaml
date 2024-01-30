@@ -52,7 +52,7 @@ tests:
             uri: /login
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
           output:
-            no_log_contains: 
+            no_log_contains:
               - id "920230"
               - id "932200"
               - id "932190"
@@ -73,7 +73,7 @@ tests:
             uri: /index.php/login
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
           output:
-            no_log_contains: 
+            no_log_contains:
               - id "920230"
               - id "932200"
               - id "932190"
