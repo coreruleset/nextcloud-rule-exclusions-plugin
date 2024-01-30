@@ -20,84 +20,10 @@ tests:
             uri: /ocs/v2.php/references/resolve
             data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
           output:
-            no_log_contains: id "920230"
-  - test_title: 9508880-2
-    desc: Adding a hyperlink to text
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP ModSecurity Core Rule Set
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/references/resolve
-            data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
-          output:
-            no_log_contains: id "931130"
-  - test_title: 9508880-3
-    desc: Adding a hyperlink to text
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP ModSecurity Core Rule Set
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/references/resolve
-            data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
-          output:
-            no_log_contains: id "932200"
-  - test_title: 9508880-4
-    desc: Adding a hyperlink to text
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP ModSecurity Core Rule Set
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/references/resolve
-            data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
-          output:
-            no_log_contains: id "942430"
-  - test_title: 9508880-5
-    desc: Adding a hyperlink to text
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP ModSecurity Core Rule Set
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/references/resolve
-            data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
-          output:
-            no_log_contains: id "942431"
-  - test_title: 9508880-6
-    desc: Adding a hyperlink to text
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP ModSecurity Core Rule Set
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/references/resolve
-            data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
-          output:
-            no_log_contains: id "942432"
+            no_log_contains:
+              - id "920230"
+              - id "931130"
+              - id "932200"
+              - id "942430"
+              - id "942431"
+              - id "942432"
