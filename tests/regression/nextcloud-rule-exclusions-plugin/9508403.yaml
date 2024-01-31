@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "FPs during login from desktop app"
   enabled: true
   name: 9508403.yaml
 tests:

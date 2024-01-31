@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "FPs during reauthentication / verification"
   enabled: true
   name: 9508401.yaml
 tests:

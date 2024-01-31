@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "FPs during login with FIDO2"
   enabled: true
   name: 9508402.yaml
 tests:

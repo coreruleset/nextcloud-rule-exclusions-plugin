@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "FPs when registering webauthn devices"
   enabled: true
   name: 9508624.yaml
 tests:
