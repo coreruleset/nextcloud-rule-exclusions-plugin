@@ -1,0 +1,519 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "FP when sending login token"
+  enabled: true
+  name: 9508420.yaml
+tests:
+  - test_title: 9508420-1
+    desc: logging in with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-2
+    desc: logging in with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-3
+    desc: logging in with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-4
+    desc: logging in with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-5
+    desc: logging in without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-6
+    desc: logging in without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-7
+    desc: logging in without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-8
+    desc: logging in without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-9
+    desc: logging out with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /logout
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-10
+    desc: logging out with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /logout
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-11
+    desc: logging out with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /logout
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-12
+    desc: logging out with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /logout
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-13
+    desc: logging out without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/logout
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-14
+    desc: logging out without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/logout
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-15
+    desc: logging out without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/logout
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-16
+    desc: logging out without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/logout
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-17
+    desc: viewing/authenticating a pubic share with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /s/share-id/authenticate/showShare
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-18
+    desc: viewing/authenticating a pubic share with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /s/share-id/authenticate/showShare
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-19
+    desc: viewing/authenticating a pubic share with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /s/share-id/authenticate/showShare
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-20
+    desc: viewing/authenticating a pubic share with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /s/share-id/authenticate/showShare
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-21
+    desc: viewing/authenticating a pubic share without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/s/share-id/authenticate/showShare
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-22
+    desc: viewing/authenticating a pubic share without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/s/share-id/authenticate/showShare
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-23
+    desc: viewing/authenticating a pubic share without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/s/share-id/authenticate/showShare
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-24
+    desc: viewing/authenticating a pubic share without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/s/share-id/authenticate/showShare
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-25
+    desc: logging into nextcloud desktop client with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/v2/grant
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-26
+    desc: logging into nextcloud desktop client with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/v2/grant
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-27
+    desc: logging into nextcloud desktop client with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/v2/grant
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-28
+    desc: logging into nextcloud desktop client with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/v2/grant
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508420-29
+    desc: logging into nextcloud desktop client without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/v2/grant
+            data: "requesttoken=lds:978+/dfdsa"
+          output:
+            no_log_contains: id "920273"
+  - test_title: 9508420-30
+    desc: logging into nextcloud desktop client without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/v2/grant
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508420-31
+    desc: logging into nextcloud desktop client without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/v2/grant
+            data: "requesttoken=lss:978+/dfdsa"
+          output:
+            no_log_contains: id "942432"
+  - test_title: 9508420-32
+    desc: logging into nextcloud desktop client without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/v2/grant
+            data: "requesttoken=0x800:fds+/dsfsda"
+          output:
+            no_log_contains: id "942450"
