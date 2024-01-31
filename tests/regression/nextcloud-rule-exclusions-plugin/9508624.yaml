@@ -24,13 +24,7 @@ tests:
             no_log_contains: |
               id "920273"
               id "932236"
-              id "942200"
-              id "942260"
-              id "942340"
-              id "942370"
-              id "942430"
-              id "942431"
-              id "942432"
+              id "942(?:2[06]0|3[47]0|43[012])"
   - test_title: 9508624-2
     desc: Registering webauthn device without pretty URLs
     stages:
@@ -50,10 +44,4 @@ tests:
             no_log_contains: |
               id "920273"
               id "932236"
-              id "942200"
-              id "942260"
-              id "942340"
-              id "942370"
-              id "942430"
-              id "942431"
-              id "942432"
+              id "942(?:2[06]0|3[47]0|43[012])"
