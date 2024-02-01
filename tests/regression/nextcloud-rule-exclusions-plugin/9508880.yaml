@@ -21,6 +21,4 @@ tests:
             data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
           output:
             no_log_contains: |
-              id "920230"
-              id "93(?:1130|2200)"
-              id "94243[012]"
+              id "920230" | id "93(?:1130|2200)" | id "94243[012]"
