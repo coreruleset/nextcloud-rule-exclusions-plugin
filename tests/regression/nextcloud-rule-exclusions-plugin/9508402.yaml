@@ -22,7 +22,7 @@ tests:
               json.data={"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}
           output:
             no_log_contains: |
-              id "920273" | id "932236" | id "942(?:2[06]0|3[47]0|43[012])"
+              id"920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
   - test_title: 9508402-2
     desc: Logging in via webauthn without pretty URLs
     stages:
@@ -40,4 +40,4 @@ tests:
               json.data={"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}
           output:
             no_log_contains: |
-              id "920273" | id "932236" | id "942(?:2[06]0|3[47]0|43[012])"
+              id "920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
