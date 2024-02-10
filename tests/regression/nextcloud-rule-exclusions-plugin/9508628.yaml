@@ -1,0 +1,69 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508628.yaml
+tests:
+  - test_title: 9508628-1
+    desc: Deleting an oauth client
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /apps/oauth2/clients/42
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508628-2
+    desc: Deleting an oauth client
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /apps/oauth2/clients
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508628-3
+    desc: Specifying a redirect URL for oauth clients
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /apps/oauth2/clients/42
+            data: "json.redirectUri=https://example.com/"
+          output:
+            no_log_contains: id "931130"
+  - test_title: 9508628-4
+    desc: Specifying a redirect URL for oauth clients
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /apps/oauth2/clients
+            data: "json.redirectUri=https://example.com/"
+          output:
+            no_log_contains: id "931130"

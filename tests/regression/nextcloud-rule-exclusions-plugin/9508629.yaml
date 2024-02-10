@@ -1,0 +1,22 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508629.yaml
+tests:
+  - test_title: 9508629-1
+    desc: Disabling automatic deletion of a tag type
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /ocs/v2.php/apps/files_retention/api/v2/retentions/42
+          output:
+            no_log_contains: id "911100"
