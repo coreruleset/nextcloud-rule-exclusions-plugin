@@ -20,7 +20,10 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/cards/1/reorder
-            data: "description=This is a description.\n\nUse this [link](https://github.com/microsoft/vscode/issues?page=3&q=is%3Aissue+is%3Aopen).\n"
+            data: |
+              description=This is a description.
+              
+              Use this [link](https://github.com/microsoft/vscode/issues?page=3&q=is%3Aissue+is%3Aopen).
           output:
             no_log_contains: |
-              id"911100"|id "93(?:[23]2[10]0)"|id "94(?:2[234][03467]0|9110)"|id "980130"
+              id "911100"|id "932200"|id "933210"|id "942200"|id "942260"|id "942370"|id "942430"|id "942440"|id "949110"|id "980130"
