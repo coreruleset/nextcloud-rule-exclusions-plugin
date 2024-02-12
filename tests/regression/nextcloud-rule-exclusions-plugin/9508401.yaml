@@ -1,0 +1,71 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "FPs during reauthentication / verification"
+  enabled: true
+  name: 9508401.yaml
+tests:
+  - test_title: 9508401-1
+    desc: Disable OWASP CRS for password when an admin is reauthenticating with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/confirm
+            data: "password=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508401-2
+    desc: Disable OWASP CRS for password when an admin is reauthenticating with pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /login/confirm
+            data: "json.password=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508401-3
+    desc: Disable OWASP CRS for password when an admin is reauthenticating without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/confirm
+            data: "password=<script>"
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508401-4
+    desc: Disable OWASP CRS for password when an admin is reauthenticating without pretty URLs
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP ModSecurity Core Rule Set
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/login/confirm
+            data: "json.password=<script>"
+          output:
+            no_log_contains: id "941101"
