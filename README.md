@@ -1,5 +1,7 @@
 # OWASP ModSecurity Core Rule Set - Nextcloud Rule Exclusions Plugin
 
+![Integration tests](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
+
 ## Description
 
 This plugin contains rule exclusions for [Nextcloud](https://nextcloud.com/), a productivity platform and file hosting service. These rule exclusions are designed to resolve common false positives and allow for easier integration with the OWASP ModSecurity Core Rule Set (CRS).
