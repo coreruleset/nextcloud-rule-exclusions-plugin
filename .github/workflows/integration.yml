@@ -1,5 +1,6 @@
 ---
 on: [push, pull_request]
+name: Integration tests
 
 jobs:
   integration-tests:
