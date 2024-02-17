@@ -1,0 +1,71 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508533.yaml
+tests:
+  - test_title: 9508533-1
+    desc: Sending access token to Nextcloud Office connector
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/apps/richdocuments/wopi/files/random_instanceid/contents
+            data: "access_token=lsrandom03843"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508533-2
+    desc: Sending access token to Nextcloud Office connector
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/apps/richdocuments/wopi/files/random_instanceid
+            data: "access_token=lsrandom03843"
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508533-3
+    desc: Sending access token to Nextcloud Office connector
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/apps/richdocuments/wopi/files/random_instanceid/contents
+            data: "access_token=0x0800random45"
+          output:
+            no_log_contains: id "942450"
+  - test_title: 9508533-4
+    desc: Sending access token to Nextcloud Office connector
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /index.php/apps/richdocuments/wopi/files/random_instanceid
+            data: "access_token=0x0800random45"
+          output:
+            no_log_contains: id "942450"
