@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Text Editor: Sending awareness messages"
+  description: "Text Editor: Checking for attachments"
   enabled: true
   name: 9508315.yaml
 tests:
