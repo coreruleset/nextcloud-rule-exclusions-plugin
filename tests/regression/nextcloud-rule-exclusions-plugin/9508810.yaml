@@ -27,3 +27,39 @@ tests:
           output:
             no_log_contains: |
               id "911100"|id "932200"|id "933210"|id "942200"|id "942260"|id "942370"|id "942430"|id "942440"
+  - test_title: 9508810-2
+    desc: Unassigning a user from a card.
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/deck/cards/1/unassign
+          output:
+            no_log_contains: |
+              id "911100"|id "932200"|id "933210"|id "942200"|id "942260"|id "942370"|id "942430"|id "942440"
+  - test_title: 9508810-3
+    desc: |
+      Setting a due date on a card.
+      Target: json.data
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/deck/cards/1
+            data: |
+              json.data={"id":16,"title":"Title","description":"","stackId":11,"type":"plain","lastModified":1708032296,"lastEditor":null,"createdAt":1708013998,"labels":[{"id":9,"title":"Terminé","color":"31CC7C","boardId":3,"cardId":null,"lastModified":0,"ETag":"cfcd208495d565ef66e7dff9f98764da"}],"owner":{"primaryKey":"mivek","uid":"mivek","displayname":"mivek","type":0},"order":2,"duedate":"2024-02-15T23:00:00.000Z","deletedAt":0,"boardId":3}
+          output:
+            no_log_contains: |
+              id "911100"|id "932200"|id "933210"|id "942200"|id "942260"|id "942370"|id "942430"|id "942440"
