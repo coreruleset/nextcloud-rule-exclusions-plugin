@@ -14,10 +14,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data_raw: "json.sessionToken=lsh8u9sd+dfsdaf/89"
           output:
             no_log_contains: |
               id "920273"|id "932236"|id "942432"
@@ -30,6 +31,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/close
@@ -46,6 +48,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/push
@@ -62,6 +65,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
@@ -78,6 +82,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/close
@@ -94,6 +99,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/push
@@ -110,6 +116,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/attachments
@@ -126,6 +133,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/sync
@@ -142,6 +150,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/close
@@ -158,6 +167,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/push
@@ -174,6 +184,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
@@ -190,6 +201,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/close
@@ -206,6 +218,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/push
@@ -222,6 +235,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/attachments
