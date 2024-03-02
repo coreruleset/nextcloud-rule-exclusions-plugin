@@ -18,9 +18,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.awareness=lsbu+as8d/f0bsd0789fsd07a98fnnuin="
+            data: |
+              {"awareness": "lsbu+as8d/f0bsd0789fsd07a98fnnuin="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508314-2
     stages:
@@ -35,9 +36,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.awareness=lsbu+as8d/f0bsd0789fsd07a98fnnuin="
+            data: |
+              {"awareness": "lsbu+as8d/f0bsd0789fsd07a98fnnuin="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508314-3
     stages:
@@ -52,9 +54,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.awareness=0x0800buas8d+f0bsd07/89fsd07a98fnnuin="
+            data: |
+              {"awareness": "0x0800buas8d+f0bsd07/89fsd07a98fnnuin="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508314-4
     stages:
@@ -69,7 +72,8 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.awareness=0x0800buas8d+f0bsd07/89fsd07a98fnnuin="
+            data: |
+              {"awareness": "0x0800buas8d+f0bsd07/89fsd07a98fnnuin="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"

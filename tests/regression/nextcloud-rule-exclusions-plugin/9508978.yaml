@@ -15,8 +15,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/mail/api/messages/1/flags?json.flags.$notjunk=1
+            uri: /apps/mail/api/messages/1/flags
+            data: |
+              {"flags": {"$notjunk": 1}}
           output:
             no_log_contains: id "942290"

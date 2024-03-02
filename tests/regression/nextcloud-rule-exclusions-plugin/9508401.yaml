@@ -15,10 +15,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /login/confirm
-            data: "password=<script>"
+            data: |
+              {"password": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-2
@@ -31,10 +33,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /login/confirm
-            data: "json.password=<script>"
+            data: |
+              {"password": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-3
@@ -47,10 +51,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /index.php/login/confirm
-            data: "password=<script>"
+            data: |
+              {"password": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-4
@@ -63,9 +69,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /index.php/login/confirm
-            data: "json.password=<script>"
+            data: |
+              {"password": "<script>"}
           output:
             no_log_contains: id "941101"

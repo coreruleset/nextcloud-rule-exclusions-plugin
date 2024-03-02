@@ -18,9 +18,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data_raw: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-2
     stages:
@@ -35,9 +36,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/close
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-3
     stages:
@@ -52,9 +54,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-4
     stages:
@@ -69,9 +72,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-5
     stages:
@@ -86,9 +90,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-6
     stages:
@@ -103,9 +108,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-7
     stages:
@@ -120,9 +126,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: "json.sessionToken=lsh8u9sd+dfsdaf/89"
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508311-8
     stages:
@@ -137,9 +144,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-9
     stages:
@@ -154,9 +162,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/close
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-10
     stages:
@@ -171,9 +180,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-11
     stages:
@@ -188,9 +198,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-12
     stages:
@@ -205,9 +216,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-13
     stages:
@@ -222,9 +234,10 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508311-14
     stages:
@@ -239,7 +252,8 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: "json.sessionToken=0x0800b7098sdbf+sdfJB76/nsidf878B"
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"

@@ -18,9 +18,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.token=ls78sdf"
+            data: |
+              {"token": "ls78sdf"}
           output:
-            no_log_contains: id "932236"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
   - test_title: 9508313-2
     stages:
       - stage:
@@ -34,9 +36,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.token=ls78sdf"
+            data: |
+              {"token": "ls78sdf"}
           output:
-            no_log_contains: id "932236"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
   - test_title: 9508313-3
     stages:
       - stage:
@@ -50,9 +54,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.token=ls78sdf"
+            data: |
+              {"token": "ls78sdf"}
           output:
-            no_log_contains: id "932236"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
   - test_title: 9508313-4
     stages:
       - stage:
@@ -66,9 +72,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.token=0x0800dsf78dgf"
+            data: |
+              {"token": "0x0800dsf78dgf"}
           output:
-            no_log_contains: id "942450"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
   - test_title: 9508313-5
     stages:
       - stage:
@@ -82,9 +90,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.token=0x0800dsf78dgf"
+            data: |
+              {"token": "0x0800dsf78dgf"}
           output:
-            no_log_contains: id "942450"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
   - test_title: 9508313-6
     stages:
       - stage:
@@ -98,6 +108,8 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.token=0x0800dsf78dgf"
+            data: |
+              {"token": "0x0800dsf78dgf"}
           output:
-            no_log_contains: id "942450"
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
