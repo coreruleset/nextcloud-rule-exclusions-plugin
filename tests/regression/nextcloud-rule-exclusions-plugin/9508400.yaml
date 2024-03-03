@@ -53,7 +53,7 @@ tests:
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
           output:
             no_log_contains: |-
-              id "920230"|id "932(?:19|20)0"|id "94243[12]"
+              id "(?:920230|932190|932200|942431|942432)"
   - test_title: 9508400-4
     desc: Desktop app redirecting to web gui to authenticate without pretty URLs
     stages:
@@ -70,4 +70,4 @@ tests:
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
           output:
             no_log_contains: |-
-              id "920230"|id "932(?:19|20)0"|id "94243[12]"
+              id "(?:920230|932190|932200|942431|942432)"

@@ -46,7 +46,7 @@ tests:
             method: PUT
             uri: /apps/mail/api/drafts/1
             data: |
-              {"data.body.value": "<script>"}
+              {"data":{"body":{"value": "<script>"}}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-3
@@ -68,7 +68,7 @@ tests:
             method: PUT
             uri: /apps/mail/api/drafts/1
             data: |
-              {"data.editorBody": "<script>"}
+              {"data":{"editorBody": "<script>"}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-4
@@ -134,7 +134,7 @@ tests:
             method: PUT
             uri: /apps/mail/api/drafts/{id}
             data: |
-              {"data.body.value": "<script>"}
+              {"data":{"body":{"value": "<script>"}}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-7
@@ -156,7 +156,7 @@ tests:
             method: PUT
             uri: /apps/mail/api/drafts/{id}
             data: |
-              {"data.editorBody": "<script>"}
+              {"data":{"editorBody": "<script>"}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-8

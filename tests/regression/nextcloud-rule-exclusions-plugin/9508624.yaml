@@ -23,7 +23,7 @@ tests:
               {"data":{"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}}
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
+              id "(?:920273|932236|942200|942260|942340|942370|942430|942431|942432)"
   - test_title: 9508624-2
     desc: Registering webauthn device without pretty URLs
     stages:
@@ -42,4 +42,4 @@ tests:
               {"data":{"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}}
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
+              id "(?:920273|932236|942200|942260|942340|942370|942430|942431|942432)"
