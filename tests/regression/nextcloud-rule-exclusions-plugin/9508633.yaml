@@ -15,9 +15,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /index.php/apps/richdocuments/ajax/admin.php
-            data: "json.wopi_url=https://example.com/"
+            data: |
+              {"wopi_url": "https://example.com/"}
           output:
             no_log_contains: id "931130"

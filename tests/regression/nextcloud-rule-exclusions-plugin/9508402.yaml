@@ -15,14 +15,15 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /login/webauthn/finish
             data: |
-              json.data={"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}
+              {"data":"{\"id\":\"RanDom__02Data\",\"type\":\"public-key\",\"rawId\":\"FDADG34//fsd88DF=\",\"response\":{\"authenticatorData\":\"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==\",\"clientDataJSON\":\"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==\",\"signature\":\"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=\",\"userHandle\":\"random="}}"}
           output:
-            no_log_contains: |
-              id"920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
+            no_log_contains: |-
+              id "(?:"920273|932236|942200|942260|942340|942370|942430|942431|942432)"
   - test_title: 9508402-2
     desc: Logging in via webauthn without pretty URLs
     stages:
@@ -33,11 +34,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /index.php/login/webauthn/finish
             data: |
-              json.data={"id":"RanDom__02Data","type":"public-key","rawId":"FDADG34//fsd88DF=","response":{"authenticatorData":"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==","clientDataJSON":"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==","signature":"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=","userHandle":"random="}}
+              {"data":"{\"id\":\"RanDom__02Data\",\"type\":\"public-key\",\"rawId\":\"FDADG34//fsd88DF=\",\"response\":{\"authenticatorData\":\"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==\",\"clientDataJSON\":\"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==\",\"signature\":\"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=\",\"userHandle\":\"random="}}"}
           output:
-            no_log_contains: |
-              id "920273"|id "932236"|id "942(?:2[06]0|3[47]0|43[012])"
+            no_log_contains: |-
+              id "(?:"920273|932236|942200|942260|942340|942370|942430|942431|942432)"

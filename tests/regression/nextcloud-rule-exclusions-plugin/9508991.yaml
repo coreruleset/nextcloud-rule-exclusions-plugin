@@ -19,10 +19,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/1
-            data: "json.body=<script>"
+            data: |
+              {"body": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-2
@@ -39,10 +41,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/1
-            data: "json.data.body.value=<script>"
+            data: |
+              {"data":{"body":{"value": "<script>"}}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-3
@@ -59,10 +63,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/1
-            data: "json.data.editorBody=<script>"
+            data: |
+              {"data":{"editorBody": "<script>"}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-4
@@ -79,10 +85,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/1
-            data: "json.editorBody=<script>"
+            data: |
+              {"editorBody": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-5
@@ -99,10 +107,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/{id}
-            data: "json.body=<script>"
+            data: |
+              {"body": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-6
@@ -119,10 +129,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/{id}
-            data: "json.data.body.value=<script>"
+            data: |
+              {"data":{"body":{"value": "<script>"}}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-7
@@ -139,10 +151,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/{id}
-            data: "json.data.editorBody=<script>"
+            data: |
+              {"data":{"editorBody": "<script>"}}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-8
@@ -159,10 +173,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/{id}
-            data: "json.editorBody=<script>"
+            data: |
+              {"editorBody": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-9
@@ -178,10 +194,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/{id}
-            data: "json.subject=<script>"
+            data: |
+              {"subject": "<script>"}
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-10
@@ -197,9 +215,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/drafts/1
-            data: "json.subject=<script>"
+            data: |
+              {"subject": "<script>"}
           output:
             no_log_contains: id "941101"

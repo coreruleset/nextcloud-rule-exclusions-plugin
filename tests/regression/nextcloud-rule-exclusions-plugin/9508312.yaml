@@ -14,12 +14,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-2
     stages:
@@ -30,12 +32,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/close
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-3
     stages:
@@ -46,12 +50,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-4
     stages:
@@ -62,12 +68,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-5
     stages:
@@ -78,12 +86,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-6
     stages:
@@ -94,12 +104,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.documentState=lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "lsgdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "932236"|id "942432"
   - test_title: 9508312-7
     stages:
@@ -110,12 +122,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508312-8
     stages:
@@ -126,12 +140,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/close
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508312-9
     stages:
@@ -142,12 +158,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508312-10
     stages:
@@ -158,12 +176,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508312-11
     stages:
@@ -174,12 +194,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"
   - test_title: 9508312-12
     stages:
@@ -190,10 +212,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: "json.documentState=0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="
+            data: |
+              {"documentState": "0x0800gdrsg4/dg43q/ubiisdfbUYDFSBUIbjbsdfb7sd8fuhjdf87tsdfJHDF+7p/ranbdom/sdf68nN+89s/bsdf87676gJBUIJBUIBsss+sdf7858/iubdfs77="}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920273"|id "942432"|id "942450"

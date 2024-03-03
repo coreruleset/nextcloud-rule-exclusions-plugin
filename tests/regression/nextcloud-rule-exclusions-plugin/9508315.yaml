@@ -14,10 +14,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: "json.shareToken=lsnus80dfsdf"
+            data: |
+              {"shareToken": "lsnus80dfsdf"}
           output:
             no_log_contains: id "932236"
   - test_title: 9508315-2
@@ -29,9 +31,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: "json.shareToken=0x0800nsudf"
+            data: |
+              {"shareToken": "0x0800nsudf"}
           output:
             no_log_contains: id "942450"

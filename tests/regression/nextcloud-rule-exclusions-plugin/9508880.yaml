@@ -15,10 +15,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /ocs/v2.php/references/resolve
             data: "reference=https://www.jaycar.com.au/raspberry-pi-3-switchmode-power-supply-5-1v-2-5a-with-usb-micro-b/p/MP3536?pos=1&queryId=0a9ebf34f466c42c586d9561f4ac20d2&sort=relevance&searchText=2.5a%205v%20micro%20usb"
           output:
-            no_log_contains: |
-              id "920230"|id "93(?:1130|2200)"|id "94243[012]"
+            no_log_contains: |-
+              id "(?:920230|931130|932200|942430|942431|942432)"
