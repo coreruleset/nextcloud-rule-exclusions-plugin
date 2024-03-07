@@ -6,7 +6,7 @@ meta:
   name: 9508637.yaml
 tests:
   - test_title: 9508637-1
-    desc: Adjusting your availability hours
+    desc: Adjusting availability hours
     stages:
       - stage:
           input:
@@ -15,7 +15,6 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: text/plain;charset=UTF-8
             port: 80
             method: PROPPATCH
             uri: /remote.php/dav/calendars/username/inbox
