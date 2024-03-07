@@ -56,5 +56,5 @@ tests:
                           </x0:set>
                         </x0:propertyupdate>
           output:
-            no_log_contains: | 
+            no_log_contains: |
               id "(?:911100|932236|942430|942431|942432)"
