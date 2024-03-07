@@ -33,3 +33,31 @@ tests:
             uri: /apps/text/public/session/create
           output:
             no_log_contains: id "911100"
+  - test_title: 9508122-3
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/text/session/1234/create
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508122-4
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/text/public/session/1234/create
+          output:
+            no_log_contains: id "911100"
