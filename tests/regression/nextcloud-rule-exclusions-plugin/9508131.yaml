@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Dav client scanning for Dav path"
   enabled: true
-  name: 9508338.yaml
+  name: 9508131.yaml
 tests:
-  - test_title: 9508338-1
+  - test_title: 9508131-1
     stages:
       - stage:
           input:
