@@ -21,10 +21,7 @@ tests:
             uri: /public.php/webdav/example.jpg
             data: |
               <?xml version="1.0"?>
-              <d:propfind  xmlns:d="DAV:"
-	              xmlns:oc="http://owncloud.org/ns"
-              	xmlns:nc="http://nextcloud.org/ns"
-              	xmlns:ocs="http://open-collaboration-services.org/ns">
+              <d:propfind  xmlns:d="DAV:"xmlns:oc="http://owncloud.org/ns"xmlns:nc="http://nextcloud.org/ns"xmlns:ocs="http://open-collaboration-services.org/ns">
                 <d:prop>
               	  <d:getlastmodified />
               	  <d:getcontenttype />
