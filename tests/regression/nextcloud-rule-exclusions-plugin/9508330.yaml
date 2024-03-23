@@ -6,7 +6,7 @@ meta:
   name: 9508330.yaml
 tests:
   - test_title: 9508330-1
-    desc: Creating/modifying an calendar from iPhone 
+    desc: Creating/modifying an calendar from iPhone
     stages:
       - stage:
           input:
