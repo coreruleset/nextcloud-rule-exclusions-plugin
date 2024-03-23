@@ -113,3 +113,111 @@ tests:
           output:
             no_log_contains: |-
               id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-7
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/sync
+            data: |
+              {"token": "ls78sdf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-8
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/close
+            data: |
+              {"token": "ls78sdf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-9
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"token": "ls78sdf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-10
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/sync
+            data: |
+              {"token": "0x0800dsf78dgf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-11
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/close
+            data: |
+              {"token": "0x0800dsf78dgf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"
+  - test_title: 9508313-12
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"token": "0x0800dsf78dgf"}
+          output:
+            no_log_contains: |-
+              id "932236"|id "932250"|id "942450"

@@ -77,3 +77,75 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
+  - test_title: 9508314-5
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/push
+            data: |
+              {"awareness": "lsbu+as8d/f0bsd0789fsd07a98fnnuin="}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508314-6
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"awareness": "lsbu+as8d/f0bsd0789fsd07a98fnnuin="}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508314-7
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/push
+            data: |
+              {"awareness": "0x0800buas8d+f0bsd07/89fsd07a98fnnuin="}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508314-8
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"awareness": "0x0800buas8d+f0bsd07/89fsd07a98fnnuin="}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
