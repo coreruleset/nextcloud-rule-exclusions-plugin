@@ -1,0 +1,87 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508316.yaml
+tests:
+  - test_title: 9508316-1
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/push
+            data: |
+              {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
+              "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
+              "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+          output:
+            no_log_contains: |
+              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
+  - test_title: 9508316-2
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/push
+            data: |
+              {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
+              "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
+              "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+          output:
+            no_log_contains: |
+              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
+  - test_title: 9508316-3
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
+              "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
+              "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+          output:
+            no_log_contains: |
+              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
+  - test_title: 9508316-4
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/push
+            data: |
+              {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
+              "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
+              "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+          output:
+            no_log_contains: |
+              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
