@@ -1,11 +1,12 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Text Editor: Opening a file"
+  description: "Adjusting Nextcloud Files settings"
   enabled: true
-  name: 9508122.yaml
+  name: 9508961.yaml
 tests:
-  - test_title: 9508122-1
+  - test_title: 9508961-1
+    desc: Enabling image preview cropping
     stages:
       - stage:
           input:
@@ -14,12 +15,16 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/text/session/create
+            uri: /apps/files/api/v1/config/crop_image_previews
+            data: |
+              { "value":true }
           output:
             no_log_contains: id "911100"
-  - test_title: 9508122-2
+  - test_title: 9508961-2
+    desc: Enabling Grid view
     stages:
       - stage:
           input:
@@ -28,12 +33,16 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/text/public/session/create
+            uri: /apps/files/api/v1/config/grid_view
+            data: |
+              { "value":true }
           output:
             no_log_contains: id "911100"
-  - test_title: 9508122-3
+  - test_title: 9508961-3
+    desc: Enabling show hidden files
     stages:
       - stage:
           input:
@@ -42,12 +51,16 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/text/session/1234/create
+            uri: /apps/files/api/v1/config/show_hidden
+            data: |
+              { "value":true }
           output:
             no_log_contains: id "911100"
-  - test_title: 9508122-4
+  - test_title: 9508961-4
+    desc: Enabling "Sort Favorites first"
     stages:
       - stage:
           input:
@@ -56,8 +69,29 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/text/public/session/1234/create
+            uri: /apps/files/api/v1/config/sort_favorites_first
+            data: |
+              { "value":true }
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508961-5
+    desc: Enabling "Sort folders first"
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/files/api/v1/config/sort_folders_first
+            data: |
+              { "value":true }
           output:
             no_log_contains: id "911100"
