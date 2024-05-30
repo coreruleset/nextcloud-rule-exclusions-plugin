@@ -37,3 +37,33 @@ tests:
             uri: /apps/logreader/poll
           output:
             no_log_contains: id "942450"
+  - test_title: 9508631-3
+    desc: Viewing Nextcloud log files via web GUI
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: GET
+            uri: /apps/logreader/api/poll?lastReqId=lsbusydifb08
+          output:
+            no_log_contains: id "932236"
+  - test_title: 9508631-4
+    desc: Viewing Nextcloud log files via web GUI
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: GET
+            uri: /apps/logreader/api/poll?lastReqId=0x0800dasf86gm
+          output:
+            no_log_contains: id "942450"
