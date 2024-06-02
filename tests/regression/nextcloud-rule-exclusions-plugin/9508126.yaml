@@ -90,7 +90,7 @@ tests:
             uri: /apps/text/public/session/1234/sync
             data: |
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
-            version: HTTP/1.1 
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508126-5
