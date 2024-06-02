@@ -13,7 +13,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -21,6 +21,7 @@ tests:
             uri: /login/confirm
             data: |
               {"password": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-2
@@ -31,7 +32,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -39,6 +40,7 @@ tests:
             uri: /login/confirm
             data: |
               {"password": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-3
@@ -49,7 +51,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -57,6 +59,7 @@ tests:
             uri: /index.php/login/confirm
             data: |
               {"password": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508401-4
@@ -67,7 +70,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -75,5 +78,6 @@ tests:
             uri: /index.php/login/confirm
             data: |
               {"password": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"

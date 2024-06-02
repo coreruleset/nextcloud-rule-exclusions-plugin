@@ -12,7 +12,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -22,6 +22,7 @@ tests:
               {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
               "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
               "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+            version: HTTP/1.1
           output:
             no_log_contains: |
               id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
@@ -32,7 +33,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -42,6 +43,7 @@ tests:
               {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
               "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
               "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+            version: HTTP/1.1
           output:
             no_log_contains: |
               id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
@@ -52,7 +54,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -62,6 +64,7 @@ tests:
               {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
               "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
               "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+            version: HTTP/1.1
           output:
             no_log_contains: |
               id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
@@ -72,7 +75,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -82,6 +85,7 @@ tests:
               {"documentId":12,"sessionId":34,"sessionToken":"lrfdsasdf/random","token":null,"filePath":"",
               "steps":["0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw==","0x0800rs/g/gPGvnfdsc3Q7+oMOfsdfsdafsQGj0cm/B/cCOsdfdsfcZ+6aI+fdtw=="],
               "version":4234,"awareness":"UIBYSAD78+nu9sadfbnd0987safb80ds7abfjbkVBYJABDFhvyib776575"}
+            version: HTTP/1.1
           output:
             no_log_contains: |
               id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
