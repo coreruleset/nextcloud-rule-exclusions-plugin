@@ -1,12 +1,11 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Dav client scanning for Dav path"
   enabled: true
-  name: 9508635.yaml
+  name: 9508131.yaml
 tests:
-  - test_title: 9508635-1
-    desc: Configuring default apps
+  - test_title: 9508131-1
     stages:
       - stage:
           input:
@@ -15,12 +14,10 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/logreader/api/settings
-            data: |
-              { "setting":"defaultApps","value":["files","dashboard"] }
+            method: PROPFIND
+            uri: /
             version: HTTP/1.1
           output:
-            no_log_contains: id "911100"
+            no_log_contains: |
+              id "911100"| id "921110"

@@ -12,7 +12,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -20,6 +20,7 @@ tests:
             uri: /apps/text/session/sync
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -30,7 +31,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -38,6 +39,7 @@ tests:
             uri: /apps/text/session/close
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -48,7 +50,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -56,6 +58,7 @@ tests:
             uri: /apps/text/session/push
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -66,7 +69,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -74,6 +77,7 @@ tests:
             uri: /apps/text/public/session/sync
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -84,7 +88,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -92,6 +96,7 @@ tests:
             uri: /apps/text/public/session/close
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -102,7 +107,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -110,6 +115,7 @@ tests:
             uri: /apps/text/public/session/push
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -120,7 +126,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -128,6 +134,7 @@ tests:
             uri: /apps/text/attachments
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -138,7 +145,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -146,6 +153,7 @@ tests:
             uri: /apps/text/session/sync
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -156,7 +164,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -164,6 +172,7 @@ tests:
             uri: /apps/text/session/close
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -174,7 +183,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -182,6 +191,7 @@ tests:
             uri: /apps/text/session/push
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -192,7 +202,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -200,6 +210,7 @@ tests:
             uri: /apps/text/public/session/sync
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -210,7 +221,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -218,6 +229,7 @@ tests:
             uri: /apps/text/public/session/close
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -228,7 +240,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -236,6 +248,7 @@ tests:
             uri: /apps/text/public/session/push
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -246,7 +259,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -254,6 +267,7 @@ tests:
             uri: /apps/text/attachments
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -264,7 +278,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -272,6 +286,7 @@ tests:
             uri: /apps/text/session/1234/sync
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -282,7 +297,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -290,6 +305,7 @@ tests:
             uri: /apps/text/session/1234/close
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -300,7 +316,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -308,6 +324,7 @@ tests:
             uri: /apps/text/session/1234/push
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -318,7 +335,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -326,6 +343,7 @@ tests:
             uri: /apps/text/public/session/1234/sync
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -336,7 +354,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -344,6 +362,7 @@ tests:
             uri: /apps/text/public/session/1234/close
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -354,7 +373,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -362,6 +381,7 @@ tests:
             uri: /apps/text/public/session/1234/push
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -372,7 +392,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -380,6 +400,7 @@ tests:
             uri: /apps/text/session/1234/sync
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -390,7 +411,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -398,6 +419,7 @@ tests:
             uri: /apps/text/session/1234/close
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -408,7 +430,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -416,6 +438,7 @@ tests:
             uri: /apps/text/session/1234/push
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -426,7 +449,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -434,6 +457,7 @@ tests:
             uri: /apps/text/public/session/1234/sync
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -444,7 +468,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -452,6 +476,7 @@ tests:
             uri: /apps/text/public/session/1234/close
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -462,7 +487,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -470,6 +495,7 @@ tests:
             uri: /apps/text/public/session/1234/push
             data: |
               {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -480,7 +506,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -488,6 +514,7 @@ tests:
             uri: /apps/text/session/1234/save
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -498,7 +525,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -506,6 +533,7 @@ tests:
             uri: /apps/text/session/1234/save
             data: |
               {"sessionToken": "0x0800random+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
@@ -516,7 +544,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -524,6 +552,7 @@ tests:
             uri: /apps/text/public/session/1234/save
             data: |
               {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942432"
@@ -534,7 +563,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -542,6 +571,7 @@ tests:
             uri: /apps/text/public/session/1234/save
             data: |
               {"sessionToken": "0x0800random+dfsdaf/89"}
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"

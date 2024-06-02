@@ -13,12 +13,13 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             port: 80
             method: POST
             uri: /login
             data: "password=<script>"
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508400-2
@@ -29,12 +30,13 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             port: 80
             method: POST
             uri: /index.php/login
             data: "password=<script>"
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508400-3
@@ -45,12 +47,13 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             port: 80
             method: POST
             uri: /login
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920230|932190|932200|942431|942432)"
@@ -62,12 +65,13 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             port: 80
             method: POST
             uri: /index.php/login
             data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920230|932190|932200|942431|942432)"

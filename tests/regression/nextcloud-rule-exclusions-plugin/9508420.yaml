@@ -18,13 +18,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -38,13 +39,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -58,13 +60,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -78,13 +81,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -98,13 +102,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -118,13 +123,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -138,13 +144,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -158,13 +165,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -178,13 +186,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /logout
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -198,13 +207,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /logout
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -218,13 +228,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /logout
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -238,13 +249,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /logout
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -258,13 +270,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/logout
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -278,13 +291,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/logout
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -298,13 +312,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/logout
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -318,13 +333,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/logout
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -338,13 +354,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /s/share-id/authenticate/showShare
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -358,13 +375,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /s/share-id/authenticate/showShare
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -378,13 +396,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /s/share-id/authenticate/showShare
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -398,13 +417,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /s/share-id/authenticate/showShare
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -418,13 +438,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/s/share-id/authenticate/showShare
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -438,13 +459,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/s/share-id/authenticate/showShare
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -458,13 +480,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/s/share-id/authenticate/showShare
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -478,13 +501,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/s/share-id/authenticate/showShare
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -498,13 +522,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login/v2/grant
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -518,13 +543,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login/v2/grant
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -538,13 +564,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login/v2/grant
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -558,13 +585,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /login/v2/grant
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -578,13 +606,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login/v2/grant
             data: "requesttoken=lds%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -598,13 +627,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login/v2/grant
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -618,13 +648,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login/v2/grant
             data: "requesttoken=lss%3A978%2B%2Fdfdsa"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"
@@ -638,13 +669,14 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
             uri: /index.php/login/v2/grant
             data: "requesttoken=0x800%3Afds%2B%2Fdsfsda"
+            version: HTTP/1.1
           output:
             no_log_contains: |-
               id "(?:920273|932236|942100|942120|942432|942450)"

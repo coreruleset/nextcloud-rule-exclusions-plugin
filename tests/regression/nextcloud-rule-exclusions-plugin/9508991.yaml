@@ -17,7 +17,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -25,6 +25,7 @@ tests:
             uri: /apps/mail/api/drafts/1
             data: |
               {"body": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-2
@@ -39,7 +40,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -47,6 +48,7 @@ tests:
             uri: /apps/mail/api/drafts/1
             data: |
               {"data":{"body":{"value": "<script>"}}}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-3
@@ -61,7 +63,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -69,6 +71,7 @@ tests:
             uri: /apps/mail/api/drafts/1
             data: |
               {"data":{"editorBody": "<script>"}}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-4
@@ -83,7 +86,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -91,6 +94,7 @@ tests:
             uri: /apps/mail/api/drafts/1
             data: |
               {"editorBody": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-5
@@ -105,7 +109,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -113,6 +117,7 @@ tests:
             uri: /apps/mail/api/drafts/{id}
             data: |
               {"body": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-6
@@ -127,7 +132,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -135,6 +140,7 @@ tests:
             uri: /apps/mail/api/drafts/{id}
             data: |
               {"data":{"body":{"value": "<script>"}}}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-7
@@ -149,7 +155,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -157,6 +163,7 @@ tests:
             uri: /apps/mail/api/drafts/{id}
             data: |
               {"data":{"editorBody": "<script>"}}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-8
@@ -171,7 +178,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -179,6 +186,7 @@ tests:
             uri: /apps/mail/api/drafts/{id}
             data: |
               {"editorBody": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-9
@@ -192,7 +200,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -200,6 +208,7 @@ tests:
             uri: /apps/mail/api/drafts/{id}
             data: |
               {"subject": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
   - test_title: 9508991-10
@@ -213,7 +222,7 @@ tests:
             dest_addr: 127.0.0.1
             headers:
               Host: localhost
-              User-Agent: OWASP CRS
+              User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
@@ -221,5 +230,6 @@ tests:
             uri: /apps/mail/api/drafts/1
             data: |
               {"subject": "<script>"}
+            version: HTTP/1.1
           output:
             no_log_contains: id "941101"
