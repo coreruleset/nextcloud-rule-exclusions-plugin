@@ -11,6 +11,7 @@
 - [ignatiev](https://github.com/ignatiev)
 - [Joost de Keijzer](https://github.com/joostdekeijzer)
 - [Max Leske](https://github.com/theseion)
+- [Matus](https://github.com/yeapguy)
 - [pyllyukko](https://github.com/pyllyukko)
 - [Chaim Sanders](https://github.com/csanders-git)
 - [Federico G. Schwindt](https://github.com/fgsch)

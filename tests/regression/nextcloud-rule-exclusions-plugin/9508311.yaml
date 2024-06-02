@@ -257,3 +257,291 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-15
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/sync
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-16
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/close
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-17
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/push
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-18
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/sync
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-19
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/close
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-20
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-21
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/sync
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-22
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/close
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-23
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/push
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-24
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/sync
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-25
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/close
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-26
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/push
+            data: |
+              {"sessionToken": "0x0800b7098sdbf+sdfJB76/nsidf878B"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-27
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/save
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-28
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/save
+            data: |
+              {"sessionToken": "0x0800random+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
+  - test_title: 9508311-29
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/save
+            data: |
+              {"sessionToken": "lsh8u9sd+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "942432"
+  - test_title: 9508311-30
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/save
+            data: |
+              {"sessionToken": "0x0800random+dfsdaf/89"}
+          output:
+            no_log_contains: |-
+              id "920273"|id "942432"|id "942450"
