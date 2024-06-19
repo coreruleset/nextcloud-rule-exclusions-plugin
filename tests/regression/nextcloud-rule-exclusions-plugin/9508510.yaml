@@ -61,3 +61,22 @@ tests:
           output:
             no_log_contains: |
               id "920273" | id "941100" | id "941120" | id "942390" | id "942432"
+  - test_title: 9508510-4
+    desc: Sending request token
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: POST
+            uri: /
+            data: |
+              requesttoken=lds%3A978%2B%2Fdfdsa
+            version: HTTP/1.1
+          output:
+            no_log_contains: |
+              id "920273" | id "941100" | id "941120" | id "942100" | id "942120" | id "942390" | id "942432"
