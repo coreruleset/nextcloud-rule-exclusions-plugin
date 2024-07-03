@@ -18,7 +18,7 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/photos/api/v2+/config/photosSourceFolders
+            uri: /apps/photos/api/v2/config/photosSourceFolders
             # Data is actually sent like this with characters escaped
             data: |
               {"value":"[\"/Pictures\",\"/InstantUpload\"]"}

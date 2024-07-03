@@ -19,7 +19,7 @@ tests:
             method: POST
             uri: /
             data: |
-              lsrandom+random:data=
+              requesttoken=lsrandom+random:data=
             version: HTTP/1.1
             no_log_contains: |
               id "920273"|id "932236"|id "941100"|id "941120"|id "942390"|id "942432"
@@ -37,7 +37,7 @@ tests:
             method: POST
             uri: /
             data: |
-              0x0800+random/
+              requesttoken=0x0800+random/
             version: HTTP/1.1
           output:
             no_log_contains: |
@@ -56,7 +56,7 @@ tests:
             method: POST
             uri: /
             data: |
-              or+2U5random/
+              requesttoken=or+2U5random/
             version: HTTP/1.1
           output:
             no_log_contains: |
