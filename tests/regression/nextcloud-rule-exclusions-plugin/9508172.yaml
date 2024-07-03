@@ -24,7 +24,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "930120" | id "941110"
+              id "930120"|id "941110"
   - test_title: 9508172-2
     desc: Editing an existing share
     stages:
@@ -44,7 +44,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "911100" | id "930120" | id "941110"
+              id "911100"|id "930120"|id "941110"
   - test_title: 9508172-3
     desc: Deleting an share
     stages:
