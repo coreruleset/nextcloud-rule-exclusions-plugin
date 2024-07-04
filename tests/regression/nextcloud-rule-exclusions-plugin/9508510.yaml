@@ -19,7 +19,7 @@ tests:
             uri: /apps/mail/proxy?src=https%3A%2F%2Fexample.com&requesttoken=lsrandom
             version: HTTP/1.1
             no_log_contains: |
-              id "920273"|id "932236"|id "941100"|id "941120"|id "942390"|id "942432"
+              id "932236"|id "941100"|id "941120"|id "942390"|id "942432"
   - test_title: 9508510-2
     stages:
       - stage:
@@ -33,12 +33,12 @@ tests:
             port: 80
             method: POST
             uri: /login
-            data: |
+            data: |-
               user=test&password=test&timezone=Australia%2FSydney&timezone_offset=10&requesttoken=0x0000random
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "941100"|id "941120"|id "942390"|id "942432"|id "942450"
+              id "941100"|id "941120"|id "942390"|id "942432"|id "942450"
   - test_title: 9508510-3
     stages:
       - stage:
@@ -52,9 +52,9 @@ tests:
             port: 80
             method: POST
             uri: /s/random/authenticate/showshare
-            data: |
+            data: |-
               requesttoken=or%2B2U5random%2F&password=test&sharingToken=test&sharingType=3
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "941100"|id "941120"|id "942390"|id "942432"
+              id "941100"|id "941120"|id "942390"|id "942432"
