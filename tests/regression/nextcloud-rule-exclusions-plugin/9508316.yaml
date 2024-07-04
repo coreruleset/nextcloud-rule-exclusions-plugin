@@ -25,7 +25,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
+              id "920273"|id "932236"| id "932250"|id "941100"|id "942210"|id "942432"
   - test_title: 9508316-2
     stages:
       - stage:
@@ -46,7 +46,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
+              id "920273"|id "932236"|id "932250"|id "941100"|id "942210"|id "942432"|id "942450"
   - test_title: 9508316-3
     stages:
       - stage:
@@ -67,7 +67,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"
+              id "920273"|id "932236"|id "932250"|id "941100"|id "942210"|id "942432"
   - test_title: 9508316-4
     stages:
       - stage:
@@ -88,4 +88,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273"|id "932236"| id "932250"| id "941100"|id "942210"| id "942432"| id "942450"
+              id "920273"|id "932236"|id "932250"|id "941100"|id "942210"|id "942432"|id "942450"

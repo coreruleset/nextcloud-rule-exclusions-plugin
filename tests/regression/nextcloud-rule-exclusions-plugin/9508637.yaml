@@ -18,6 +18,7 @@ tests:
             port: 80
             method: PROPPATCH
             uri: /remote.php/dav/calendars/username/inbox
+            Content-Type: text/plain;charset=UTF-8
             data: |
               <?xml version="1.0"?>
                         <x0:propertyupdate xmlns:x0="DAV:">
