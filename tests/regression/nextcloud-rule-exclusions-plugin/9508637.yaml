@@ -15,10 +15,10 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: text/plain;charset=UTF-8
             port: 80
             method: PROPPATCH
             uri: /remote.php/dav/calendars/username/inbox
-            Content-Type: text/plain;charset=UTF-8
             data: |
               <?xml version="1.0"?>
                         <x0:propertyupdate xmlns:x0="DAV:">
