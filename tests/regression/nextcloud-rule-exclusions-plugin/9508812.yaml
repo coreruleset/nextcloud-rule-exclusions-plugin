@@ -1,12 +1,12 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Nextcloud Deck"
   enabled: true
-  name: 9508172.yaml
+  name: 9508812.yaml
 tests:
-  - test_title: 9508172-1
-    desc: Creating a new share for a file/folder
+  - test_title: 9508812-1
+    desc: Marking a card as done
     stages:
       - stage:
           input:
@@ -15,38 +15,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /ocs/v2.php/apps/files_sharing/api/v1/shares
-            data: |
-              {"path":"/path/to/tmp/example/","shareType":3,"password":"<script>","attributes":"[]"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |
-              id "930120"|id "941110"
-  - test_title: 9508172-2
-    desc: Editing an existing share
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
-            data: |
-              {"permissions":"31","attributes":"[]","note":"","expireDate":"2024-06-23 00:00:00","label":"test","password":"<script>","hideDownload":"false"}
+            uri: /apps/deck/cards/7/done
             version: HTTP/1.1
           output:
-            no_log_contains: |
-              id "911100"|id "930120"|id "941110"
-  - test_title: 9508172-3
-    desc: Deleting an share
+            no_log_contains: id "911100"
+  - test_title: 9508812-2
+    desc: Marking a card as not done
     stages:
       - stage:
           input:
@@ -55,10 +31,41 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: DELETE
-            uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
+            method: PUT
+            uri: /apps/deck/cards/7/undone
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508812-3
+    desc: Archiving a card
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/deck/cards/7/archive
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508812-4
+    desc: Unarchiving a card
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /apps/deck/cards/7/unarchive
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

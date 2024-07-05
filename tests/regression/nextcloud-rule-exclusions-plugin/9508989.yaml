@@ -15,7 +15,7 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              content-type: application/json
+              Content-Type: application/json
             port: 80
             method: PUT
             uri: /apps/mail/api/accounts/1/signature
@@ -24,4 +24,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "911100" | id "941101"
+              id "911100"|id "941101"

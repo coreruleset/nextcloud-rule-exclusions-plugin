@@ -1,12 +1,11 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Sending request token"
   enabled: true
   name: 9508510.yaml
 tests:
   - test_title: 9508510-1
-    desc: Sending request token
     stages:
       - stage:
           input:
@@ -16,15 +15,12 @@ tests:
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             port: 80
-            method: POST
-            uri: /
-            data: |
-              lsrandom+random:data=
+            method: GET
+            uri: /apps/mail/proxy?src=https%3A%2F%2Fexample.com&requesttoken=lsrandom
             version: HTTP/1.1
             no_log_contains: |
-              id "920273" | id "932236" | id "941100" | id "941120" | id "942390" | id "942432"
+              id "932236"|id "941100"|id "941120"|id "942390"|id "942432"
   - test_title: 9508510-2
-    desc: Sending request token
     stages:
       - stage:
           input:
@@ -33,17 +29,17 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
-            uri: /
-            data: |
-              0x0800+random/
+            uri: /login
+            data: |-
+              user=test&password=test&timezone=Australia%2FSydney&timezone_offset=10&requesttoken=0x0000random
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273" | id "941100" | id "941120" | id "942390" | id "942432" | id "942450"
+              id "941100"|id "941120"|id "942390"|id "942432"|id "942450"
   - test_title: 9508510-3
-    desc: Sending request token
     stages:
       - stage:
           input:
@@ -52,31 +48,13 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/x-www-form-urlencoded
             port: 80
             method: POST
-            uri: /
-            data: |
-              or+2U5random/
+            uri: /s/random/authenticate/showshare
+            data: |-
+              requesttoken=or%2B2U5random%2F&password=test&sharingToken=test&sharingType=3
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "920273" | id "941100" | id "941120" | id "942390" | id "942432"
-  - test_title: 9508510-4
-    desc: Sending request token
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /
-            data: |
-              requesttoken=lds%3A978%2B%2Fdfdsa
-            version: HTTP/1.1
-          output:
-            no_log_contains: |
-              id "920273" | id "941100" | id "941120" | id "942100" | id "942120" | id "942390" | id "942432"
+              id "941100"|id "941120"|id "942390"|id "942432"

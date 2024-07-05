@@ -18,14 +18,14 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/photos/api/v2+/config/photosSourceFolders
+            uri: /apps/photos/api/v2/config/photosSourceFolders
             # Data is actually sent like this with characters escaped
             data: |
               {"value":"[\"/Pictures\",\"/InstantUpload\"]"}
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "911100" | id "942100" | id "942200" | id "942370" | id "942520"
+              id "911100"|id "942100"|id "942200"|id "942370"|id "942520"
   - test_title: 9508957-2
     desc: Configuring upload folder for Nextcloud Photos
     stages:
@@ -46,4 +46,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |
-              id "911100" | id "942100" | id "942200" | id "942370" | id "942520"
+              id "911100"|id "942100"|id "942200"|id "942370"|id "942520"
