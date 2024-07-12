@@ -6,7 +6,7 @@ meta:
   name: 9508171.yaml
 tests:
   - test_title: 9508171-1
-    desc: Entering password on a public share
+    desc: Entering password on a public share (Nextcloud changed the case on this endpoint, tested on 29.0.3)
     stages:
       - stage:
           input:
