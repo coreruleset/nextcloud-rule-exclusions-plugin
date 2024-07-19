@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508638.yaml
+  name: 9508644.yaml
 tests:
-  - test_title: 9508638-1
-    desc: Deleting an email address from personal info
+  - test_title: 9508644-1
+    desc: Configuring/excluding 2FA enforcement for groups
     stages:
       - stage:
           input:
@@ -18,9 +18,9 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /ocs/v2.php/cloud/users/test/additional_mail
+            uri: /settings/api/admin/twofactorauth
             data: |
-              {"key":"email@example.com","value":""}
+              {"enforced":true,"enforcedGroups":["admin"],"excludedGroups":["Users"]}
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

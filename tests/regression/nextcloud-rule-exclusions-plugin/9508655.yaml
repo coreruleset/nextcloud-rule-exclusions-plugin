@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508628.yaml
+  name: 9508655.yaml
 tests:
-  - test_title: 9508628-1
+  - test_title: 9508655-1
     desc: Deleting an oauth client
     stages:
       - stage:
@@ -21,7 +21,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508628-2
+  - test_title: 9508655-2
     desc: Deleting an oauth client
     stages:
       - stage:
@@ -37,7 +37,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508628-3
+  - test_title: 9508655-3
     desc: Specifying a redirect URL for oauth clients
     stages:
       - stage:
@@ -56,7 +56,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "931130"
-  - test_title: 9508628-4
+  - test_title: 9508655-4
     desc: Specifying a redirect URL for oauth clients
     stages:
       - stage:

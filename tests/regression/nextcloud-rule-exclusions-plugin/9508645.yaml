@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508630.yaml
+  name: 9508645.yaml
 tests:
-  - test_title: 9508630-1
-    desc: Disabling Gmail email integration
+  - test_title: 9508645-1
+    desc: Disabling log reader live view
     stages:
       - stage:
           input:
@@ -15,14 +15,17 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
-            method: DELETE
-            uri: /apps/mail/api/integration/google
+            method: PUT
+            uri: /apps/logreader/api/settings
+            data: |
+              { "settingsKey": "liveLog","settingsValue": false }
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508630-2
-    desc: Disabling Microsoft email integration
+  - test_title: 9508645-2
+    desc: Enabling log reader live view
     stages:
       - stage:
           input:
@@ -31,9 +34,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
-            method: DELETE
-            uri: /apps/mail/api/integration/microsoft
+            method: PUT
+            uri: /apps/logreader/api/settings
+            data: |
+              { "settingsKey": "liveLog","settingsValue": true }
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
