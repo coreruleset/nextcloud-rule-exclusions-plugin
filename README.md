@@ -6,6 +6,41 @@
 
 This plugin contains rule exclusions for [Nextcloud](https://nextcloud.com/), a productivity platform and file hosting service. These rule exclusions are designed to resolve common false positives and allow for easier integration with the OWASP CRS (CRS).
 
+## Supported apps
+
+Due to how feature rich Nextcloud is, not all apps in Nextcloud can be supported (Especially 3rd party apps). False positives that are due to unsupported apps within Nextcloud must be resolved by a [custom rule exclusion](https://coreruleset.org/docs/concepts/false_positives_tuning/).
+
+Additional apps may be supported if there is enough demand from the community, but in general, support for apps made by 3rd parties (not Nextcloud) won't be added.
+
+|             *App Name*              |      *Status*      |
+|------------------------------------ |--------------------|
+| Nextcloud Files                     |  Supported ✅     |
+| Nextcloud Photos                    |  Supported ✅     |
+| Nextcloud Calendar                  |  Supported ✅     |
+| Nextcloud Contacts                  |  Supported ✅     |
+| Nextcloud Teams (Formerly Circles)  |  Supported ✅     |
+| Nextcloud Mail                      |  Supported ✅     |
+| Nextcloud Deck                      |  Supported ✅     |
+| Nextcloud Office                    |  Supported ✅     |
+| Nextcloud Notes                     |  Supported ✅     |
+| Nextcloud Text Editor               |  Supported ✅     |
+| Nextcloud Recognize                 |  Supported ✅     |
+| Nextcloud Cookbook                  |  In Progress⏳    |
+| Nextcloud Talk                      |  Not supported ❌ |
+| Nextcloud Forms                     |  Not supported ❌ |
+| Nextcloud Polls                     |  Not supported ❌ |
+| Nextcloud Unspash                   |  Not supported ❌ |
+| Nextcloud Collectives               |  Not supported ❌ |
+| Nextcloud News                      |  Not supported ❌ |
+| Nextcloud Maps                      |  Not supported ❌ |
+| Cospend                             |  Not supported ❌ |
+| Breeze Dark                         |  Not supported ❌ |
+| OnlyOffice                          |  Not supported ❌ |
+| Nextcloud Tables                    |  Not supported ❌ |
+| Nextcloud Assistant                 |  Not supported ❌ |
+| ownCloud Music                      |  Not supported ❌ |
+
+
 ## Installation
 
 For full and up to date instructions for the different available plugin installation methods, refer to [How to Install a Plugin](https://coreruleset.org/docs/concepts/plugins/#how-to-install-a-plugin) in the official CRS documentation.
