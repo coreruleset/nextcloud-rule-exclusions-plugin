@@ -10,7 +10,7 @@ This plugin contains rule exclusions for [Nextcloud](https://nextcloud.com/), a 
 
 Due to how feature rich Nextcloud is, not all apps in Nextcloud can be supported (Especially 3rd party apps). False positives that are due to unsupported apps within Nextcloud must be resolved by a [custom rule exclusion](https://coreruleset.org/docs/concepts/false_positives_tuning/).
 
-Additional apps may be supported if there is enough demand from the community, generally support for apps made by 3rd parties (Not Nextcloud) won't be added.
+Additional apps may be supported if there is enough demand from the community, but in general, support for apps made by 3rd parties (not Nextcloud) won't be added.
 
 |             *App Name*              |      *Status*      |
 |------------------------------------ |--------------------|
