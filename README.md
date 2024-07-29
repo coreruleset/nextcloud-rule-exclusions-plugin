@@ -25,7 +25,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Notes                     |  Supported ✅     |
 | Nextcloud Text Editor               |  Supported ✅     |
 | Nextcloud Recognize                 |  Supported ✅     |
-| Nextcloud Cookbook                  |  In Progress⏳    |
+| Nextcloud Cookbook                  |  Supported ✅     |
 | Nextcloud Talk                      |  Not supported ❌ |
 | Nextcloud Forms                     |  Not supported ❌ |
 | Nextcloud Polls                     |  Not supported ❌ |
