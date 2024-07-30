@@ -21,7 +21,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/cookbook/webapp/recipes/1
-            data: | >-
+            data: >-
               {"id":"1245809","name":"Easy pumpkin soup recipie test","description":"The beauty of a creamy pumpkin soup (and this classic pumpkin soup recipe in particular) is that it’s so versatile and forgiving.
               It’s one of the easiest meals to make with just a handful of ingredients, and it’s almost impossible to mess up. We love easy soup recipes, and know our community of home cooks do too.\n\nWhat
               makes this our best easy pumpkin soup recipe?\nThe recipe author, Valli Little, originally created this creamy pumpkin soup recipe way back in 2004 and it was passed on to us here at taste.com.au
@@ -60,7 +60,7 @@ tests:
               "dateModified":"2024-07-22T12:29:24+00:00","datePublished":null,"printImage":true,"imageUrl":"/apps/cookbook/webapp/recipes/1245809/image?size=full"}
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920272"|id "920273"|id "931130"|id "932200"|id "932236"|id "932380"|id "942200"|id "942430"|id "942431"|id "942432"|id "942460"
   - test_title: 9508721-2
     desc: Deleting a recipe
