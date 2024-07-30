@@ -6,7 +6,7 @@ meta:
   name: 9508722.yaml
 tests:
   - test_title: 9508722-1
-    desc: Editing a recipie catagory
+    desc: Editing a recipe category
     stages:
       - stage:
           input:

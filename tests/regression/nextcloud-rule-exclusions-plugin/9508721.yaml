@@ -7,8 +7,8 @@ meta:
 tests:
   - test_title: 9508721-1
     desc: |
-      Editing a recipie
-      Sample recipie taken from: https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=quickeasy/biccuul7
+      Editing a recipe
+      Sample recipe taken from: https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=quickeasy/biccuul7
     stages:
       - stage:
           input:
@@ -63,7 +63,7 @@ tests:
             no_log_contains: |
               id "920272"|id "920273"|id "931130"|id "932200"|id "932236"|id "932380"|id "942200"|id "942430"|id "942431"|id "942432"|id "942460"
   - test_title: 9508721-2
-    desc: Deleting a recipie
+    desc: Deleting a recipe
     stages:
       - stage:
           input:

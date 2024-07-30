@@ -7,8 +7,8 @@ meta:
 tests:
   - test_title: 9508720-1
     desc: |
-      Creating recipies
-      Sample recipie taken from: https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=quickeasy/biccuul7
+      Creating recipes
+      Sample recipe taken from: https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=quickeasy/biccuul7
     stages:
       - stage:
           input:
