@@ -1,0 +1,61 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Managing authentication tokens/sessions"
+  enabled: true
+  name: 9508600.yaml
+tests:
+  - test_title: 9508600-1
+    desc: Disabling filesystem access
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /settings/personal/authtokens/1
+            data: |
+              {"id":1,"name":"test","lastActivity":1721401548,"type":1,"scope":{"filesystem":false},"canDelete":true,"canRename":true}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508600-2
+    desc: Renaming a token/session
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /settings/personal/authtokens/1
+            data: |
+              {"id":1,"name":"test123","lastActivity":1721401548,"type":1,"scope":{"filesystem":false},"canDelete":true,"canRename":true}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508600-3
+    desc: Deleting a token/session
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /settings/personal/authtokens/1
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"

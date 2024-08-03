@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508638.yaml
+  name: 9508618.yaml
 tests:
-  - test_title: 9508638-1
-    desc: Deleting an email address from personal info
+  - test_title: 9508618-1
+    desc: Adding a link to user profile
     stages:
       - stage:
           input:
@@ -17,10 +17,10 @@ tests:
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /ocs/v2.php/cloud/users/test/additional_mail
+            method: POST
             data: |
-              {"key":"email@example.com","value":""}
+              {"value": "https://example.com/"}
+            uri: /ocs/v2.php/cloud/users/
             version: HTTP/1.1
           output:
-            no_log_contains: id "911100"
+            no_log_contains: id "931130"
