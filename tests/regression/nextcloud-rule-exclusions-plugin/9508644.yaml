@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508636.yaml
+  name: 9508644.yaml
 tests:
-  - test_title: 9508636-1
-    desc: Deleting out of office message
+  - test_title: 9508644-1
+    desc: Configuring/excluding 2FA enforcement for groups
     stages:
       - stage:
           input:
@@ -15,9 +15,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
-            method: DELETE
-            uri: /ocs/v2.php/apps/dav/api/v1/outOfOffice/username
+            method: PUT
+            uri: /settings/api/admin/twofactorauth
+            data: |
+              {"enforced":true,"enforcedGroups":["admin"],"excludedGroups":["Users"]}
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

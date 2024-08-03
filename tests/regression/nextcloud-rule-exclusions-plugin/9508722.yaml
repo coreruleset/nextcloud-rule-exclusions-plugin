@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508635.yaml
+  name: 9508722.yaml
 tests:
-  - test_title: 9508635-1
-    desc: Configuring default apps
+  - test_title: 9508722-1
+    desc: Editing a recipe category
     stages:
       - stage:
           input:
@@ -18,9 +18,9 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/logreader/api/settings
+            uri: /apps/cookbook/webapp/category/Soup
             data: |
-              { "setting":"defaultApps","value":["files","dashboard"] }
+              {"name":"Soup"}
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

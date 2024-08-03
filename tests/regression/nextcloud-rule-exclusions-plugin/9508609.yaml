@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "FPs when registering webauthn devices"
   enabled: true
-  name: 9508624.yaml
+  name: 9508609.yaml
 tests:
-  - test_title: 9508624-1
+  - test_title: 9508609-1
     desc: Registering webauthn device with pretty URLs
     stages:
       - stage:
@@ -25,7 +25,7 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "932236"|id "942200"|id "942260"|id "942340"|id "942370"|id "942430"|id "942431"|id "942432"
-  - test_title: 9508624-2
+  - test_title: 9508609-2
     desc: Registering webauthn device without pretty URLs
     stages:
       - stage:
