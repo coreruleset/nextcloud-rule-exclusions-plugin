@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508652.yaml
+  name: 9508631.yaml
 tests:
-  - test_title: 9508652-1
+  - test_title: 9508631-1
     desc: Viewing Nextcloud log files via web GUI
     stages:
       - stage:
@@ -22,7 +22,7 @@ tests:
             uri: /apps/logreader/poll
           output:
             no_log_contains: id "932236"
-  - test_title: 9508652-2
+  - test_title: 9508631-2
     desc: Viewing Nextcloud log files via web GUI
     stages:
       - stage:
@@ -39,7 +39,7 @@ tests:
             uri: /apps/logreader/poll
           output:
             no_log_contains: id "942450"
-  - test_title: 9508652-3
+  - test_title: 9508631-3
     desc: Viewing Nextcloud log files via web GUI
     stages:
       - stage:
@@ -55,7 +55,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "932236"
-  - test_title: 9508652-4
+  - test_title: 9508631-4
     desc: Viewing Nextcloud log files via web GUI
     stages:
       - stage:

@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508614.yaml
+  name: 9508639.yaml
 tests:
-  - test_title: 9508614-1
+  - test_title: 9508639-1
     desc: Changing the ordering of apps in the menu
     stages:
       - stage:

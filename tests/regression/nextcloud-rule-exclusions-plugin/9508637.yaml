@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508612.yaml
+  name: 9508637.yaml
 tests:
-  - test_title: 9508612-1
+  - test_title: 9508637-1
     desc: Adjusting availability hours
     stages:
       - stage:
