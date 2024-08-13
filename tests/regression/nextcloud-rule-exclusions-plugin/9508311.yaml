@@ -6,9 +6,7 @@ meta:
   name: 9508311.yaml
 tests:
   - test_title: 9508311-1
-    desc: |
-      Nextcloud 28 and newer
-      Public share: no
+    desc: "Checking for attachments"
     stages:
       - stage:
           input:
@@ -116,9 +114,7 @@ tests:
             no_log_contains: |-
               id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942210"|id "942390"|id "942432"|id "942450"
   - test_title: 9508311-6
-    desc: |
-      Nextcloud 28 and newer
-      Public share: yes
+    desc: "Checking for attachments on public shares"
     stages:
       - stage:
           input:
@@ -294,50 +290,6 @@ tests:
   - test_title: 9508311-14
     desc: |
       Nextcloud 27 and older
-      Public share: no
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/attachments
-            data: |
-              {"documentId":1,"sessionId":1,"sessionToken":"ls/RanDom","shareToken":null}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942210"|id "942390"|id "942432"|id "942450"
-  - test_title: 9508311-15
-    desc: |
-      Nextcloud 27 and older
-      Public share: yes
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/attachments
-            data: |
-              {"documentId":1,"sessionId":1,"sessionToken":"0x000+ran/dom","shareToken":"0x00000random"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942210"|id "942390"|id "942432"|id "942450"
-  - test_title: 9508311-16
-    desc: |
-      Nextcloud 27 and older
       Public share: yes
     stages:
       - stage:
@@ -357,7 +309,7 @@ tests:
           output:
             no_log_contains: |-
               id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942210"|id "942390"|id "942432"|id "942450"
-  - test_title: 9508311-17
+  - test_title: 9508311-15
     desc: |
       Nextcloud 27 and older
       Public share: yes
@@ -379,7 +331,7 @@ tests:
           output:
             no_log_contains: |-
               id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942210"|id "942390"|id "942432"|id "942450"
-  - test_title: 9508311-18
+  - test_title: 9508311-16
     desc: |
       Nextcloud 27 and older
       Public share: yes
