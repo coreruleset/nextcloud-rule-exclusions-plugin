@@ -1,11 +1,15 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Text Editor: Guest Token"
+  description: "Text Editor: Editing a text document"
   enabled: true
   name: 9508313.yaml
 tests:
   - test_title: 9508313-1
+    desc: |
+      Version: 27.1 and older
+      Action: autosync
+      Public share: no
     stages:
       - stage:
           input:
@@ -17,52 +21,17 @@ tests:
               Content-Type: application/json
             port: 80
             method: POST
-            uri: /apps/text/public/session/sync
+            uri: /apps/text/session/sync
             data: |
-              {"token": "ls78sdf"}
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
+            no_log_contains: id "941101"
   - test_title: 9508313-2
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/close
-            data: |
-              {"token": "ls78sdf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-3
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/push
-            data: |
-              {"token": "ls78sdf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-4
+    desc: |
+      Version: 27.1 and older
+      Action: autosync
+      Public share: yes
     stages:
       - stage:
           input:
@@ -76,12 +45,59 @@ tests:
             method: POST
             uri: /apps/text/public/session/sync
             data: |
-              {"token": "0x0800dsf78dgf"}
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
+            no_log_contains: id "941101"
+  - test_title: 9508313-3
+    desc: |
+      Version: 28 and newer
+      Action: autosync
+      Public share: no
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/session/1234/sync
+            data: |
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508313-4
+    desc: |
+      Version: 28 and newer
+      Action: autosync
+      Public share: yes
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/text/public/session/1234/sync
+            data: |
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
   - test_title: 9508313-5
+    desc: |
+      Version: 28 and newer
+      Action: manual save
+      Public share: no
     stages:
       - stage:
           input:
@@ -93,14 +109,17 @@ tests:
               Content-Type: application/json
             port: 80
             method: POST
-            uri: /apps/text/public/session/close
+            uri: /apps/text/session/1234/save
             data: |
-              {"token": "0x0800dsf78dgf"}
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
+            no_log_contains: id "941101"
   - test_title: 9508313-6
+    desc: |
+      Version: 28 and newer
+      Action: manual save
+      Public share: yes
     stages:
       - stage:
           input:
@@ -112,124 +131,9 @@ tests:
               Content-Type: application/json
             port: 80
             method: POST
-            uri: /apps/text/public/session/push
+            uri: /apps/text/public/session/1234/save
             data: |
-              {"token": "0x0800dsf78dgf"}
+              {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-7
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/sync
-            data: |
-              {"token": "ls78sdf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-8
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/close
-            data: |
-              {"token": "ls78sdf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-9
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/push
-            data: |
-              {"token": "ls78sdf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-10
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/sync
-            data: |
-              {"token": "0x0800dsf78dgf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-11
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/close
-            data: |
-              {"token": "0x0800dsf78dgf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
-  - test_title: 9508313-12
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
-            port: 80
-            method: POST
-            uri: /apps/text/public/session/1234/push
-            data: |
-              {"token": "0x0800dsf78dgf"}
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "932236"|id "932250"|id "942450"
+            no_log_contains: id "941101"

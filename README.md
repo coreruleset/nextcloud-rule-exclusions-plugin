@@ -50,7 +50,7 @@ For full and up to date instructions for the different available plugin installa
 Large uploads can be modified with SecRequestBodyLimit. Or they can be more controlled by using the following:
 
 ```
-SecRule REQUEST_URI "@endsWith /index.php/apps/files/ajax/upload.php" \
+SecRule REQUEST_FILENAME "@endsWith /index.php/apps/files/ajax/upload.php" \
     "id:9508610,\
     phase:1,\
     t:none,\
