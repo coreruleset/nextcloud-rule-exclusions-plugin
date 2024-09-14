@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail"
   enabled: true
-  name: 9508989.yaml
+  name: 9508995.yaml
 tests:
-  - test_title: 9508989-1
-    desc: Setting a email signature
+  - test_title: 9508995-1
+    desc: Editing an email alias
     stages:
       - stage:
           input:
@@ -18,15 +18,14 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/mail/api/accounts/1/signature
+            uri: /apps/mail/api/accounts/2/aliases/1
             data: |
-              {"signature":"<p style=\"margin:0;\">&lt;script&gt;</p>"}
+              {"alias":"test@example.com","aliasName":"test123","smimeCertificateId":null}
             version: HTTP/1.1
           output:
-            no_log_contains: |
-              id "911100"|id "941101"
-  - test_title: 9508989-2
-    desc: Setting a email signature for an alias
+            no_log_contains: id "911100"
+  - test_title: 9508995-2
+    desc: Deleting an email alias
     stages:
       - stage:
           input:
@@ -35,13 +34,9 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/mail/api/accounts/2/aliases/2/signature
-            data: |
-             {"signature":"<p style=\"margin:0;\">t</p>"}
+            method: DELETE
+            uri: /apps/mail/api/accounts/2/aliases/1
             version: HTTP/1.1
           output:
-            no_log_contains: |
-              id "911100"|id "941101"
+            no_log_contains: id "911100"
