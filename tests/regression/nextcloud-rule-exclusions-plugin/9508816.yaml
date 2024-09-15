@@ -1,0 +1,42 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Deck"
+  enabled: true
+  name: 9508816.yaml
+tests:
+  - test_title: 9508816-1
+    desc: Editing a comment on a card
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /ocs/v2.php/apps/deck/api/v1.0/cards/5/comments/61
+            data: |
+              {"message":"<div data-v-3b61be27=\"\"></div>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508816-2
+    desc: Deleting a comment on a card
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /ocs/v2.php/apps/deck/api/v1.0/cards/5/comments/62
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
