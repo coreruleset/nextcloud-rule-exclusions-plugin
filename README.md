@@ -49,8 +49,9 @@ For full and up to date instructions for the different available plugin installa
 
 Large uploads can be modified with SecRequestBodyLimit. Or they can be more controlled by using the following:
 
+Apache with ModSecurity2:
 ```
-SecRule REQUEST_FILENAME "@endsWith /index.php/apps/files/ajax/upload.php" \
+SecRule REQUEST_FILENAME "@rx (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))" \
     "id:9508610,\
     phase:1,\
     t:none,\
@@ -62,14 +63,14 @@ ctl:requestBodyLimit is not supported in libmodsecurity3, Nginx users can increa
 by using the following:
 
 ```
-location /index.php/apps/files/ajax/upload.php { modsecurity_rules 'SecRequestBodyLimit 1073741824'; }
+location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/)) { modsecurity_rules 'SecRequestBodyLimit 1073741824'; }
 ```
 
 Apache libmodsecurity3 Example:
 ```
- <location "/index.php/apps/files/ajax/upload.php">
+<LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
     modsecurity_rules 'SecRequestBodyLimit 1073741824'
-</location>
+</LocationMatch>
 ```
 
 ## Relaxing file upload restrictions
