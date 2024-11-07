@@ -45,6 +45,10 @@ Additional apps may be supported if there is enough demand from the community, b
 
 For full and up to date instructions for the different available plugin installation methods, refer to [How to Install a Plugin](https://coreruleset.org/docs/concepts/plugins/#how-to-install-a-plugin) in the official CRS documentation.
 
+### Conditionally enable plugins for multi-application environments
+
+For full and up to date instructions on how to conditionally enable/disable this plugin on a multisite environment, please refer to [Conditionally enable plugins for multi-application environments](https://coreruleset.org/docs/concepts/plugins/#conditionally-enable-plugins-for-multi-application-environments) in the official CRS documentation.
+
 ## Increasing max upload size
 
 Large uploads can be modified with SecRequestBodyLimit. Or they can be more controlled by using the following:
