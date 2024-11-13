@@ -6,7 +6,7 @@ meta:
   name: 9508400.yaml
 tests:
   - test_title: 9508400-1
-    desc: Logging into Nextcloud
+    desc: Logging in to Nextcloud
     stages:
       - stage:
           input:
