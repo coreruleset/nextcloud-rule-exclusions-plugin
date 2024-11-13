@@ -3,12 +3,12 @@ meta:
   author: "Esad Cetiner"
   description: |
     Nextcloud Mail
-    Note this test also applies for rule 9508988 (Which allows com and inc TLDs)
+    Note: this test also applies for rule 9508988 (Which allows com and inc TLDs)
   enabled: true
   name: 9508987.yaml
 tests:
   - test_title: 9508987-1
-    desc: Adding internal addresses
+    desc: Adding internal addresses (.com)
     stages:
       - stage:
           input:
@@ -24,7 +24,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-2
-    desc: Removing internal addresses
+    desc: Removing internal addresses (.com)
     stages:
       - stage:
           input:
@@ -40,7 +40,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-3
-    desc: Adding internal addresses
+    desc: Adding internal addresses (.inc)
     stages:
       - stage:
           input:
@@ -56,7 +56,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-4
-    desc: Removing internal addresses
+    desc: Removing internal addresses (.inc)
     stages:
       - stage:
           input:
@@ -72,7 +72,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-5
-    desc: Adding a domain to the trusted senders list
+    desc: Adding a domain to the trusted senders list (.com)
     stages:
       - stage:
           input:
@@ -88,7 +88,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-6
-    desc: Adding a domain from the trusted senders list
+    desc: Removing a domain from the trusted senders list (.com)
     stages:
       - stage:
           input:
@@ -104,7 +104,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-7
-    desc: Adding a domain to the trusted senders list
+    desc: Adding a domain to the trusted senders list (.inc)
     stages:
       - stage:
           input:
@@ -120,7 +120,7 @@ tests:
           output:
             no_log_contains: id "911100"
   - test_title: 9508987-8
-    desc: Removing a domain from the trusted senders list
+    desc: Removing a domain from the trusted senders list (.inc)
     stages:
       - stage:
           input:
