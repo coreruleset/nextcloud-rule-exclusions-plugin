@@ -36,4 +36,4 @@ tests:
             uri: /apps/mail/api/messages/138/tags/%24test
             version: HTTP/1.1
           output:
-            no_log_contains: id "911100"`
+            no_log_contains: id "911100"

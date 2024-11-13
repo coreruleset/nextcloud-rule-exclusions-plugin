@@ -38,7 +38,7 @@ tests:
             uri: /apps/mail/api/internalAddress/test%40example.com?type=individual
             version: HTTP/1.1
           output:
-            no_log_contains: id "911100"`
+            no_log_contains: id "911100"
   - test_title: 9508987-3
     desc: Adding internal addresses
     stages:
