@@ -1,12 +1,12 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "FPs during login"
+  description: "FPs during login/reauthentication"
   enabled: true
   name: 9508400.yaml
 tests:
   - test_title: 9508400-1
-    desc: Disable OWASP CRS for password with pretty URLs
+    desc: Logging in to Nextcloud
     stages:
       - stage:
           input:
@@ -23,7 +23,7 @@ tests:
           output:
             no_log_contains: id "941101"
   - test_title: 9508400-2
-    desc: Disable OWASP CRS for password without pretty URLs
+    desc: Reauthentication when performing an sensitive action (i.e changing personal settings or an admin installing a new app)
     stages:
       - stage:
           input:
@@ -32,46 +32,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
             port: 80
             method: POST
-            uri: /index.php/login
-            data: "password=<script>"
+            uri: /login/confirm
+            data: |
+              {"password": "<script>"}
             version: HTTP/1.1
           output:
             no_log_contains: id "941101"
-  - test_title: 9508400-3
-    desc: Desktop app redirecting to web gui to authenticate with pretty URLs
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /login
-            data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "920230"|id "932190"|id "932200"|id "942431"|id "942432"
-  - test_title: 9508400-4
-    desc: Desktop app redirecting to web gui to authenticate without pretty URLs
-    stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: POST
-            uri: /index.php/login
-            data: "redirect_url=/login/v2/grant?user=Esad%20Cetiner&stateToken=sample-token"
-            version: HTTP/1.1
-          output:
-            no_log_contains: |-
-              id "920230"|id "932190"|id "932200"|id "942431"|id "942432"

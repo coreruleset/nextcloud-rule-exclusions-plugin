@@ -1,12 +1,14 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Adjusting Nextcloud Files settings/Using the sidebar"
+  description: |
+    Nextcloud Mail
+    Note: this test also applies for rule 9508988 (Which allows com and inc TLDs)
   enabled: true
-  name: 9508961.yaml
+  name: 9508987.yaml
 tests:
-  - test_title: 9508961-1
-    desc: Enabling image preview cropping
+  - test_title: 9508987-1
+    desc: Adding internal addresses (.com)
     stages:
       - stage:
           input:
@@ -15,17 +17,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/files/api/v1/config/crop_image_previews
-            data: |
-              { "value":true }
+            uri: /apps/mail/api/internalAddress/test%40example.com?type=individual
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-2
-    desc: Enabling Grid view
+  - test_title: 9508987-2
+    desc: Removing internal addresses (.com)
     stages:
       - stage:
           input:
@@ -34,17 +33,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/files/api/v1/config/grid_view
-            data: |
-              { "value":true }
+            method: DELETE
+            uri: /apps/mail/api/internalAddress/test%40example.com?type=individual
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-3
-    desc: Enabling show hidden files
+  - test_title: 9508987-3
+    desc: Adding internal addresses (.inc)
     stages:
       - stage:
           input:
@@ -53,17 +49,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/files/api/v1/config/show_hidden
-            data: |
-              { "value":true }
+            uri: /apps/mail/api/internalAddress/test%40example.inc?type=individual
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-4
-    desc: Enabling "Sort Favorites first"
+  - test_title: 9508987-4
+    desc: Removing internal addresses (.inc)
     stages:
       - stage:
           input:
@@ -72,17 +65,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/files/api/v1/config/sort_favorites_first
-            data: |
-              { "value":true }
+            method: DELETE
+            uri: /apps/mail/api/internalAddress/test%40example.inc?type=individual
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-5
-    desc: Enabling "Sort folders first"
+  - test_title: 9508987-5
+    desc: Adding a domain to the trusted senders list (.com)
     stages:
       - stage:
           input:
@@ -91,17 +81,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/files/api/v1/config/sort_folders_first
-            data: |
-              { "value":true }
+            uri: /apps/mail/api/trustedsenders/example.com?type=domain
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-6
-    desc: Browsing folders via sidebar
+  - test_title: 9508987-6
+    desc: Removing a domain from the trusted senders list (.com)
     stages:
       - stage:
           input:
@@ -110,17 +97,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/files/api/v1/views
-            data: |
-              {"value":true,"view":"https://example.com/remote.php/dav/files/example/Templates","key":"expanded"}
+            method: DELETE
+            uri: /apps/mail/api/trustedsenders/example.com?type=domain
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
-  - test_title: 9508961-7
-    desc: Viewing shares via sidebar
+  - test_title: 9508987-7
+    desc: Adding a domain to the trusted senders list (.inc)
     stages:
       - stage:
           input:
@@ -129,12 +113,25 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/files/api/v1/config/folder_tree
-            data: |
-              {"value":false}
+            uri: /apps/mail/api/trustedsenders/example.inc?type=domain
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508987-8
+    desc: Removing a domain from the trusted senders list (.inc)
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /apps/mail/api/trustedsenders/example.inc?type=domain
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

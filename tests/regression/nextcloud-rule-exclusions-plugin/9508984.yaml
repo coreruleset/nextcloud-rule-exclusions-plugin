@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail"
   enabled: true
-  name: 9508989.yaml
+  name: 9508984.yaml
 tests:
-  - test_title: 9508989-1
-    desc: Setting a email signature
+  - test_title: 9508984-1
+    desc: Adding a tag to an email
     stages:
       - stage:
           input:
@@ -15,18 +15,14 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/mail/api/accounts/1/signature
-            data: |
-              {"signature":"<p style=\"margin:0;\">&lt;script&gt;</p>"}
+            uri: /apps/mail/api/messages/138/tags/%24test
             version: HTTP/1.1
           output:
-            no_log_contains: |
-              id "911100"|id "941101"
-  - test_title: 9508989-2
-    desc: Setting a email signature for an alias
+            no_log_contains: id "911100"
+  - test_title: 9508984-2
+    desc: Removing a tag from an email
     stages:
       - stage:
           input:
@@ -35,13 +31,9 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: PUT
-            uri: /apps/mail/api/accounts/2/aliases/2/signature
-            data: |
-             {"signature":"<p style=\"margin:0;\">t</p>"}
+            method: DELETE
+            uri: /apps/mail/api/messages/138/tags/%24test
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "911100"|id "941101"
+            no_log_contains: id "911100"
