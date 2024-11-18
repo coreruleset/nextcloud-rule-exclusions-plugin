@@ -20,5 +20,5 @@ tests:
             uri: /apps/mail/proxy?src=https://go.netacad.com/rs/059-VFZ-834/images/ezgif.com-animated-gif-maker%281%29.gif
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "920230"|id "920273"|id "931130"|id "942421"|id "942430"|id "942431"|id "942432"

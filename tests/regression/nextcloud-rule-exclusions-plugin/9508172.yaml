@@ -23,7 +23,7 @@ tests:
               {"path":"/path/to/tmp/example/","shareType":3,"password":"<script>","attributes":"[]"}
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "930120"|id "941110"
   - test_title: 9508172-2
     desc: Editing an existing share
@@ -43,7 +43,7 @@ tests:
               {"permissions":"31","attributes":"[]","note":"","expireDate":"2024-06-23 00:00:00","label":"test","password":"<script>","hideDownload":"false"}
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "911100"|id "930120"|id "941110"
   - test_title: 9508172-3
     desc: Deleting an share

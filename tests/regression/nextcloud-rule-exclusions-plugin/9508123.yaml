@@ -23,5 +23,5 @@ tests:
               {"actorDisplayName":"test","actorId":"test","actorType":"users","creationDateTime":"Sat, 16 Nov 2024 05:14:53 GMT","message":"&lt;script&gt;","objectType":"files","verb":"comment"}
             version: HTTP/1.1
           output:
-            log_contains: |-
+            no_log_contains: |-
               id "920272"|id "920273"|id "921110"|id "941100"

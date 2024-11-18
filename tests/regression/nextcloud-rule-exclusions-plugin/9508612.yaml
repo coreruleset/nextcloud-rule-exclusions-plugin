@@ -57,5 +57,5 @@ tests:
                         </x0:propertyupdate>
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "911100"|id "932236"|id "942430"|id "942431"|id "942432"
