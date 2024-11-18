@@ -37,5 +37,5 @@ tests:
               </d:propfind>
             version: HTTP/1.1
           output:
-            log_contains: |-
+            no_log_contains: |-
               id "911100"|id "920272"|id "920273"|id "920420"|id "921110"
