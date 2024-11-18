@@ -31,7 +31,8 @@ tests:
                 </oc:filter-comments>
           version: HTTP/1.1
           output:
-            no_log_contains: id "920420"
+            no_log_contains: |-
+              id "911100"|id "920420"|id "941160"
   - test_title: 9508182-2
     desc: Editing comments on an file
     stages:
@@ -60,4 +61,4 @@ tests:
           version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920420"|id "941160"
+              id "911100"|id "920420"|id "941160"
