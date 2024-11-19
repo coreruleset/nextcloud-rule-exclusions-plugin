@@ -6,7 +6,7 @@ meta:
   name: 9508182.yaml
 tests:
   - test_title: 9508182-1
-    desc: Viewing comments on an file
+    desc: Viewing comments on a file
     stages:
       - stage:
           input:
@@ -34,7 +34,7 @@ tests:
             no_log_contains: |-
               id "911100"|id "920420"|id "941160"
   - test_title: 9508182-2
-    desc: Editing comments on an file
+    desc: Editing comments on a file
     stages:
       - stage:
           input:

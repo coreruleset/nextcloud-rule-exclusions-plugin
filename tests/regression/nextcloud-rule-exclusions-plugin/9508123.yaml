@@ -6,7 +6,7 @@ meta:
   name: 9508123.yaml
 tests:
   - test_title: 9508123-1
-    desc: Posting a comment on an file
+    desc: Posting a comment on a file
     stages:
       - stage:
           input:
