@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508171.yaml
+  name: 9508134.yaml
 tests:
-  - test_title: 9508171-1
+  - test_title: 9508134-1
     desc: Entering password on a public share (Nextcloud changed the case on this endpoint, tested on 29.0.3)
     stages:
       - stage:
@@ -24,7 +24,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "941101"
-  - test_title: 9508171-2
+  - test_title: 9508134-2
     desc: Entering password on a public share
     stages:
       - stage:

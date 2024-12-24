@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508363.yaml
+  name: 9508337.yaml
 tests:
-  - test_title: 9508363-1
+  - test_title: 9508337-1
     desc: Getting Calendar inbox
     stages:
       - stage:
