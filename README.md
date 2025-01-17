@@ -26,6 +26,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Text Editor               |  Supported ✅     |
 | Nextcloud Recognize                 |  Supported ✅     |
 | Nextcloud Cookbook                  |  Supported ✅     |
+| Nextcloud Files HPB ( Notify_Push ) |  Supported ✅     |
 | Nextcloud Talk                      |  Not supported ❌ |
 | Nextcloud Forms                     |  Not supported ❌ |
 | Nextcloud Polls                     |  Not supported ❌ |
@@ -114,6 +115,11 @@ Apache libmodsecurity3 Example:
    modsecurity_rules 'SecRequestBodyNoFilesLimit 144384'
 </location>
 ```
+
+## Nextcloud Server Crawler
+
+The Nextcloud Server Crawler is used by Nextcloud for various functions of Nextcloud such as generating document previews with Collabora, and testing the fuctionality of Nextcloud (For example, when setting up the high performance backend for files).
+To resolve false positives with the server crawler, you will need to add your Nextcloud Server IP(s) to `tx.nextcloud-rule-exclusions-plugin_crawler_ips` in `nextcloud-rule-exclusions-config.conf`, you can use a comma to seperate multiple IP addresses (If needed). Your Nextcloud Server's IP address will likely be it's public IP, if your server is behind a NAT firewall then it's either your Nextcloud Server's private IP address or your router's IP address (Depeding on your NAT configuration). You can also monitor your error log to find the correct IP address.
 
 ## Testing
 
