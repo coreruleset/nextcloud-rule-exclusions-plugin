@@ -77,20 +77,6 @@ Apache libmodsecurity3 Example:
 </LocationMatch>
 ```
 
-## Relaxing file upload restrictions
-
-To relax upload restrictions for only the php files that need it, you put something like this in crs-setup.conf:
-
-```
-SecRule REQUEST_FILENAME "@rx /(?:remote\.php|index\.php)/" \
-    "id:9508600,\
-    phase:2,\
-    t:none,\
-    nolog,\
-    pass,\
-    setvar:'tx.restricted_extensions=.bak/ .config/ .conf/'"
-```
-
 ## Increasing max request body size
 
 The Nextcloud desktop client occasionally sends large request bodies not containing any uploaded files.
