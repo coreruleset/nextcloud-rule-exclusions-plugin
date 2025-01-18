@@ -26,7 +26,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Text Editor               |  Supported ✅     |
 | Nextcloud Recognize                 |  Supported ✅     |
 | Nextcloud Cookbook                  |  Supported ✅     |
-| Nextcloud Files HPB ( Notify_Push ) |  Supported ✅     |
+| Nextcloud Files HPB (Notify_Push)   |  Supported ✅     |
 | Nextcloud Talk                      |  Not supported ❌ |
 | Nextcloud Forms                     |  Not supported ❌ |
 | Nextcloud Polls                     |  Not supported ❌ |
@@ -52,7 +52,7 @@ For full and up to date instructions on how to conditionally enable/disable this
 
 ## Known Limitations
 
-Due to some engine limitations, there are a few issues that can't be handled out of the box with this plugin (Such as issues relating to uploading large file sizes).
+Due to some engine limitations, there are a few issues that can't be handled out of the box with this plugin (such as issues relating to uploading large file sizes).
 Below you can find a list of known limitations along with workarounds for this issue.
 
 ### Increasing max upload size
@@ -123,7 +123,7 @@ Apache libmodsecurity3 Example:
 
 ### Nextcloud Server Crawler
 
-The Nextcloud Server Crawler is used by Nextcloud for various functions of Nextcloud such as generating document previews with Collabora, and testing the fuctionality of Nextcloud (For example, when setting up the high performance backend for files).
+The Nextcloud Server Crawler is used by Nextcloud for various functions of Nextcloud such as generating document previews with Collabora, and testing the functionality of Nextcloud (for example, when setting up the high performance backend for files).
 Copy this rule and replace `your-server-ip` with your Nextcloud Server's IP address.
 Your Nextcloud Server's IP address will either be your server's WAN IP, or if your server is behind a NAT firewall then it's either your server's private IP address or your default gateway's IP address (Depending on your NAT configuration).
 ```
