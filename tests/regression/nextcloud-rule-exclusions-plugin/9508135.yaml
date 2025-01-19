@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508172.yaml
+  name: 9508135.yaml
 tests:
-  - test_title: 9508172-1
+  - test_title: 9508135-1
     desc: Creating a new share for a file/folder
     stages:
       - stage:
@@ -25,7 +25,7 @@ tests:
           output:
             no_log_contains: |-
               id "930120"|id "941110"
-  - test_title: 9508172-2
+  - test_title: 9508135-2
     desc: Editing an existing share
     stages:
       - stage:
@@ -45,7 +45,7 @@ tests:
           output:
             no_log_contains: |-
               id "911100"|id "930120"|id "941110"
-  - test_title: 9508172-3
+  - test_title: 9508135-3
     desc: Deleting an share
     stages:
       - stage:

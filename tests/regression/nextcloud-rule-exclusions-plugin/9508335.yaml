@@ -1,0 +1,29 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508335.yaml
+tests:
+  - test_title: 9508335-1
+    desc: Creating an calendar appointment
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/calendar/v1/appointment_configs
+            data: >-
+              {"name":"test","description":"<script>","location":"test","visibility":"PRIVATE","targetCalendarUri":
+              "personal-1","availability":{"timezoneId":"Australia/Melbourne","slots":{"MO":[],"TU":[],"WE":[],
+              "TH":[],"FR":[],"SA":[],"SU":[]}},"length":300,"increment":900,"preparationDuration":0,"followupDuration":0,
+              "timeBeforeNextSlot":0,"futureLimit":5184000,"calendarFreeBusyUris":[]}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941100"

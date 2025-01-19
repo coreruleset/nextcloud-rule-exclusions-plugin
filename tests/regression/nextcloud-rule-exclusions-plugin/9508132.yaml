@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508123.yaml
+  name: 9508132.yaml
 tests:
-  - test_title: 9508123-1
+  - test_title: 9508132-1
     desc: Posting a comment on a file
     stages:
       - stage:

@@ -6,7 +6,7 @@ meta:
   name: 9508111.yaml
 tests:
   - test_title: 9508111-1
-    desc: Restoring a file to an previous/newer version
+    desc: Moving a chuncked uploaded file to user's files directory
     stages:
       - stage:
           input:
@@ -15,27 +15,11 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: text/plain;charset=UTF-8
+              Content-Type: application/octet-stream
+              Destination: /remote.php/dav/files/esadc/ubuntu-24.04.1-desktop-amd64.iso
             port: 80
-            method: PROPFIND
-            uri: /remote.php/dav/versions/username/versions/1371159/
-            data: |
-              <?xml version="1.0"?>
-              <d:propfind xmlns:d="DAV:"
-                xmlns:oc="http://owncloud.org/ns"
-                xmlns:nc="http://nextcloud.org/ns"
-                xmlns:ocs="http://open-collaboration-services.org/ns">
-                <d:prop>
-                  <d:getcontentlength />
-                  <d:getcontenttype />
-                  <d:getlastmodified />
-                  <d:getetag />
-                  <nc:version-label />
-                  <nc:version-author />
-                  <nc:has-preview />
-                </d:prop>
-              </d:propfind>
+            method: MOVE
+            uri: /remote.php/dav/uploads/esadc/3400313959/.file
             version: HTTP/1.1
           output:
-            no_log_contains: |-
-              id "911100"|id "920272"|id "920273"|id "920420"|id "921110"
+            no_log_contains: id "920420"

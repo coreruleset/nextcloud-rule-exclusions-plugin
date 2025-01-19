@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508180.yaml
+  name: 9508137.yaml
 tests:
-  - test_title: 9508180-1
+  - test_title: 9508137-1
     desc: Creating a password protected file upload request and emailing the recipient
     stages:
       - stage:

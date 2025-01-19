@@ -83,20 +83,6 @@ Apache libmodsecurity3 Example:
 </LocationMatch>
 ```
 
-### Relaxing file upload restrictions
-
-To relax upload restrictions for only the php files that need it, you put something like this in crs-setup.conf:
-
-```
-SecRule REQUEST_FILENAME "@rx /(?:remote\.php|index\.php)/" \
-    "id:9508031,\
-    phase:2,\
-    t:none,\
-    nolog,\
-    pass,\
-    setvar:'tx.restricted_extensions=.bak/ .config/ .conf/'"
-```
-
 ### Increasing max request body size
 
 The Nextcloud desktop client occasionally sends large request bodies not containing any uploaded files.
@@ -150,6 +136,6 @@ After the plugin is enabled, Nextcloud should work without problems caused by CR
 
 ## License
 
-Copyright (c) 2022-2024 OWASP CRS project. All rights reserved.
+Copyright (c) 2022-2025 OWASP CRS project. All rights reserved.
 
 The OWASP CRS and its official plugins are distributed under Apache Software License (ASL) version 2. Please see the enclosed LICENSE file for full details.
