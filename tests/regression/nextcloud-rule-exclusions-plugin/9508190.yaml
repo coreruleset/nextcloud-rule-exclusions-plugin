@@ -1507,10 +1507,10 @@ tests:
             no_log_contains: id "911100"
   - test_title: 9508190-79
       desc: |
-      Text Editor:
-      Opening an file
-      Public Share: NO
-      NC 28 and newer
+        Text Editor:
+        Opening an file
+        Public Share: NO
+        NC 28 and newer
     stages:
       - stage:
           input:
