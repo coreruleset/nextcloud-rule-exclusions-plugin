@@ -23,7 +23,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "931130"
-  - test_title: 9508552-2
+  - test_title: 9508551-2
     desc: Sending access token to dedicated Collabora Server
     stages:
       - stage:
@@ -40,7 +40,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "932236"
-  - test_title: 9508552-3
+  - test_title: 9508551-3
     desc: Sending access token to dedicated Collabora Server
     stages:
       - stage:
