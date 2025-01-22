@@ -3,9 +3,33 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508118.yaml
+  name: 9508192.yaml
 tests:
-  - test_title: 9508118-1
+  - test_title: 9508192-1
+    desc: Getting Calendar inbox
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: text/plain;charset=UTF-8
+            port: 80
+            method: PROPFIND
+            uri: /remote.php/dav/calendars/test/inbox
+            data: |
+              <?xml version="1.0"?>
+                <x0:propfind xmlns:x0="DAV:">
+                  <x0:prop>
+                    <x1:calendar-availability xmlns:x1="urn:ietf:params:xml:ns:caldav"/>
+                  </x0:prop>
+                </x0:propfind>
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "920420"
+  - test_title: 9508192-2
     desc: Getting files/folders stored on the server
     stages:
       - stage:
@@ -47,7 +71,7 @@ tests:
           version: HTTP/1.1
           output:
             no_log_contains: id "920420"
-  - test_title: 9508118-2
+  - test_title: 9508192-3
     desc: Opening an image from a public share
     stages:
       - stage:
