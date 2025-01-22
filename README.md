@@ -125,6 +125,8 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
     ctl:ruleRemoveById=920300,\
     ctl:ruleRemoveById=920320,\
     ctl:ruleRemoveById=920330,\
+    ctl:ruleRemoveTargetById=920120;FILES:data,\
+    ctl:ruleRemoveTargetById=920121;FILES:data,\
     ctl:ruleRemoveTargetById=920120;FILES_NAMES,\
     ctl:ruleRemoveTargetById=920121;FILES_NAMES,\
     ctl:ruleRemoveTargetById=922130;MULTIPART_PART_HEADERS"
