@@ -27,12 +27,12 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Recognize                 |  Supported ✅     |
 | Nextcloud Cookbook                  |  Supported ✅     |
 | Nextcloud Files HPB (Notify_Push)   |  Supported ✅     |
+| Nextcloud News                      |  Supported ✅     |
 | Nextcloud Talk                      |  Not supported ❌ |
 | Nextcloud Forms                     |  Not supported ❌ |
 | Nextcloud Polls                     |  Not supported ❌ |
 | Nextcloud Unspash                   |  Not supported ❌ |
 | Nextcloud Collectives               |  Not supported ❌ |
-| Nextcloud News                      |  Not supported ❌ |
 | Nextcloud Maps                      |  Not supported ❌ |
 | Cospend                             |  Not supported ❌ |
 | Breeze Dark                         |  Not supported ❌ |
