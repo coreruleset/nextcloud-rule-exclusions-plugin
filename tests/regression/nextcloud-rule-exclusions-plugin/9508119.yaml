@@ -19,10 +19,10 @@ tests:
             port: 80
             method: POST
             uri: /remote.php/dav/files/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-2
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
@@ -37,10 +37,10 @@ tests:
             port: 80
             method: PUT
             uri: /remote.php/dav/files/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-3
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
@@ -55,10 +55,10 @@ tests:
             port: 80
             method: POST
             uri: /remote.php/dav/uploads/username/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-4
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
@@ -73,10 +73,10 @@ tests:
             port: 80
             method: PUT
             uri: /remote.php/dav/uploads/username/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-5
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
@@ -91,10 +91,10 @@ tests:
             port: 80
             method: POST
             uri: /remote.php/dav/uploads/username/something/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-6
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
@@ -109,10 +109,10 @@ tests:
             port: 80
             method: PUT
             uri: /remote.php/dav/uploads/username/something/something
-            data: "evil=<script>"
+            data: "evil=/bin/bash"
             version: HTTP/1.1
           output:
-            log_contains: id "941100"
+            log_contains: id "932160"
   - test_title: 9508119-7
     desc: Make sure iOS file upload workaround is disabled by default
     stages:
