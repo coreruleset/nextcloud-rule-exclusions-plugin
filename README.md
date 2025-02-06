@@ -89,6 +89,13 @@ Apache with libmodsecurity3:
 </LocationMatch>
 ```
 
+### Fixing file uploads on iOS
+
+The Nextcloud iOS app does not set the correct content type when uploading files, which causes issues with CRS as it relies on the content type to correctly parse data.
+There's a workaround included with the plugin but it's disabled by default due to a bypass risk, if you use the Nextcloud iOS app then uncomment rule `9508011` in `nextcloud-rule-exclusions-config.conf` to enable the workaround.
+The workaround will be removed when this issue is fixed within the iOS app.
+See: https://github.com/nextcloud/ios/issues/1942
+
 ### Nextcloud Server Crawler
 
 The Nextcloud Server Crawler is used by Nextcloud for various functions of Nextcloud such as generating document previews with Collabora, and testing the functionality of Nextcloud (for example, when setting up the high performance backend for files).
