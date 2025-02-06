@@ -57,54 +57,36 @@ Below you can find a list of known limitations along with workarounds for this i
 
 ### Increasing max upload size
 
-Large uploads can be modified with SecRequestBodyLimit. Or they can be more controlled by using the following:
+ModSecurity has very strict defaults on the size of file uploads (13MB), which is often too small even for photos.
+It's strongly recommended to increase the max upload size to a value like 1GB by adjusting both `SecRequestBodyNoFilesLimit` and `SecRequestBodyLimit`.
+
+The process of increasing the value is slightly different depending on your web server, see below for some examples.
+
+**NOTE:** SecRequestBodyNoFilesLimit changes the max size for the request body, and not the max file upload size. Due to how Nextcloud iOS uploads files ModSecurity does not recognize it as a file upload.
 
 Apache with ModSecurity2:
 ```
-SecRule REQUEST_FILENAME "@rx (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))" \
-    "id:9508030,\
-    phase:1,\
-    t:none,\
-    nolog,\
-    ctl:requestBodyLimit=1073741824"
-```
-
-ctl:requestBodyLimit is not supported in libmodsecurity3, Nginx users can increase max upload size
-by using the following:
-
-```
-location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/)) { modsecurity_rules 'SecRequestBodyLimit 1073741824'; }
-```
-
-Apache libmodsecurity3 Example:
-```
 <LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
-    modsecurity_rules 'SecRequestBodyLimit 1073741824'
+    SecRequestBodyLimit 1073741824
+    SecRequestBodyNoFilesLimit 1073741824
 </LocationMatch>
 ```
 
-### Increasing max request body size
+NGINX with libModSecurity3:
 
-The Nextcloud desktop client occasionally sends large request bodies not containing any uploaded files.
-ModSecurity will block request bodies larger than 131KB, adjusting SecRequestBodyNoFilesLimit to 141KB works for all scenarios tested.
-
-Nginx libmodsecurity3 Example:
 ```
-location /remote.php/dav/files/ { modsecurity_rules 'SecRequestBodyNoFilesLimit 144384'; }
-```
-
-Apache modsecurity2 Example:
-```
-<location "/remote.php/dav/files/">
-   SecRequestBodyNoFilesLimit 144384
-</location>
+location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/)) { 
+    modsecurity_rules 'SecRequestBodyLimit 1073741824
+    SecRequestBodyNoFilesLimit 1073741824'; 
+}
 ```
 
-Apache libmodsecurity3 Example:
+Apache with libmodsecurity3:
 ```
-<location "/remote.php/dav/files/">
-   modsecurity_rules 'SecRequestBodyNoFilesLimit 144384'
-</location>
+<LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
+    modsecurity_rules 'SecRequestBodyLimit 1073741824
+    SecRequestBodyNoFilesLimit 1073741824';
+</LocationMatch>
 ```
 
 ### Nextcloud Server Crawler
