@@ -58,7 +58,7 @@ Below you can find a list of known limitations along with workarounds for this i
 ### Increasing max upload size
 
 ModSecurity has very strict defaults on the size of file uploads (13MB), which is often too small even for photos.
-It's strongly recommended to increase the max upload size to a value like 1GB by adjusting both `SecRequestBodyNoFilesLimit` and `SecRequestBodyLimit`.
+It's strongly recommended to increase the max upload size to a value like 10GB by adjusting both `SecRequestBodyNoFilesLimit` and `SecRequestBodyLimit`.
 
 The process of increasing the value is slightly different depending on your web server, see below for some examples.
 
@@ -67,8 +67,8 @@ The process of increasing the value is slightly different depending on your web 
 Apache with ModSecurity2:
 ```
 <LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
-    SecRequestBodyLimit 1073741824
-    SecRequestBodyNoFilesLimit 1073741824
+    SecRequestBodyLimit 10737418240
+    SecRequestBodyNoFilesLimit 10737418240
 </LocationMatch>
 ```
 
@@ -76,16 +76,16 @@ NGINX with libModSecurity3:
 
 ```
 location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/)) { 
-    modsecurity_rules 'SecRequestBodyLimit 1073741824
-    SecRequestBodyNoFilesLimit 1073741824'; 
+    modsecurity_rules 'SecRequestBodyLimit 10737418240
+    SecRequestBodyNoFilesLimit 10737418240'; 
 }
 ```
 
 Apache with libmodsecurity3:
 ```
 <LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
-    modsecurity_rules 'SecRequestBodyLimit 1073741824
-    SecRequestBodyNoFilesLimit 1073741824';
+    modsecurity_rules 'SecRequestBodyLimit 10737418240
+    SecRequestBodyNoFilesLimit 10737418240';
 </LocationMatch>
 ```
 
