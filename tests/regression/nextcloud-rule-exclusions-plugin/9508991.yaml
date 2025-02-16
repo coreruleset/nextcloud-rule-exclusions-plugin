@@ -233,3 +233,177 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: id "941101"
+  - test_title: 9508991-11
+    desc: |
+      Drafting an email, subject could be anything.
+      Nextcloud 31 and newer
+      Formatting option: enabled
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/mail/api/drafts
+            data: |
+              {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p style=\"margin:0;\">&lt;/script&gt;</p>"},"attachments":[],"isHtml":true,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>","bodyHtml":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-12
+    desc: |
+      Drafting an email, subject could be anything.
+      Nextcloud 31 and newer
+      Formatting option: disabled
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/mail/api/drafts
+            data: |
+              {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p>&lt;/script&gt;<br>unformatted</p>"},"attachments":[],"isHtml":false,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p>&lt;/script&gt;<br>unformatted</p>","bodyPlain":"</script>\nunformatted"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-13
+    desc: |
+      Sending an email, content could be anything.
+      Formatting option: enabled
+      Target: json.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: |
+              {"editorBody": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-14
+    desc: |
+      Sending an email, content could be anything.
+      Formatting option: disabled
+      Target: json.body
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: |
+              {"body": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-15
+    desc: |
+      Sending an email, subject could be anything.
+      Target: json.subject
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/1
+            data: |
+              {"subject": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-16
+    desc: |
+      Modifying email from outbox, content could be anything.
+      Formatting option: enabled
+      Target: json.editorBody
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: |
+              {"editorBody": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-17
+    desc: |
+      Modifying email from outbox, content could be anything.
+      Formatting option: disabled
+      Target: json.body
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: |
+              {"body": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
+  - test_title: 9508991-18
+    desc: |
+      Modifying email from outbox, subject could be anything.
+      Target: json.subject
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /apps/mail/api/outbox/from-draft/1
+            data: |
+              {"subject": "<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "941101"
