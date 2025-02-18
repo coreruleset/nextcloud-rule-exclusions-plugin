@@ -19,7 +19,7 @@ tests:
             port: 80
             method: REPORT
             uri: /remote.php/dav/addressbooks/users/esadc/z-app-generated--contactsinteraction--recent/
-            data: |
+            data: |-
               <?xml version='1.0' encoding='UTF-8' ?><CARD:addressbook-multiget xmlns="DAV:" xmlns:CARD="urn:ietf:params:xml:ns:carddav"><prop><getcontenttype /><getetag /><CARD:address-data content-type="text/vcard" version="4.0" /></prop><href>/remote.php/dav/addressbooks/users/esadc/z-app-generated--contactsinteraction--recent/53</href></CARD:addressbook-multiget>
             version: HTTP/1.1
           output:
