@@ -27,7 +27,7 @@ tests:
               {"account":3,"accountId":3,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":"<p style=\"margin:0;\">&lt;/script&gt;</p>","attachments":[],"isHtml":true,"requestMdn":false,"sendAt":1739797589,"smimeSign":false,"smimeEncrypt":false,"force":false,"id":4,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-2
     desc: |
       Drafting an email, content could be anything.
@@ -50,7 +50,7 @@ tests:
               {"data":{"body":{"value": "<script>"}}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-3
     desc: |
       Drafting an email, content could be anything.
@@ -73,7 +73,7 @@ tests:
               {"data":{"editorBody": "<script>"}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-4
     desc: |
       Drafting an email, content could be anything.
@@ -96,7 +96,7 @@ tests:
               {"body": "<script>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-5
     desc: |
       Drafting an email, content could be anything.
@@ -119,7 +119,7 @@ tests:
               {"data":{"body":{"value": "<script>"}}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-6
     desc: |
       Drafting an email, content could be anything.
@@ -142,7 +142,7 @@ tests:
               {"data":{"editorBody": "<script>"}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-7
     desc: |
       Drafting an email, content could be anything.
@@ -165,7 +165,7 @@ tests:
               {"editorBody": "<script>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-8
     desc: |
       Drafting an email, subject could be anything.
@@ -187,7 +187,7 @@ tests:
               {"subject": "<script>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-9
     desc: |
       Writing a draft email
@@ -209,7 +209,7 @@ tests:
               {"account":3,"accountId":3,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":"<p style=\"margin:0;\">&lt;/script&gt;</p>","attachments":[],"isHtml":true,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-10
     desc: |
       Drafting an email, subject could be anything.
@@ -231,7 +231,7 @@ tests:
               {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p style=\"margin:0;\">&lt;/script&gt;</p>"},"attachments":[],"isHtml":true,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>","bodyHtml":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-11
     desc: |
       Drafting an email, subject could be anything.
@@ -253,7 +253,7 @@ tests:
               {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p>&lt;/script&gt;<br>unformatted</p>"},"attachments":[],"isHtml":false,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p>&lt;/script&gt;<br>unformatted</p>","bodyPlain":"</script>\nunformatted"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-12
     desc: |
       Editing email from outbox with/without pretty formatting
@@ -274,7 +274,7 @@ tests:
               {"id":1,"type":0,"accountId":1,"aliasId":null,"updatedAt":null,"subject":"<script>","body":"<script> unformatted","editorBody":"<p>&lt;script&gt; unformatted</p>","isHtml":false,"inReplyToMessageId":null,"attachments":[],"from":[],"to":[{"id":10,"messageId":null,"localMessageId":1,"type":1,"label":"test@example.com","email":"test@example.com"}],"cc":[],"bcc":[],"failed":false}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-13
     desc: |
       Sending an formatted/unformatted email
@@ -295,7 +295,7 @@ tests:
               {"account":3,"accountId":3,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":"<p style=\"margin:0;\">&lt;/script&gt;</p>","attachments":[],"isHtml":true,"requestMdn":false,"sendAt":1739797679,"smimeSign":false,"smimeEncrypt":false,"force":false,"id":4,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-14
     desc: |
       Writing an draft email with/without pretty formatting
@@ -316,7 +316,7 @@ tests:
               {"accountId":1,"subject":"<script>","body":"<p style=\"margin:0;\">&lt;/script&gt;</p>","editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>","isHtml":true,"to":"test@example.com","cc":"","bcc":"","attachments":[],"aliasId":null}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508991-15
     desc: |
       Sending an email with/without pretty format
@@ -337,4 +337,4 @@ tests:
               {"accountId":1,"subject":"<script>","body":"<script> unformatted","editorBody":"<p>&lt;script&gt; unformatted</p>","isHtml":false,"to":[{"label":"test@example.com","email":"test@example.com"}],"cc":[],"bcc":[],"attachments":[],"aliasId":null,"sendAt":1739730272}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
