@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/oauth2/clients/42
-            data: |
+            data: |-
               {"redirectUri": "https://example.com/"}
             version: HTTP/1.1
           output:
@@ -38,7 +38,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/oauth2/clients
-            data: |
+            data: |-
               {"redirectUri": "https://example.com/"}
             version: HTTP/1.1
           output:

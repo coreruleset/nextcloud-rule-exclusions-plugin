@@ -20,7 +20,7 @@ tests:
             method: PUT
             uri: /apps/photos/api/v2/config/photosSourceFolders
             # Data is actually sent like this with characters escaped
-            data: |
+            data: |-
               {"value":"[\"/Pictures\",\"/InstantUpload\"]"}
             version: HTTP/1.1
           output:
@@ -41,7 +41,7 @@ tests:
             method: PUT
             uri: /apps/photos/api/v2/config/photosLocation
             # Data is actually sent like this with characters escaped
-            data: |
+            data: |-
               {"value":"[\"/Pictures\",\"/InstantUpload\"]"}
             version: HTTP/1.1
           output:

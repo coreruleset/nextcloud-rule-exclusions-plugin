@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PUT
             uri: /remote.php/dav/calendars/esadc/test/0123-456-789-ABC-DEF.ics
-            data: |
+            data: |-
               BEGIN:VCALENDAR
               VERSION:2.0
               PRODID:+//IDN bitfire.at//ical4android (org.tasks)

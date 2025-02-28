@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/5/send-email
-            data: |
+            data: |-
               {"password":"<script>al3Rt"}
             version: HTTP/1.1
           output:

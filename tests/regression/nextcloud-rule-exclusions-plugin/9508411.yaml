@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /lostpassword/set/random/username
-            data: |
+            data: |-
               {"password": "<script>"}
             version: HTTP/1.1
           output:
@@ -38,7 +38,7 @@ tests:
             port: 80
             method: POST
             uri: /index.php/lostpassword/set/random/username
-            data: |
+            data: |-
               {"password": "<script>"}
             version: HTTP/1.1
           output:

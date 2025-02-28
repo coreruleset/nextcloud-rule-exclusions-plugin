@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /login/webauthn/finish
-            data: |
+            data: |-
               {"data":"{\"id\":\"RanDom__02Data\",\"type\":\"public-key\",\"rawId\":\"FDADG34//fsd88DF=\",\"response\":{\"authenticatorData\":\"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==\",\"clientDataJSON\":\"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==\",\"signature\":\"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=\",\"userHandle\":\"random="}}"}
             version: HTTP/1.1
           output:
@@ -39,7 +39,7 @@ tests:
             port: 80
             method: POST
             uri: /index.php/login/webauthn/finish
-            data: |
+            data: |-
               {"data":"{\"id\":\"RanDom__02Data\",\"type\":\"public-key\",\"rawId\":\"FDADG34//fsd88DF=\",\"response\":{\"authenticatorData\":\"3/fds+dsf79dDAF/SQ+sdfaf89sDFS==\",\"clientDataJSON\":\"7sdfybsdfbyubYUFDBVASUBYFASD7687gdsfb==\",\"signature\":\"dsyuifabHBJDAF989+sfddsfDFKJ6678+fsd676JKG+S8dg=\",\"userHandle\":\"random="}}"}
             version: HTTP/1.1
           output:

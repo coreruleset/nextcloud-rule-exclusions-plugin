@@ -37,7 +37,7 @@ tests:
             port: 80
             method: MKCALENDAR
             uri: /remote.php/dav/calendars/testuser/random/
-            data: |
+            data: |-
               <?xml version="1.0" encoding="UTF-8"?>
                 <B:mkcalendar xmlns:B="urn:ietf:params:xml:ns:caldav">
                   <A:set xmlns:A="DAV:">

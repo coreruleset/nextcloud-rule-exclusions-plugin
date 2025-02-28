@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/dashboard/statuses
-            data: |
+            data: |-
               { "statuses":"{\"weather\":true,\"status\":true}" }
             version: HTTP/1.1
           output:

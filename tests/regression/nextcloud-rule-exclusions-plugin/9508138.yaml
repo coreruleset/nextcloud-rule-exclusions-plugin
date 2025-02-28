@@ -19,7 +19,7 @@ tests:
             port: 80
             method: REPORT
             uri: /remote.php/dav/comments/files/1371175
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <oc:filter-comments
                   xmlns:d="DAV:"
@@ -47,7 +47,7 @@ tests:
             port: 80
             method: PROPPATCH
             uri: /remote.php/dav/comments/files/1371175/1195
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <d:propertyupdate
                   xmlns:d="DAV:"

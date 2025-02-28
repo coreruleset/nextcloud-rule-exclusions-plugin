@@ -22,7 +22,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
@@ -44,7 +44,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
@@ -66,7 +66,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1234/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
@@ -88,7 +88,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1234/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
@@ -110,7 +110,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1234/save
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
@@ -132,7 +132,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1234/save
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:

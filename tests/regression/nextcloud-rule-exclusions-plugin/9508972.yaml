@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/mail/api/accounts
-            data: |
+            data: |-
               {"imapHost":"mail.example.com","imapPort":993,"imapSslMode":"ssl","imapUser":"test@example.com","imapPassword":"<script>","smtpHost":"mail.example.com","smtpPort":465,"smtpSslMode":"ssl","smtpUser":"test@example.com","smtpPassword":"<script>","accountName":"esadc","emailAddress":"test@example.com","authMethod":"password"}
             version: HTTP/1.1
           output:
@@ -38,7 +38,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/accounts/1
-            data: |
+            data: |-
               {"imapHost":"mail.example.com","imapPort":993,"imapSslMode":"ssl","imapUser":"test@example.com","imapPassword":"<script>","smtpHost":"mail.example.com","smtpPort":465,"smtpSslMode":"ssl","smtpUser":"test@example.com","smtpPassword":"<script>","accountName":"esadc","emailAddress":"test@example.com","authMethod":"password","accountId":1}
             version: HTTP/1.1
           output:

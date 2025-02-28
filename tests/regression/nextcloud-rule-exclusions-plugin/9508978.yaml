@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/messages/1/flags
-            data: |
+            data: |-
               {"flags": {"$notjunk": 1}}
             version: HTTP/1.1
           output:

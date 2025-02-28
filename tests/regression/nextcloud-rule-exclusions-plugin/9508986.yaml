@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/sieve/account/1
-            data: |
+            data: |-
               {"sieveEnabled":true,"sieveHost":"mail.example.com","sievePort":4190,"sieveUser":"test","sievePassword":"<script>","sieveSslMode":"tls"}
             version: HTTP/1.1
           output:
