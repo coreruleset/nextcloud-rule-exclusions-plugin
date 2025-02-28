@@ -55,10 +55,29 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
             method: DELETE
             uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"
+  - test_title: 9508135-4
+    desc: Enabling/disabling grid view for public shares
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: PUT
+            uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
+            data: |
+              {"permissions":"1","attributes":"[{\"scope\":\"config\",\"key\":\"grid_view\",\"value\":false}]","note":"test","expireDate":"","label":"","password":"","hideDownload":"false"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "932240"|id "942200"|id "942430"|id "942431"|id "942432"
