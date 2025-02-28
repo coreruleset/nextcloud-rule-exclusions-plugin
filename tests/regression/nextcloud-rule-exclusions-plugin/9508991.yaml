@@ -212,7 +212,7 @@ tests:
               Content-Type: application/json
             port: 80
             method: POST
-            uri: /apps/mail/api/drafts/
+            uri: /apps/mail/api/drafts
             data: |-
               {"account":3,"accountId":3,"aliasId":null,"to":[{"email":"test@example.com","label":"test@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":"<p style=\"margin:0;\">&lt;/script&gt;</p>","attachments":[],"isHtml":true,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"editorBody":"<p style=\"margin:0;\">&lt;/script&gt;</p>"}
             version: HTTP/1.1
