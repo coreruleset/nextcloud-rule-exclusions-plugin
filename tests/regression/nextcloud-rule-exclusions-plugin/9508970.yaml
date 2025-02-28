@@ -19,7 +19,7 @@ tests:
             uri: /apps/mail/api/autoconfig/ispdb/example.com/example@example.com
             version: HTTP/1.1
           output:
-            no_log_contains: 920440
+            no_log_contains: id "920440"
   - test_title: 9508970-2
     stages:
       - stage:
@@ -34,7 +34,7 @@ tests:
             uri: /apps/mail/api/autoconfig/ispdb/example@example.com
             version: HTTP/1.1
           output:
-            no_log_contains: 920440
+            no_log_contains: id "920440"
   - test_title: 9508970-3
     stages:
       - stage:
@@ -49,4 +49,4 @@ tests:
             uri: /apps/mail/api/autoconfig/mx/example@example.com
             version: HTTP/1.1
           output:
-            no_log_contains: 920440
+            no_log_contains: id "920440"

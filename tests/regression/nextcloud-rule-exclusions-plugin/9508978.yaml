@@ -23,4 +23,5 @@ tests:
               {"flags": {"$notjunk": 1}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "942290"
+            no_log_contains: |-
+              id "920273"|id "942290"

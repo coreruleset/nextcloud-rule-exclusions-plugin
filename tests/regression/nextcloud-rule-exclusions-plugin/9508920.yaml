@@ -25,7 +25,7 @@ tests:
               \n\n## Quotes 💬\n\n> Nextcloud, a safe home for all your data\n","title":"Sample note"}
             version: HTTP/1.1
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "942430"|id "942431"|id "942432"
   - test_title: 9508920-2
     desc: Editing a markdown note

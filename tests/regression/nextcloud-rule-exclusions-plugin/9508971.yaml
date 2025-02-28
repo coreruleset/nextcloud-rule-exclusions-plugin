@@ -19,7 +19,7 @@ tests:
             uri: /apps/mail/api/avatars/image/test%40example.com
             version: HTTP/1.1
           output:
-            no_log_contains: 920440
+            no_log_contains: id "920440"
   - test_title: 9508971-2
     stages:
       - stage:
@@ -34,4 +34,4 @@ tests:
             uri: /apps/mail/api/avatars/url/test%40example.com
             version: HTTP/1.1
           output:
-            no_log_contains: 920440
+            no_log_contains: id "920440"

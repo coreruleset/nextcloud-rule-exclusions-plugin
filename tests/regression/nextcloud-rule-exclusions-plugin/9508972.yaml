@@ -23,7 +23,8 @@ tests:
               {"imapHost":"mail.example.com","imapPort":993,"imapSslMode":"ssl","imapUser":"test@example.com","imapPassword":"<script>","smtpHost":"mail.example.com","smtpPort":465,"smtpSslMode":"ssl","smtpUser":"test@example.com","smtpPassword":"<script>","accountName":"esadc","emailAddress":"test@example.com","authMethod":"password"}
             version: HTTP/1.1
           output:
-            no_log_contains: 941100
+            no_log_contains: |-
+              id "920273"|id "941100"
   - test_title: 9508972-2
     desc: Nextcloud Mail changing mail account login information
     stages:
@@ -42,4 +43,5 @@ tests:
               {"imapHost":"mail.example.com","imapPort":993,"imapSslMode":"ssl","imapUser":"test@example.com","imapPassword":"<script>","smtpHost":"mail.example.com","smtpPort":465,"smtpSslMode":"ssl","smtpUser":"test@example.com","smtpPassword":"<script>","accountName":"esadc","emailAddress":"test@example.com","authMethod":"password","accountId":1}
             version: HTTP/1.1
           output:
-            no_log_contains: 941100
+            no_log_contains: |-
+              id "920273"|id "941100"
