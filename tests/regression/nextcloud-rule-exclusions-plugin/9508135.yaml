@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /ocs/v2.php/apps/files_sharing/api/v1/shares
-            data: |
+            data: |-
               {"path":"/path/to/tmp/example/","shareType":3,"password":"<script>","attributes":"[]"}
             version: HTTP/1.1
           output:
@@ -39,7 +39,7 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
-            data: |
+            data: |-
               {"permissions":"31","attributes":"[]","note":"","expireDate":"2024-06-23 00:00:00","label":"test","password":"<script>","hideDownload":"false"}
             version: HTTP/1.1
           output:
@@ -75,7 +75,7 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/apps/files_sharing/api/v1/shares/1
-            data: |
+            data: |-
               {"permissions":"1","attributes":"[{\"scope\":\"config\",\"key\":\"grid_view\",\"value\":false}]","note":"test","expireDate":"","label":"","password":"","hideDownload":"false"}
             version: HTTP/1.1
           output:
