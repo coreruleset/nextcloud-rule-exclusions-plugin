@@ -23,4 +23,5 @@ tests:
               url=https://www.allrecipes.com/recipe/274367/chicken-noodle-salad/
             version: HTTP/1.1
           output:
-            no_log_contains: id "931130"
+            no_log_contains: |-
+              id "927273"|id "931130"|id "932190"|id "942432"
