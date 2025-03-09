@@ -28,7 +28,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-2
     desc: |
       Drafting an email, content could be anything.
@@ -52,7 +52,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-3
     desc: |
       Drafting an email, content could be anything.
@@ -76,7 +76,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-4
     desc: |
       Drafting an email, content could be anything.
@@ -100,7 +100,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-5
     desc: |
       Drafting an email, content could be anything.
@@ -124,7 +124,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-6
     desc: |
       Drafting an email, content could be anything.
@@ -148,7 +148,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-7
     desc: |
       Drafting an email, content could be anything.
@@ -172,7 +172,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-8
     desc: |
       Drafting an email, subject could be anything.
@@ -195,7 +195,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-9
     desc: |
       Writing a draft email
@@ -218,7 +218,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-10
     desc: |
       Drafting an email, subject could be anything.
@@ -241,7 +241,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-11
     desc: |
       Drafting an email, subject could be anything.
@@ -264,7 +264,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-12
     desc: |
       Editing email from outbox with/without pretty formatting
@@ -286,7 +286,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-13
     desc: |
       Sending an formatted/unformatted email
@@ -308,7 +308,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-14
     desc: |
       Writing an draft email with/without pretty formatting
@@ -330,7 +330,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
   - test_title: 9508991-15
     desc: |
       Sending an email with/without pretty format
@@ -352,4 +352,29 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "932236"|id "941100"
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
+  - test_title: 9508991-16
+    desc: |
+      Writing an email to multiple email addresses
+      Nextcloud 30
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/mail/api/drafts
+            data: >-
+              {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"user1@example.com user2@example.com user3@example.com user4@example.com user5@example.com 
+              user6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com","label":"user1@example.com user2@example.com 
+              user3@example.com user4@example.com user5@example.com user6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com"}],
+              "cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p>&lt;script&gt;</p>"},"attachments":[],"isHtml":false,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p>&lt;script&gt;</p>","bodyPlain":"<script>"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "932236"|id "941100"|id "942430"|id "942431"|id "942432"
