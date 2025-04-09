@@ -15,12 +15,12 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              data: |-
-                {"settingsKey":"dateTimeFormat","settingsValue":"local"}
             port: 80
             version: HTTP/1.1
             method: PUT
             uri: /apps/logreader/api/settings
+            data: |-
+              {"settingsKey":"dateTimeFormat","settingsValue":"local"}
           output:
-            no_log_contains: |
+            no_log_contains: |-
               id "911100"|id "932236"
