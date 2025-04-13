@@ -6,7 +6,7 @@ meta:
   name: 9508972.yaml
 tests:
   - test_title: 9508972-1
-    desc: Nextcloud Mail Logging into mail account
+    desc: Nextcloud: Mail Logging into mail account
     stages:
       - stage:
           input:
@@ -26,7 +26,7 @@ tests:
             no_log_contains: |-
               id "920273"|id "941100"
   - test_title: 9508972-2
-    desc: Nextcloud Mail changing mail account login information
+    desc: Nextcloud Mail: changing mail account login information
     stages:
       - stage:
           input:
