@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PROPFIND
             uri: /remote.php/dav/calendars/test/inbox
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <x0:propfind xmlns:x0="DAV:">
                   <x0:prop>
@@ -43,7 +43,7 @@ tests:
             port: 80
             method: PROPFIND
             uri: /remote.php/dav/files/user/
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <d:propfind xmlns:d="DAV:" xmlns:nc="http://nextcloud.org/ns" xmlns:oc="http://owncloud.org/ns" xmlns:ocs="http://open-collaboration-services.org/ns">
                   <d:prop>
@@ -85,7 +85,7 @@ tests:
             port: 80
             method: PROPFIND
             uri: /public.php/webdav/example.jpg
-            data: |
+            data: |-
               <?xml version="1.0"?>
               <d:propfind  xmlns:d="DAV:"xmlns:oc="http://owncloud.org/ns"xmlns:nc="http://nextcloud.org/ns"xmlns:ocs="http://open-collaboration-services.org/ns">
                 <d:prop>

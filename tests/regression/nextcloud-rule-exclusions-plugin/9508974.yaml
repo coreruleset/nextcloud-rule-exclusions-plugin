@@ -1,12 +1,12 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Nextcloud Mail"
   enabled: true
-  name: 9508653.yaml
+  name: 9508974.yaml
 tests:
-  - test_title: 9508653-1
-    desc: Configuring WOPI URL for dedicated Collabora Server
+  - test_title: 9508974-1
+    desc: Searching for messages
     stages:
       - stage:
           input:
@@ -15,12 +15,10 @@ tests:
               Host: localhost
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-              Content-Type: application/json
             port: 80
-            method: POST
-            uri: /index.php/apps/richdocuments/ajax/admin.php
-            data: |-
-              {"wopi_url": "https://example.com/"}
+            method: GET
+            uri: /apps/mail/api/messages?mailboxId=122&filter=subject:something%2520space+body:something+body:space+mentions:false+match:allof+is:pi-other&limit=20
             version: HTTP/1.1
           output:
-            no_log_contains: id "931130"
+            no_log_contains: |-
+              id "920230"|id "920272"|id "920273"|id "942431"|id "942432"

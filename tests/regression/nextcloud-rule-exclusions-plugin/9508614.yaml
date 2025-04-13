@@ -20,7 +20,7 @@ tests:
             method: POST
             uri: /ocs/v2.php/apps/provisioning_api/api/v1/config/users/core/apporder
             # Payload is actually sent like this, with some characters escape
-            data: |
+            data: |-
               {"configValue":"{\"dashboard\":{\"order\":0,\"app\":\"dashboard\"},\"files\":{\"order\":1,\"app\":\"files\"},\"photos\":{\"order\":2,\"app\":\"photos\"},\"mail\":{\"order\":3,\"app\":\"mail\"},\"activity\":{\"order\":4,\"app\":\"activity\"},\"contacts\":{\"order\":5,\"app\":\"contacts\"},\"calendar\":{\"order\":6,\"app\":\"calendar\"},\"notes\":{\"order\":7,\"app\":\"notes\"},\"music\":{\"order\":8,\"app\":\"music\"},\"tasks\":{\"order\":9,\"app\":\"tasks\"},\"news\":{\"order\":10,\"app\":\"news\"}}"}
             version: HTTP/1.1
           output:

@@ -1,12 +1,12 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Nextcloud Mail: Changing settings"
   enabled: true
-  name: 9508957.yaml
+  name: 9508981.yaml
 tests:
-  - test_title: 9508957-1
-    desc: Configuring folders for Nextcloud Photos to scan
+  - test_title: 9508981-1
+    desc: Collapsing/uncollapsing mailbox (Nextcloud 25 and older)
     stages:
       - stage:
           input:
@@ -18,16 +18,15 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/photos/api/v2/config/photosSourceFolders
-            # Data is actually sent like this with characters escaped
+            uri: /apps/mail/api/preferences/account-settings
             data: |-
-              {"value":"[\"/Pictures\",\"/InstantUpload\"]"}
+              {"key":"account-settings","value":"[{\"accountId\":1,\"collapsed\":false},{\"accountId\":2,\"collapsed\":true}]"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "911100"|id "920273"|id "942100"|id "942200"|id "942370"|id "942431"|id "942432"|id "942460"|id "942520"
-  - test_title: 9508957-2
-    desc: Configuring upload folder for Nextcloud Photos
+              id "920273"|id "932236"|id "932240"|id "942200"|id "942260"|id "942430"|id "942431"|id "942432"
+  - test_title: 9508981-2
+    desc: Setting reply to text to top
     stages:
       - stage:
           input:
@@ -39,11 +38,10 @@ tests:
               Content-Type: application/json
             port: 80
             method: PUT
-            uri: /apps/photos/api/v2/config/photosLocation
-            # Data is actually sent like this with characters escaped
+            uri: /apps/mail/api/preferences/reply-mode
             data: |-
-              {"value":"[\"/Pictures\",\"/InstantUpload\"]"}
+              {"key":"reply-mode","value":"top"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "911100"|id "920273"|id "942100"|id "942200"|id "942370"|id "942431"|id "942432"|id "942460"|id "942520"
+              id "920273"|id "932236"|id "932240"|id "942200"|id "942260"|id "942430"|id "942431"|id "942432"

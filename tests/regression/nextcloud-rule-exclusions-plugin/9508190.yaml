@@ -25,7 +25,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/accounts/2/aliases/1
-            data: |
+            data: |-
               {"alias":"test@example.com","aliasName":"test123","smimeCertificateId":null}
             version: HTTP/1.1
           output:
@@ -64,7 +64,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/tags/6
-            data: |
+            data: |-
               {"displayName":"test123","color":"#541873"}
             version: HTTP/1.1
           output:
@@ -301,7 +301,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/preferences/layout-mode
-            data: |
+            data: |-
               {"key":"layout-mode","value":"horizontal-split"}
             version: HTTP/1.1
           output:
@@ -322,7 +322,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/preferences/modalSize
-            data: |
+            data: |-
               {"key":"modalSize","value":"large"}
             version: HTTP/1.1
           output:
@@ -343,7 +343,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/mail/api/preferences/internal-addresses
-            data: |
+            data: |-
               {"key":"internal-addresses","value":"false"}
             version: HTTP/1.1
           output:
@@ -364,7 +364,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/crop_image_previews
-            data: |
+            data: |-
               { "value":true }
             version: HTTP/1.1
           output:
@@ -385,7 +385,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/grid_view
-            data: |
+            data: |-
               { "value":true }
             version: HTTP/1.1
           output:
@@ -406,7 +406,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/show_hidden
-            data: |
+            data: |-
               { "value":true }
             version: HTTP/1.1
           output:
@@ -427,7 +427,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/sort_favorites_first
-            data: |
+            data: |-
               { "value":true }
             version: HTTP/1.1
           output:
@@ -448,7 +448,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/sort_folders_first
-            data: |
+            data: |-
               { "value":true }
             version: HTTP/1.1
           output:
@@ -469,7 +469,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/views
-            data: |
+            data: |-
               {"value":true,"view":"https://example.com/remote.php/dav/files/example/Templates","key":"expanded"}
             version: HTTP/1.1
           output:
@@ -490,7 +490,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/files/api/v1/config/folder_tree
-            data: |
+            data: |-
               {"value":false}
             version: HTTP/1.1
           output:
@@ -547,7 +547,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/photos/api/v1/config/croppedLayout
-            data: |
+            data: |-
               {"value":"false"}
             version: HTTP/1.1
           output:
@@ -568,7 +568,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/photos/api/v1/config/croppedLayout
-            data: |
+            data: |-
               {"value":"true"}
             version: HTTP/1.1
           output:
@@ -679,7 +679,7 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/apps/deck/api/v1.0/cards/5/comments/61
-            data: |
+            data: |-
               {"message":"<div data-v-3b61be27=\"\"></div>"}
             version: HTTP/1.1
           output:
@@ -718,7 +718,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/stacks/1/reorder
-            data: |
+            data: |-
               {"order":1}
             version: HTTP/1.1
           output:
@@ -775,7 +775,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/boards/1
-            data: |
+            data: |-
               {"id":3,"title":"test","owner":{"primaryKey":"esadc","uid":"esadc","displayname":"EsadCetiner","type":0},"color":"ea1025","archived":false,"labels":[],"acl":[],"permissions":{"PERMISSION_READ":true,"PERMISSION_EDIT":true,"PERMISSION_MANAGE":true,"PERMISSION_SHARE":true},"users":[],"shared":0,"stacks":[],"activeSessions":[],"deletedAt":0,"lastModified":1719946339,"settings":[],"ETag":"123456789abcdef"}
             version: HTTP/1.1
           output:
@@ -796,7 +796,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/labels/4
-            data: |
+            data: |-
               {"id":4,"title":"test","color":"F1DB50","boardId":1,"cardId":null,"lastModified":1662255238,"ETag":"1234567890abcdef"}
             version: HTTP/1.1
           output:
@@ -817,7 +817,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/boards/1/acl/1
-            data: |
+            data: |-
               {"id":1,"participant":{"primaryKey":"test","uid":"test","displayname":"test","type":1},"type":1,"boardId":1,"permissionEdit":true,"permissionShare":false,"permissionManage":false,"owner":false}
             version: HTTP/1.1
           output:
@@ -838,7 +838,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/deck/labels/4/acl/1
-            data: |
+            data: |-
               {"id":4,"title":"test","color":"F1DB50","boardId":1,"cardId":null,"lastModified":1662255238,"ETag":"1234567890abcdef"}
             version: HTTP/1.1
           output:
@@ -1021,7 +1021,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/cookbook/webapp/category/Soup
-            data: |
+            data: |-
               {"name":"Soup"}
             version: HTTP/1.1
           output:
@@ -1096,7 +1096,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/theming/ajax/updateAppMenu
-            data: |
+            data: |-
               { "setting":"defaultApps","value":["files","dashboard"] }
             version: HTTP/1.1
           output:
@@ -1171,7 +1171,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/logreader/api/settings
-            data: |
+            data: |-
               { "settingsKey": "liveLog","settingsValue": false }
             version: HTTP/1.1
           output:
@@ -1192,7 +1192,7 @@ tests:
             port: 80
             method: PUT
             uri: /apps/logreader/api/settings
-            data: |
+            data: |-
               { "settingsKey": "liveLog","settingsValue": true }
             version: HTTP/1.1
           output:
@@ -1213,7 +1213,7 @@ tests:
             port: 80
             method: PUT
             uri: /settings/api/admin/twofactorauth
-            data: |
+            data: |-
               {"enforced":true,"enforcedGroups":["admin"],"excludedGroups":["Users"]}
             version: HTTP/1.1
           output:
@@ -1324,7 +1324,7 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/cloud/users/test/additional_mail
-            data: |
+            data: |-
               {"key":"email@example.com","value":""}
             version: HTTP/1.1
           output:
@@ -1382,7 +1382,7 @@ tests:
             port: 80
             method: POST
             uri: /ocs/v2.php/apps/provisioning_api/api/v1/config/users/dav/user_status_automation
-            data: |
+            data: |-
               {"configValue":"yes"}
             version: HTTP/1.1
           output:
@@ -1421,7 +1421,7 @@ tests:
             port: 80
             method: PUT
             uri: /settings/personal/authtokens/1
-            data: |
+            data: |-
               {"id":1,"name":"test","lastActivity":1721401548,"type":1,"scope":{"filesystem":false},"canDelete":true,"canRename":true}
             version: HTTP/1.1
           output:
@@ -1442,7 +1442,7 @@ tests:
             port: 80
             method: PUT
             uri: /settings/personal/authtokens/1
-            data: |
+            data: |-
               {"id":1,"name":"test123","lastActivity":1721401548,"type":1,"scope":{"filesystem":false},"canDelete":true,"canRename":true}
             version: HTTP/1.1
           output:
@@ -1561,8 +1561,26 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/apps/files_downloadlimit/api/v1/zqiJrSncJep32DL/limit
-            data: |
+            data: |-
               {"limit":5}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "911100"
+  - test_title: 9508190-82
+    desc: |
+      Personal Settings:
+      Clearing profile picture
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: DELETE
+            uri: /avatar
             version: HTTP/1.1
           output:
             no_log_contains: id "911100"

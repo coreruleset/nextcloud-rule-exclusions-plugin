@@ -22,11 +22,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508313-2
     desc: |
       Version: 27.1 and older
@@ -44,11 +44,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508313-3
     desc: |
       Version: 28 and newer
@@ -66,11 +66,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1234/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508313-4
     desc: |
       Version: 28 and newer
@@ -88,11 +88,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1234/sync
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508313-5
     desc: |
       Version: 28 and newer
@@ -110,11 +110,11 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1234/save
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508313-6
     desc: |
       Version: 28 and newer
@@ -132,8 +132,8 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1234/save
-            data: |
+            data: |-
               {"documentId":1234,"sessionId":5678,"sessionToken":"randomdata","token":null,"filePath":"","version":42,"autosaveContent":"<script>2","documentState":"randomdata","force":true,"manualSave":true}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"

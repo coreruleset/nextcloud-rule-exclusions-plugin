@@ -19,7 +19,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/richdocumentscode/proxy.php?req=/cool/https%3A%2F%2Fexample.com%2Findex.php%2Fapps%2Frichdocuments%2Fwopi%2Ffiles%2F1372194_randomgd%3Faccess_token%3DVrandomtoken%26access_token_ttl%3D0/ws?WOPISrc=https%3A%2F%2Fexample.com%2Findex.php%2Fapps%2Frichdocuments%2Fwopi%2Ffiles%2F1372194_randomqgd&compat=/ws/1234567890abcdef/write/2
-            data: |
+            data: |-
               B0x0
               0x2f
               coolclient 0.1 1731805901045 130.60000002384186
@@ -44,7 +44,7 @@ tests:
             port: 80
             method: POST
             uri: /apps/richdocumentscode/proxy.php?req=/cool/https%3A%2F%2Fexample.com%2Findex.php%2Fapps%2Frichdocuments%2Fwopi%2Ffiles%2F1372194_randomgd%3Faccess_token%3DtHkDrandomtokenL%26access_token_ttl%3D0%26permission%3Dedit/ws?WOPISrc=https%3A%2F%2Fexample.com%2Findex.php%2Fapps%2Frichdocuments%2Fwopi%2Ffiles%2F1372194_randomgd&compat=/ws/1234567890abcdef/write/22
-            data: |
+            data: |-
               B0x4
               0x42
               uno .uno:ChangeTheme {"NewTheme":{"type":"string","value":"Dark"}}

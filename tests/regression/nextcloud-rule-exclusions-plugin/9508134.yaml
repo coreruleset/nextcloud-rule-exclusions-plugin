@@ -19,11 +19,11 @@ tests:
             port: 80
             method: POST
             uri: /s/random/authenticate/showshare
-            data: |
+            data: |-
               requesttoken=random&password=%3Cscript%3E&sharingToken=random&sharingType=3
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508134-2
     desc: Entering password on a public share
     stages:
@@ -38,8 +38,8 @@ tests:
             port: 80
             method: POST
             uri: /s/random/authenticate/showShare
-            data: |
+            data: |-
               requesttoken=random&password=%3Cscript%3E&sharingToken=random&sharingType=3
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"

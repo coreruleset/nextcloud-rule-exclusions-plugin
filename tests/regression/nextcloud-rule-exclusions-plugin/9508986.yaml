@@ -3,10 +3,10 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508653.yaml
+  name: 9508986.yaml
 tests:
-  - test_title: 9508653-1
-    desc: Configuring WOPI URL for dedicated Collabora Server
+  - test_title: 9508986-1
+    desc: Setting a password for a sieve server
     stages:
       - stage:
           input:
@@ -17,10 +17,10 @@ tests:
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: application/json
             port: 80
-            method: POST
-            uri: /index.php/apps/richdocuments/ajax/admin.php
+            method: PUT
+            uri: /apps/mail/api/sieve/account/1
             data: |-
-              {"wopi_url": "https://example.com/"}
+              {"sieveEnabled":true,"sieveHost":"mail.example.com","sievePort":4190,"sieveUser":"test","sievePassword":"<script>","sieveSslMode":"tls"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "931130"
+            no_log_contains: id "941100"

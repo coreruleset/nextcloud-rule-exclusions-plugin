@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PROPFIND
             uri: /remote.php/dav/versions/username/versions/1371159/
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <d:propfind xmlns:d="DAV:"
                   xmlns:oc="http://owncloud.org/ns"

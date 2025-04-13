@@ -19,7 +19,7 @@ tests:
             port: 80
             method: PROPFIND
             uri: /remote.php/dav/trashbin/username/trash/
-            data: |
+            data: |-
               <?xml version="1.0"?>
                 <d:propfind xmlns:d="DAV:" xmlns:nc="http://nextcloud.org/ns" xmlns:oc="http://owncloud.org/ns" xmlns:ocs="http://open-collaboration-services.org/ns">
                   <d:prop>

@@ -19,12 +19,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"0x0000/random+some/thing","shareToken":null}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-2
     desc: |
       Nextcloud 28 and newer
@@ -41,12 +41,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1/sync
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lssomething/random+example/token","token":null,"filePath":"","baseVersionEtag":"1234567890abcdef","version":23660}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-3
     desc: |
       Nextcloud 28 and newer
@@ -63,12 +63,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1/push
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lsrandom+something/L","token":null,"filePath":"","baseVersionEtag":"1234567890abcdef","steps":["AAABAA=="],"version":23660,"awareness":"lsrandomsomething=="}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-4
     desc: |
       Nextcloud 28 and newer
@@ -85,12 +85,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1/save
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lssomething/random+s+test","token":null,"filePath":"","baseVersionEtag":"1234567890abcdef","version":1,"autosaveContent":"<script>","documentState":"something+random==","force":false,"manualSave":true}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-5
     desc: |
       Nextcloud 28 and newer
@@ -107,12 +107,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/1/close
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"0x0000/ra+ndom","token":null}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-6
     desc: "Checking for attachments on public shares"
     stages:
@@ -127,12 +127,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/attachments
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"0x0000/something+ran+dom","shareToken":"0x000random"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-7
     desc: |
       Nextcloud 28 and newer
@@ -149,12 +149,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1/sync
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lsrandom/some+thing+example","token":"0x000something","filePath":"/New text file.md","baseVersionEtag":"1234567890abcdef","version":0}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-8
     desc: |
       Nextcloud 28 and newer
@@ -171,12 +171,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1/push
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lsr/andom+some+thing","token":"example","filePath":"/New text file.md","baseVersionEtag":"1234567890abcdef","steps":["AAABAA==","random="],"version":0,"awareness":"0x000something/random=="}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-9
     desc: |
       Nextcloud 28 and newer
@@ -193,12 +193,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1/save
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"lsaa/something/random","token":"lsaarandom","filePath":"/New text file.md","baseVersionEtag":"1234567890abcdef","version":23696,"autosaveContent":"<script>","documentState":"0x0000+some+thingrandom==","force":false,"manualSave":true}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-10
     desc: |
       Nextcloud 28 and newer
@@ -215,12 +215,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/1/close
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"0x0000/something/random","token":"lssomethingrandom"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-11
     desc: |
       Nextcloud 27 and older
@@ -237,12 +237,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/push
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"0x00000/random/some/th+ing","token":null,"filePath":"","baseVersionEtag":"1234567890abcdef","steps":["randomsomething"],"version":26,"awareness":"somethingrandom"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-12
     desc: |
       Nextcloud 27 and older
@@ -259,12 +259,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/sync
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"ls/rAnDOM","token":null,"filePath":"/Readme.md","baseVersionEtag":"1234567890abcdef","version":11,"force":false,"manualSave":false}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-13
     desc: |
       Nextcloud 27 and older
@@ -281,12 +281,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/session/close
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"ls/r/Andom","token":null}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-14
     desc: |
       Nextcloud 27 and older
@@ -303,12 +303,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/sync
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"or+2usome/thingrandom","token":"lssomethingrandmo","filePath":"/New text file.md","baseVersionEtag":"1234567890abcdef","version":0,"force":false,"manualSave":false}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-15
     desc: |
       Nextcloud 27 and older
@@ -325,12 +325,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/push
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"random+something/lsran","token":"lssomethingrandmo","filePath":"/New text file.md","baseVersionEtag":"1234567890abcdef","version":33,"force":false,"manualSave":false}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-16
     desc: |
       Nextcloud 27 and older
@@ -347,12 +347,12 @@ tests:
             port: 80
             method: POST
             uri: /apps/text/public/session/close
-            data: |
+            data: |-
               {"documentId":1,"sessionId":1,"sessionToken":"ls+somethi/random","token":"lssomethingrandmo"}
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-17
     desc: |
       Nextcloud 28 and newer
@@ -376,4 +376,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"

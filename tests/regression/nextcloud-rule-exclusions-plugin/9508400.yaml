@@ -21,7 +21,7 @@ tests:
             data: "password=<script>"
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"
   - test_title: 9508400-2
     desc: Reauthentication when performing an sensitive action (i.e changing personal settings or an admin installing a new app)
     stages:
@@ -36,8 +36,8 @@ tests:
             port: 80
             method: POST
             uri: /login/confirm
-            data: |
+            data: |-
               {"password": "<script>"}
             version: HTTP/1.1
           output:
-            no_log_contains: id "941101"
+            no_log_contains: id "941100"

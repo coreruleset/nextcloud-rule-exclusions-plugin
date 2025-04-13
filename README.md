@@ -58,7 +58,7 @@ Below you can find a list of known limitations along with workarounds for this i
 ### Increasing max upload size
 
 ModSecurity has very strict defaults on the size of file uploads (13MB), which is often too small even for photos.
-It's strongly recommended to increase the max upload size to a value like 10GB by adjusting both `SecRequestBodyNoFilesLimit` and `SecRequestBodyLimit`.
+It's strongly recommended to increase the max upload size to a value like 10GB by adjusting both `SecRequestBodyNoFilesLimit` and `SecRequestBodyLimit` (Defined in bytes).
 
 The process of increasing the value is slightly different depending on your web server, see below for some examples.
 
@@ -114,6 +114,8 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
     ctl:ruleRemoveById=920300,\
     ctl:ruleRemoveById=920320,\
     ctl:ruleRemoveById=920330,\
+    ctl:ruleRemoveTargetById=920120;FILES:data,\
+    ctl:ruleRemoveTargetById=920121;FILES:data,\
     ctl:ruleRemoveTargetById=920120;FILES_NAMES,\
     ctl:ruleRemoveTargetById=920121;FILES_NAMES,\
     ctl:ruleRemoveTargetById=922130;MULTIPART_PART_HEADERS"
