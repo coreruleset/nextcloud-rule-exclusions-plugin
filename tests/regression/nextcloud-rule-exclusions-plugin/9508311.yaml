@@ -24,7 +24,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-2
     desc: |
       Nextcloud 28 and newer
@@ -46,7 +46,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-3
     desc: |
       Nextcloud 28 and newer
@@ -68,7 +68,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-4
     desc: |
       Nextcloud 28 and newer
@@ -90,7 +90,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-5
     desc: |
       Nextcloud 28 and newer
@@ -112,7 +112,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-6
     desc: "Checking for attachments on public shares"
     stages:
@@ -132,7 +132,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-7
     desc: |
       Nextcloud 28 and newer
@@ -154,7 +154,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-8
     desc: |
       Nextcloud 28 and newer
@@ -176,7 +176,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-9
     desc: |
       Nextcloud 28 and newer
@@ -198,7 +198,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-10
     desc: |
       Nextcloud 28 and newer
@@ -220,7 +220,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-11
     desc: |
       Nextcloud 27 and older
@@ -242,7 +242,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-12
     desc: |
       Nextcloud 27 and older
@@ -264,7 +264,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-13
     desc: |
       Nextcloud 27 and older
@@ -286,7 +286,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-14
     desc: |
       Nextcloud 27 and older
@@ -308,7 +308,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-15
     desc: |
       Nextcloud 27 and older
@@ -330,7 +330,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-16
     desc: |
       Nextcloud 27 and older
@@ -352,7 +352,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
   - test_title: 9508311-17
     desc: |
       Nextcloud 28 and newer
@@ -376,4 +376,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"
+              id "920272"|id "920273"|id "921110"|id "932236"|id "932250"|id "941100"|id "942120"|id "942210"|id "942390"|id "942432"|id "942450"|id "943120"
