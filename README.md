@@ -43,7 +43,7 @@ Additional apps may be supported if there is enough demand from the community, b
 
 ## Tested Versions
 
-Nextcloud frequently releases new major versions with breaking changes and features and are likely to have false positives that haven't been discovered/resolved. It's recommended to wait until new feature releases been tested before upgrading to avoid false alarms. If you do upgrade to an untested version and encounter issues, then feel free to [open an issue](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new) or pr.
+Nextcloud frequently releases new major versions with breaking changes and features that are likely to cause false positives that haven't been discovered/resolved. It's recommended to wait until new feature releases have been tested before upgrading to prevent functionality from being impaired by the plugin. If you do upgrade and encounter issues, please [open an issue](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new) or [PR](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/compare).
 
 |       **Version**        |  **Status**   |
 |--------------------------|---------------|
