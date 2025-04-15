@@ -41,6 +41,21 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Assistant                 |  Not supported ❌ |
 | ownCloud Music                      |  Not supported ❌ |
 
+## Tested Versions
+
+Nextcloud frequently releases new major versions with breaking changes and features that are likely to cause false positives that haven't been discovered/resolved. It's recommended to wait until new feature releases have been tested before upgrading to prevent functionality from being impaired by the plugin. If you do upgrade and encounter issues, please [open an issue](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new) or [PR](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/compare).
+
+|       **Version**        |  **Status**   |
+|--------------------------|---------------|
+|  Nextcloud 24 (Hub 3)    |   Tested ✅  |
+|  Nextcloud 25 (Hub 3)    |   Tested ✅  |
+|  Nextcloud 26 (Hub 4)    |   Tested ✅  |
+|  Nextcloud 27 (Hub 5)    |   Tested ✅  |
+|  Nextcloud 27.1 (Hub 6)  |   Tested ✅  |
+|  Nextcloud 28 (Hub 7)    |   Tested ✅  |
+|  Nextcloud 29 (Hub 8)    |   Tested ✅  |
+|  Nextcloud 30 (Hub 9)    |   Tested ✅  |
+|  Nextcloud 31 (Hub 10)   |   Tested ✅  |
 
 ## Installation
 
@@ -123,7 +138,7 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
 
 ## Testing
 
-After the plugin is enabled, Nextcloud should work without problems caused by CRS (for example, false positives while blocking requests). If problems still occur then please file a new issue on [GitHub](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin). (Note that high paranoia level deployments may require additional tuning beyond this plugin.)
+After the plugin is enabled, Nextcloud should work without problems caused by CRS (for example, false positives while blocking requests). If problems still occur then please file a new issue on [GitHub](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new). (Note that high paranoia level deployments may require additional tuning beyond this plugin.)
 
 ## License
 
