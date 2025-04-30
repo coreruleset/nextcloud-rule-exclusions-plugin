@@ -1,0 +1,45 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Administration Settings: Configuring ToS/privacy policy link"
+  enabled: true
+  name: 9508648.yaml
+tests:
+  - test_title: 9508648-1
+    desc: Configuring privacy policy
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/theming/ajax/updateStylesheet
+            data: |-
+              {"setting":"privacyUrl","value":"https://example.com/privacy-policy/"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "931130"
+  - test_title: 9508648-2
+    desc: Configuring Terms of Service
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /apps/theming/ajax/updateStylesheet
+            data: |-
+              {"setting":"imprintUrl","value":"https://example.com/terms-of-service/"}
+            version: HTTP/1.1
+          output:
+            no_log_contains: id "931130"

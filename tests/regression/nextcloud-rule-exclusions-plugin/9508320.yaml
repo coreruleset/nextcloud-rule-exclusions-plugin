@@ -1,0 +1,35 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Rule Exclusions Plugin"
+  enabled: true
+  name: 9508320.yaml
+tests:
+  - test_title: 9508320-1
+    desc: Creating/editing an contact
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: text/vcard;version=4.0
+            port: 80
+            method: PUT
+            uri: /remote.php/dav/addressbooks/users/esadc/contacts/1234-567890-abc-def.vcf
+            data: |-
+              Content-Type: text/vcard;version=4.0
+              BEGIN:VCARD
+              VERSION:4.0
+              PRODID:+//IDN bitfire.at//DAVx5/4.4.8-ose ez-vcard/0.12.1
+              UID:1234-567890-abc-def
+              FN:Test
+              N:;Test;;;
+              REV:20250430T024319Z
+              END:VCARD
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "911100"|id "920420"

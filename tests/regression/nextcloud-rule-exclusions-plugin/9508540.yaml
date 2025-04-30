@@ -12,7 +12,7 @@ tests:
           input:
             dest_addr: 127.0.0.1
             headers:
-              Host: localhost
+              Host: example.com
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: text/plain;charset=UTF-8
@@ -29,7 +29,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "921150"|id "932240"|id "942200"|id "942330"|id "942340"|id "942370"|id "942430"|id "942431"|id "942432"|id "942450"
+              id "920273"|id "921150"|id "931130"|id "932240"|id "942200"|id "942330"|id "942340"|id "942370"|id "942430"|id "942431"|id "942432"|id "942450"
   - test_title: 9508540-2
     desc: Checking document state with built in collabora CODE Server
     stages:
@@ -37,7 +37,7 @@ tests:
           input:
             dest_addr: 127.0.0.1
             headers:
-              Host: localhost
+              Host: example.com
               User-Agent: OWASP CRS test agent
               Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
               Content-Type: text/plain;charset=UTF-8
@@ -120,4 +120,4 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "920273"|id "920420"|id "921150"|id "932240"|id "942200"|id "942330"|id "942340"|id "942370"|id "942430"|id "942431"|id "942432"|id "942450"
+              id "920273"|id "920420"|id "921150"|id "931130"|id "932240"|id "942200"|id "942330"|id "942340"|id "942370"|id "942430"|id "942431"|id "942432"|id "942450"
