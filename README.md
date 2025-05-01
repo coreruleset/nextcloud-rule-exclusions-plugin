@@ -28,6 +28,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Cookbook                  |  Supported ✅     |
 | Nextcloud Files HPB (Notify_Push)   |  Supported ✅     |
 | Nextcloud News                      |  Supported ✅     |
+| Nextcloud Bookmarks                 |  Supported ✅     |
 | Nextcloud Talk                      |  Not supported ❌ |
 | Nextcloud Forms                     |  Not supported ❌ |
 | Nextcloud Polls                     |  Not supported ❌ |
