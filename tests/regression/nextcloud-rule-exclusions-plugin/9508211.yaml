@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks: Syncing bookmarks via extension"
   enabled: true
-  name: 9508212.yaml
+  name: 9508211.yaml
 tests:
-  - test_title: 9508212-1
+  - test_title: 9508211-1
     desc: Connecting floccus extension to Nextcloud
     stages:
       - stage:
@@ -25,7 +25,7 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "931130"|id "941170"|id "941210"|id "942440"
-  - test_title: 9508212-2
+  - test_title: 9508211-2
     desc: Syncing an bookmark entry via an extension
     stages:
       - stage:

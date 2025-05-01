@@ -3,9 +3,9 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks"
   enabled: true
-  name: 9508211.yaml
+  name: 9508210.yaml
 tests:
-  - test_title: 9508211-1
+  - test_title: 9508210-1
     desc: Creating an bookmark
     stages:
       - stage:
@@ -25,7 +25,7 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "931130"
-  - test_title: 9508211-2
+  - test_title: 9508210-2
     desc: Editing an existing bookmark
     stages:
       - stage:
@@ -46,7 +46,7 @@ tests:
           output:
             no_log_contains: |-
               id "920273"|id "931130"
-  - test_title: 9508211-3
+  - test_title: 9508210-3
     desc: Clicking a bookmark entry
     stages:
       - stage:
