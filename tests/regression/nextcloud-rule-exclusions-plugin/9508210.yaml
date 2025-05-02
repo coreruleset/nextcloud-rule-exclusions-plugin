@@ -6,7 +6,7 @@ meta:
   name: 9508210.yaml
 tests:
   - test_title: 9508210-1
-    desc: Creating an bookmark
+    desc: Creating a bookmark
     stages:
       - stage:
           input:
