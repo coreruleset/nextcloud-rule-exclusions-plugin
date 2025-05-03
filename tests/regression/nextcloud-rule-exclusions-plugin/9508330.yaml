@@ -59,7 +59,7 @@ tests:
             no_log_contains: |-
               id "911100"|id "920272"|id "920273"|id "932236"|id "942430"|id "942431"|id "942432"|id "942440"
   - test_title: 9508330-2
-    desc: Creating a new calendar
+    desc: Creating a new calendar collection
     stages:
       - stage:
           input:
@@ -129,6 +129,34 @@ tests:
                     </A:prop>
                   </A:set>
                 </B:mkcalendar>
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "911100"|id "920272"|id "920273"|id "932236"|id "942430"|id "942431"|id "942432"|id "942440"
+  - test_title: 9508330-4
+    desc: Syncing a calendar group
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/xml; charset=utf-8
+            port: 80
+            method: PROPFIND
+            uri: /remote.php/dav/calendars/esadc/personal/
+            data: |-
+              <?xml version='1.0' encoding='UTF-8'?>
+                <propfind xmlns="DAV:" xmlns:CAL="urn:ietf:params:xml:ns:caldav" xmlns:CARD="urn:ietf:params:xml:ns:carddav">
+                  <prop>
+                    <CAL:max-resource-size/>
+                    <supported-report-set/>
+                    <n0:getctag xmlns:n0="http://calendarserver.org/ns/"/>
+                    <sync-token/>
+                  </prop>
+                </propfind>
             version: HTTP/1.1
           output:
             no_log_contains: |-
