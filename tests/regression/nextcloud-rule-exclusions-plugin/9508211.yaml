@@ -1,0 +1,44 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Bookmarks: Syncing bookmarks via extension"
+  enabled: true
+  name: 9508211.yaml
+tests:
+  - test_title: 9508211-1
+    desc: Connecting floccus extension to Nextcloud
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /index.php/apps/bookmarks/public/rest/v2/bookmark
+            data: |-
+              {"url":"javascript:void(0)","title":"floccus","folders":["-1"]}
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "931130"|id "941170"|id "941210"|id "942440"
+  - test_title: 9508211-2
+    desc: Syncing a bookmark entry via an extension
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: GET
+            uri: /index.php/apps/bookmarks/public/rest/v2/bookmark?url=https%3A%2F%2Fexample.com%2F
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "931130"|id "941170"|id "941210"|id "942440"
