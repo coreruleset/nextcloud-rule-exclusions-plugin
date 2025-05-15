@@ -73,7 +73,6 @@ tests:
           output:
             no_log_contains: |-
               id "911100"|id "920440"
-
   - test_title: 9508988-5
     desc: Adding a internal address (.com TLD)
     stages:
