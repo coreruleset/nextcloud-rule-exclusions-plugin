@@ -19,15 +19,15 @@ tests:
             port: 80
             method: POST
             uri: /apps/mail/api/settings/provisioning
-            # Broken
-            # data: >-
-            #   {{"data":{"id":null,"active":true,"emailTemplate":"%USERID%@domain.com","provisioningDomain":"domain.com",
-            #   "imapUser":"%USERID%domain.com","imapHost":"mx.domain.com","imapPort":"993","imapSslMode":"ssl","smtpUser":"%USERID%domain.com",
-            #   "smtpHost":"mx.domain.com","smtpPort":"465","smtpSslMode":"ssl","masterPasswordEnabled":false,"masterPassword":"",
-            #   "sieveEnabled":false,"sieveUser":"","sieveHost":"","sievePort":"","sieveSslMode":"","ldapAliasesProvisioning":false,"ldapAliasesAttribute":""}}
+            data: >-
+              {"data":{"id":null,"active":true,"emailTemplate":"%USERID%@domain.com","provisioningDomain":"domain.com","imapUser":"%USERID%domain.com",
+              "imapHost":"mx.domain.com","imapPort":"993","imapSslMode":"ssl","smtpUser":"%USERID%domain.com","smtpHost":"mx.domain.com","smtpPort":"465",
+              "smtpSslMode":"ssl","masterPasswordEnabled":false,"masterPassword":"","sieveEnabled":false,"sieveUser":"","sieveHost":"",
+              "sievePort":"","sieveSslMode":"","ldapAliasesProvisioning":false,"ldapAliasesAttribute":""}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "920230"
+            no_log_contains: |-
+              id "920230"|id "920272"|id "920273"|id "942432"
   - test_title: 9508982-2
     desc: Editing an existing mail account provison config
     stages:
@@ -49,4 +49,5 @@ tests:
               "sieveUser":"","sieveHost":"","sievePort":"","sieveSslMode":"","ldapAliasesProvisioning":false,"ldapAliasesAttribute":""}}
             version: HTTP/1.1
           output:
-            no_log_contains: id "920230"
+            no_log_contains: |-
+              id "920230"|id "920272"|id "920273"|id "942432"
