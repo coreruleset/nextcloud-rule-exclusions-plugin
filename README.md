@@ -137,6 +137,21 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
     ctl:ruleRemoveTargetById=922130;MULTIPART_PART_HEADERS"
 ```
 
+### Coraza default body processor
+
+By default, Coraza will use the `URLENCODED` body processor when no other request body processor has been configured. Which body processor Coraza uses is defined in the `coraza.conf` file. The default behavior is not desirable for Nextcloud since Nextcloud is used to upload files which may include raw binary data or pretty much anything. The following rule can be used to enable the `RAW` body processor when no other parser has been configured.
+
+```
+SecRule REQBODY_PROCESSOR "!@rx (?:URLENCODED|MULTIPART|XML|JSON)" \
+    "id:9508033,\
+    phase:1,\
+    pass,\
+    nolog,\
+    ctl:requestBodyProcessor=RAW"
+```
+
+**NOTE:** This issue can also happen if you enable the `enforce body processor` option in `crs-setup.conf` which isn't recommended for Nextcloud.
+
 ## Testing
 
 After the plugin is enabled, Nextcloud should work without problems caused by CRS (for example, false positives while blocking requests). If problems still occur then please file a new issue on [GitHub](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new). (Note that high paranoia level deployments may require additional tuning beyond this plugin.)
