@@ -139,7 +139,7 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
 
 ### Coraza default body processor
 
-By default Coraza will use the `URLENCODED` body processor when no other request body parser has been configured, what body parser Coraza uses is defined by the `coraza.conf` recommended file. This behavior is not desirable for Nextcloud since Nextcloud is used to upload files which may include raw binary data or pretty much anything. This behavior can be changed by using the `RAW` body processor when no other parser has been configured.
+By default, Coraza will use the `URLENCODED` body processor when no other request body processor has been configured. Which body processor Coraza uses is defined in the `coraza.conf` file. The default behavior is not desirable for Nextcloud since Nextcloud is used to upload files which may include raw binary data or pretty much anything. The following rule can be used to enable the `RAW` body processor when no other parser has been configured.
 
 ```
 SecRule REQBODY_PROCESSOR "!@rx (?:URLENCODED|MULTIPART|XML|JSON)" \
