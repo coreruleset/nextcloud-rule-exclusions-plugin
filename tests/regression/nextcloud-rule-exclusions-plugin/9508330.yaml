@@ -77,7 +77,7 @@ tests:
             no_log_contains: |-
               id "911100"|id "920272"|id "920273"|id "932236"|id "942430"|id "942431"|id "942432"|id "942440"
   - test_title: 9508330-3
-    desc: Signing into CalDav iPhone
+    desc: Signing into CalDav on iPhone
     stages:
       - stage:
           input:

@@ -6,7 +6,7 @@ meta:
   name: 9508320.yaml
 tests:
   - test_title: 9508320-1
-    desc: Creating/editing an contact
+    desc: Creating/editing a contact
     stages:
       - stage:
           input:
