@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Teams: Setting a unique password for all shares to the team"
+  description: "Teams: Setting a unique password for all shares sent to a team"
   enabled: true
   name: 9508941.yaml
 tests:
