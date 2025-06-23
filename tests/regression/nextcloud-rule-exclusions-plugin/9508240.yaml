@@ -38,7 +38,7 @@ tests:
             port: 80
             method: PUT
             uri: /ocs/v2.php/apps/external/api/v1/sites/6
-            data |-
+            data: |-
               {"name":"test","url":"https://example.com","lang":"en","type":"link","device":"android","icon":"external.svg","groups":[],"redirect":1,"id":6}
             version: HTTP/1.1
           output:
