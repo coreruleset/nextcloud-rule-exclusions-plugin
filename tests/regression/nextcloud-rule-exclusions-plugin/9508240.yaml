@@ -1,0 +1,46 @@
+---
+meta:
+  author: "Esad Cetiner"
+  description: "Nextcloud Bookmarks: External Sites"
+  enabled: true
+  name: 9508240.yaml
+tests:
+  - test_title: 9508240-1
+    desc: Adding an external link
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: application/json
+            port: 80
+            method: POST
+            uri: /ocs/v2.php/apps/external/api/v1/sites
+            data: |-
+              {"name":"test","url":"https://example.com","lang":"","type":"link","device":"","icon":"external.svg","groups":[],"redirect":0}
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "931130"|id "942432"
+  - test_title: 9508240-2
+    desc: Modifying an external link
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            port: 80
+            method: PUT
+            uri: /ocs/v2.php/apps/external/api/v1/sites/6
+            data |-
+              {"name":"test","url":"https://example.com","lang":"en","type":"link","device":"android","icon":"external.svg","groups":[],"redirect":1,"id":6}
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "920273"|id "931130"|id "942432"
