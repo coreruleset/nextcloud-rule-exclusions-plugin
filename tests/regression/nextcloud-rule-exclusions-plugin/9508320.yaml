@@ -6,7 +6,7 @@ meta:
   name: 9508320.yaml
 tests:
   - test_title: 9508320-1
-    desc: Creating/editing a contact
+    desc: Creating/editing a contact via an dav client
     stages:
       - stage:
           input:
@@ -32,7 +32,7 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "911100"|id "920420"|id "921110"|id "942430"|id "942431"|id "942432"|id "942440"
+              id "911100"|id "920420"|id "920530"|id "921110"|id "942430"|id "942431"|id "942432"|id "942440"
   - test_title: 9508320-2
     desc: Syncing recently contacted contacts
     stages:
@@ -60,4 +60,31 @@ tests:
             version: HTTP/1.1
           output:
             no_log_contains: |-
-              id "911100"|id "920420"|id "921110"|id "942430"|id "942431"|id "942432"|id "942440"
+              id "911100"|id "920420"|id "920530"|id "921110"|id "942430"|id "942431"|id "942432"|id "942440"
+  - test_title: 9508320-3
+    desc: Editing an existing contact via the GUI
+    stages:
+      - stage:
+          input:
+            dest_addr: 127.0.0.1
+            headers:
+              Host: localhost
+              User-Agent: OWASP CRS test agent
+              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+              Content-Type: text/vcard; charset=UTF-8; charset=UTF-8
+            port: 80
+            method: PUT
+            uri: /remote.php/dav/addressbooks/users/test/contacts/44F9B20E-5FB9-410E-9C99-63320C133165.vcf
+            data: |-
+              BEGIN:VCARD
+              VERSION:3.0
+              PRODID;VALUE=TEXT:-//Apple Inc.//iOS 15.6.1//EN
+              N:;Test;;;
+              FN:Test1
+              REV;VALUE=DATE-AND-OR-TIME:20250605T224554Z
+              UID:C29191D9-A248-4DBE-B0A1-8515FC18F031
+              END:VCARD
+            version: HTTP/1.1
+          output:
+            no_log_contains: |-
+              id "911100"|id "920420"|id "920530"|id "921110"|id "942430"|id "942431"|id "942432"|id "942440"
