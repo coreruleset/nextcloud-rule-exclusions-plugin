@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks"
   enabled: true
-  name: 9508210.yaml
+  rule_id: 9508210
 tests:
   - test_id: 1
     desc: Creating a bookmark
@@ -23,7 +23,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 931130]
+            no_expect_ids:
+              - 920273
+              - 931130
   - test_id: 2
     desc: Editing an existing bookmark
     stages:
@@ -43,7 +45,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 931130]
+            no_expect_ids:
+              - 920273
+              - 931130
   - test_id: 3
     desc: Clicking a bookmark entry
     stages:
@@ -62,4 +66,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 931130]
+            no_expect_ids:
+              - 920273
+              - 931130

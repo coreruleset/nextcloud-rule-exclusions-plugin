@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Loading avatars for an email address"
   enabled: true
-  name: 9508971.yaml
+  rule_id: 9508971
 tests:
   - test_id: 1
     stages:

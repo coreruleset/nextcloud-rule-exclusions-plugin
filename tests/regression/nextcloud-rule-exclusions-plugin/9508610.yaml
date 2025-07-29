@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Personal Settings: Changing password"
   enabled: true
-  name: 9508610.yaml
+  rule_id: 9508610
 tests:
   - test_id: 1
     stages:

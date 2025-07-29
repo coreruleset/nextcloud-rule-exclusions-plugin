@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "FPs during password reset"
   enabled: true
-  name: 9508411.yaml
+  rule_id: 9508411
 tests:
   - test_id: 1
     desc: Resetting a password with pretty URLs

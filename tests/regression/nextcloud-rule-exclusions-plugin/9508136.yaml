@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Files: Downloading all files in a share as an zip file"
   enabled: true
-  name: 9508136.yaml
+  rule_id: 9508136
 tests:
   - test_id: 1
     desc: Creating a new share for a file/folder

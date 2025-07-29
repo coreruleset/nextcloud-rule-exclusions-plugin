@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Text Editor: Editing a text document"
   enabled: true
-  name: 9508313.yaml
+  rule_id: 9508313
 tests:
   - test_id: 1
     desc: |

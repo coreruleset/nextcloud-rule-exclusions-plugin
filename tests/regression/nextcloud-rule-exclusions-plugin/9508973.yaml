@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508973.yaml
+  rule_id: 9508973
 tests:
   - test_id: 1
     desc: Loading a remote image in Nextcloud Mail
@@ -20,4 +20,11 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920230, 920273, 931130, 942421, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920230
+              - 920273
+              - 931130
+              - 942421
+              - 942430
+              - 942431
+              - 942432

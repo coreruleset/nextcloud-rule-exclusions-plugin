@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508642.yaml
+  rule_id: 9508642
 tests:
   - test_id: 1
     desc: Configuring Nextcloud Office Templates
@@ -44,4 +44,12 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920272, 920273, 931130, 942430, 942431, 942432, 942440, 942460]
+            no_expect_ids:
+              - 920272
+              - 920273
+              - 931130
+              - 942430
+              - 942431
+              - 942432
+              - 942440
+              - 942460

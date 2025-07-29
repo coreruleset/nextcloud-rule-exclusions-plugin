@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "FPs during login/reauthentication"
   enabled: true
-  name: 9508400.yaml
+  rule_id: 9508400
 tests:
   - test_id: 1
     desc: Logging in to Nextcloud

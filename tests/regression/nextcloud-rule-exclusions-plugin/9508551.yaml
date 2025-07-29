@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Dedicated Collabora Server"
   enabled: true
-  name: 9508551.yaml
+  rule_id: 9508551
 tests:
   - test_id: 1
     desc: Nextcloud Office advertisement with dedicated Collabora server

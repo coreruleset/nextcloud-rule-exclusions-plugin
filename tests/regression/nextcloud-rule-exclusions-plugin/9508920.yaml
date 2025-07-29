@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Notes: Classic editor web GUI"
   enabled: true
-  name: 9508920.yaml
+  rule_id: 9508920
 tests:
   - test_id: 1
     desc: Creating a sample markdown note for new Notes users
@@ -25,7 +25,10 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [942430, 942431, 942432]
+            no_expect_ids:
+              - 942430
+              - 942431
+              - 942432
   - test_id: 2
     desc: Editing a markdown note
     stages:
@@ -44,4 +47,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 941100]
+            no_expect_ids:
+              - 911100
+              - 941100

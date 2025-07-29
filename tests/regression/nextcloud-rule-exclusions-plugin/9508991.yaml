@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Sending/drafting an email message"
   enabled: true
-  name: 9508991.yaml
+  rule_id: 9508991
 tests:
   - test_id: 1
     desc: |-
@@ -27,7 +27,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 2
     desc: |
       Drafting an email, content could be anything.
@@ -50,7 +56,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 3
     desc: |
       Drafting an email, content could be anything.
@@ -73,7 +85,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 4
     desc: |
       Drafting an email, content could be anything.
@@ -96,7 +114,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 5
     desc: |
       Drafting an email, content could be anything.
@@ -119,7 +143,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 6
     desc: |
       Drafting an email, content could be anything.
@@ -142,7 +172,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 7
     desc: |
       Drafting an email, content could be anything.
@@ -165,7 +201,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 8
     desc: |
       Drafting an email, subject could be anything.
@@ -187,7 +229,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 9
     desc: |
       Writing a draft email
@@ -209,7 +257,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 10
     desc: |
       Drafting an email, subject could be anything.
@@ -231,7 +285,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 11
     desc: |
       Drafting an email, subject could be anything.
@@ -253,7 +313,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 12
     desc: |
       Editing email from outbox with/without pretty formatting
@@ -274,7 +340,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 13
     desc: |
       Sending an formatted/unformatted email
@@ -295,7 +367,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 14
     desc: |
       Writing an draft email with/without pretty formatting
@@ -316,7 +394,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 15
     desc: |
       Sending an email with/without pretty format
@@ -337,7 +421,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432
   - test_id: 16
     desc: |
       Writing an email to multiple email addresses
@@ -361,4 +451,10 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 932236, 941100, 942430, 942431, 942432]
+            no_expect_ids:
+              - 920273
+              - 932236
+              - 941100
+              - 942430
+              - 942431
+              - 942432

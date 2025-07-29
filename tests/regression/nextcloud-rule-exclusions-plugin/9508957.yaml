@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508957.yaml
+  rule_id: 9508957
 tests:
   - test_id: 1
     desc: Configuring folders for Nextcloud Photos to scan
@@ -24,7 +24,16 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 942100, 942200, 942370, 942431, 942432, 942460, 942520]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 942100
+              - 942200
+              - 942370
+              - 942431
+              - 942432
+              - 942460
+              - 942520
   - test_id: 2
     desc: Configuring upload folder for Nextcloud Photos
     stages:
@@ -44,4 +53,13 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 942100, 942200, 942370, 942431, 942432, 942460, 942520]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 942100
+              - 942200
+              - 942370
+              - 942431
+              - 942432
+              - 942460
+              - 942520

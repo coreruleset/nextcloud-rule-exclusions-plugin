@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail"
   enabled: true
-  name: 9508989.yaml
+  rule_id: 9508989
 tests:
   - test_id: 1
     desc: Setting a email signature
@@ -23,7 +23,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 941100]
+            no_expect_ids:
+              - 911100
+              - 941100
   - test_id: 2
     desc: Setting a email signature for an alias
     stages:
@@ -42,4 +44,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 941100]
+            no_expect_ids:
+              - 911100
+              - 941100

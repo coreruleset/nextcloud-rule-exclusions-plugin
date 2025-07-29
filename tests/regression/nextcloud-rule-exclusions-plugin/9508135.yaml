@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508135.yaml
+  rule_id: 9508135
 tests:
   - test_id: 1
     desc: Creating a new share for a file/folder
@@ -23,7 +23,17 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 930120, 932240, 941110, 942200, 942340, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 930120
+              - 932240
+              - 941110
+              - 942200
+              - 942340
+              - 942430
+              - 942431
+              - 942432
   - test_id: 2
     desc: Editing an existing share
     stages:
@@ -42,7 +52,17 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 930120, 932240, 941110, 942200, 942340, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 930120
+              - 932240
+              - 941110
+              - 942200
+              - 942340
+              - 942430
+              - 942431
+              - 942432
   - test_id: 3
     desc: Deleting an share
     stages:
@@ -58,7 +78,17 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 930120, 932240, 941110, 942200, 942340, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 930120
+              - 932240
+              - 941110
+              - 942200
+              - 942340
+              - 942430
+              - 942431
+              - 942432
   - test_id: 4
     desc: Enabling/disabling grid view for public shares
     stages:
@@ -77,7 +107,17 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 930120, 932240, 941110, 942200, 942340, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 930120
+              - 932240
+              - 941110
+              - 942200
+              - 942340
+              - 942430
+              - 942431
+              - 942432
   - test_id: 5
     desc: Creating a share then sending an email
     stages:
@@ -96,4 +136,14 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920273, 930120, 932240, 941110, 942200, 942340, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 920273
+              - 930120
+              - 932240
+              - 941110
+              - 942200
+              - 942340
+              - 942430
+              - 942431
+              - 942432

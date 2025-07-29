@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Photos"
   enabled: true
-  name: 9508953.yaml
+  rule_id: 9508953
 tests:
   - test_id: 1
     desc: Renaming tagged faces
@@ -48,4 +48,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920420, 921110]
+            no_expect_ids:
+              - 920420
+              - 921110

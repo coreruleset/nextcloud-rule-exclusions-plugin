@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508618.yaml
+  rule_id: 9508618
 tests:
   - test_id: 1
     desc: Adding a link to user profile

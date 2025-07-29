@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508612.yaml
+  rule_id: 9508612
 tests:
   - test_id: 1
     desc: Adjusting availability hours
@@ -57,4 +57,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 932236, 942430, 942431, 942432]
+            no_expect_ids:
+              - 911100
+              - 932236
+              - 942430
+              - 942431
+              - 942432

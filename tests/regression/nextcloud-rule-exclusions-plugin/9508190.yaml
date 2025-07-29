@@ -7,7 +7,7 @@ meta:
     the required request methods. This test is a compilation of old
     tests from rules that no longer exist.
   enabled: true
-  name: 9508190.yaml
+  rule_id: 9508190
 tests:
   - test_id: 1
     desc: |

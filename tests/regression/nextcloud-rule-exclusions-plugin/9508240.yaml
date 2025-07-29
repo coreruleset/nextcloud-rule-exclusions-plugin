@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks: External Sites"
   enabled: true
-  name: 9508240.yaml
+  rule_id: 9508240
 tests:
   - test_id: 1
     desc: Adding an external link
@@ -23,7 +23,10 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 931130, 942432]
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 942432
   - test_id: 2
     desc: Modifying an external link
     stages:
@@ -42,4 +45,7 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 931130, 942432]
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 942432

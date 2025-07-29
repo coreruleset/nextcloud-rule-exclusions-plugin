@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring CPU cores for Recognize"
   enabled: true
-  name: 9508649.yaml
+  rule_id: 9508649
 tests:
   - test_id: 1
     stages:

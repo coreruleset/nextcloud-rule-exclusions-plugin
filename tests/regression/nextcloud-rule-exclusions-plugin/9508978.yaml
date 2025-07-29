@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508978.yaml
+  rule_id: 9508978
 tests:
   - test_id: 1
     desc: Marking an email as not junk
@@ -23,4 +23,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [920273, 942290]
+            no_expect_ids:
+              - 920273
+              - 942290

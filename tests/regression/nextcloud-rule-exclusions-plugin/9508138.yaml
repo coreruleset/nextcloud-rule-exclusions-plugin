@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508138.yaml
+  rule_id: 9508138
 tests:
   - test_id: 1
     desc: Viewing comments on a file
@@ -31,7 +31,10 @@ tests:
         version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920420, 941160]
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 941160
   - test_id: 2
     desc: Editing comments on a file
     stages:
@@ -59,4 +62,7 @@ tests:
         version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920420, 941160]
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 941160

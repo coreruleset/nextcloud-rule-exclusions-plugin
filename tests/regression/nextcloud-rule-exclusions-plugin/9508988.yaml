@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Adding/removing trusted senders/internal addresses"
   enabled: true
-  name: 9508988.yaml
+  rule_id: 9508988
 tests:
   - test_id: 1
     desc: Adding a trusted domain (.com TLD)
@@ -20,7 +20,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 2
     desc: Adding a trusted domain (.inc TLD)
     stages:
@@ -36,7 +38,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 3
     desc: Removing a trusted domain (.com TLD)
     stages:
@@ -52,7 +56,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 4
     desc: Removing a trusted domain (.inc TLD)
     stages:
@@ -68,7 +74,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 5
     desc: Adding a internal address (.com TLD)
     stages:
@@ -84,7 +92,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 6
     desc: Adding a internal address (.inc TLD)
     stages:
@@ -100,7 +110,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 7
     desc: Removing a internal address (.com TLD)
     stages:
@@ -116,7 +128,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440
   - test_id: 8
     desc: Removing a internal address (.inc TLD)
     stages:
@@ -132,4 +146,6 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920440]
+            no_expect_ids:
+              - 911100
+              - 920440

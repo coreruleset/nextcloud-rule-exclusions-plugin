@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring ToS/privacy policy link"
   enabled: true
-  name: 9508648.yaml
+  rule_id: 9508648
 tests:
   - test_id: 1
     desc: Configuring privacy policy

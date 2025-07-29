@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508334.yaml
+  rule_id: 9508334
 tests:
   - test_id: 1
     desc: Editing an existing calendar appointments
@@ -26,7 +26,9 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 941100]
+            no_expect_ids:
+              - 911100
+              - 941100
   - test_id: 2
     desc: Deleting an existing calendar appointments
     stages:

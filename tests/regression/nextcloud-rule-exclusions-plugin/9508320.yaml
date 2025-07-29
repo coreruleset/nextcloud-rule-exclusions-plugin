@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508320.yaml
+  rule_id: 9508320
 tests:
   - test_id: 1
     desc: Creating/editing a contact via an dav client
@@ -31,7 +31,15 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920420, 920530, 921110, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 920530
+              - 921110
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 2
     desc: Syncing recently contacted contacts
     stages:
@@ -58,7 +66,15 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920420, 920530, 921110, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 920530
+              - 921110
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 3
     desc: Editing an existing contact via the GUI
     stages:
@@ -84,4 +100,12 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920420, 920530, 921110, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 920530
+              - 921110
+              - 942430
+              - 942431
+              - 942432
+              - 942440

@@ -3,7 +3,7 @@ meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
   enabled: true
-  name: 9508330.yaml
+  rule_id: 9508330
 tests:
   - test_id: 1
     desc: Creating/modifying an calendar
@@ -56,7 +56,15 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920272, 920273, 932236, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920272
+              - 920273
+              - 932236
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 2
     desc: Creating a new calendar collection
     stages:
@@ -73,7 +81,15 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920272, 920273, 932236, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920272
+              - 920273
+              - 932236
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 3
     desc: Signing into CalDav on iPhone
     stages:
@@ -129,7 +145,15 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920272, 920273, 932236, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920272
+              - 920273
+              - 932236
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 4
     desc: Syncing a calendar group
     stages:
@@ -156,4 +180,12 @@ tests:
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [911100, 920272, 920273, 932236, 942430, 942431, 942432, 942440]
+            no_expect_ids:
+              - 911100
+              - 920272
+              - 920273
+              - 932236
+              - 942430
+              - 942431
+              - 942432
+              - 942440
