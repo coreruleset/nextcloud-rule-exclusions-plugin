@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Clicking on an email address"
-  enabled: true
   rule_id: 9508979
 tests:
   - test_id: 1

@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs when registering webauthn devices"
-  enabled: true
   rule_id: 9508609
 tests:
   - test_id: 1

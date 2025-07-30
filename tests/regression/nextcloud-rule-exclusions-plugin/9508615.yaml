@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Personal Settings: Validating new user password against password policy"
-  enabled: true
   rule_id: 9508615
 tests:
   - test_id: 1

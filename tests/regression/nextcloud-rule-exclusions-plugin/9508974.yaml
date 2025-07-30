@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail"
-  enabled: true
   rule_id: 9508974
 tests:
   - test_id: 1

@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Dedicated Collabora Server"
-  enabled: true
   rule_id: 9508551
 tests:
   - test_id: 1

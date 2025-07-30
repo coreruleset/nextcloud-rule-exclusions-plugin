@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Text Editor: False positive with various Text Editor tokens"
-  enabled: true
   rule_id: 9508311
 tests:
   - test_id: 1

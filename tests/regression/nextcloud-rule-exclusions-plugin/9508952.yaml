@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Photos"
-  enabled: true
   rule_id: 9508952
 tests:
   - test_id: 1

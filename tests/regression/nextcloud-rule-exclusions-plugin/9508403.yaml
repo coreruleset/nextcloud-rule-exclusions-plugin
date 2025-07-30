@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login from desktop app"
-  enabled: true
   rule_id: 9508403
 tests:
   - test_id: 1

@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during password reset"
-  enabled: true
   rule_id: 9508411
 tests:
   - test_id: 1

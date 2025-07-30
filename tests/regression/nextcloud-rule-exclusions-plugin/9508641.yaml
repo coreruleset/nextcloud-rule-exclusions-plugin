@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring password policy"
-  enabled: true
   rule_id: 9508641
 tests:
   - test_id: 1

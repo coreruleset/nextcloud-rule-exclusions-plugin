@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring SMTP server credentials"
-  enabled: true
   rule_id: 9508646
 tests:
   - test_id: 1

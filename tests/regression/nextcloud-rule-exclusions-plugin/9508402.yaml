@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login with FIDO2"
-  enabled: true
   rule_id: 9508402
 tests:
   - test_id: 1

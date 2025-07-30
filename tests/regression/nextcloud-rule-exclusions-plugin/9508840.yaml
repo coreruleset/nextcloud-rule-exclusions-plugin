@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud News"
-  enabled: true
   rule_id: 9508840
 tests:
   - test_id: 1

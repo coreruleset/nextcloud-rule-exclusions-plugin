@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Text Editor: Editing a text document"
-  enabled: true
   rule_id: 9508313
 tests:
   - test_id: 1

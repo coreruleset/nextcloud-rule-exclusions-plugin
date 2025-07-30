@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Notes: Classic editor mobile app"
-  enabled: true
   rule_id: 9508910
 tests:
   - test_id: 1

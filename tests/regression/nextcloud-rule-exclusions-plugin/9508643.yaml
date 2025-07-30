@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Nextcloud Bookmarks"
-  enabled: true
   rule_id: 9508643
 tests:
   - test_id: 1

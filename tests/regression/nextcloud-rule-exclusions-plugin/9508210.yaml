@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks"
-  enabled: true
   rule_id: 9508210
 tests:
   - test_id: 1

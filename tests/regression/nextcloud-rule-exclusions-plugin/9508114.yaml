@@ -2,7 +2,6 @@
 meta:
   author: "Jozef Sudolsky, Max Leske, Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  enabled: true
   rule_id: 9508114
 tests:
   - test_id: 1

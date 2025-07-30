@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Smart Picker: Displaying Previews/adding a hyperlink"
-  enabled: true
   rule_id: 9508880
 tests:
   - test_id: 1

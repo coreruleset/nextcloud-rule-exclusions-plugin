@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Sending/drafting an email message"
-  enabled: true
   rule_id: 9508991
 tests:
   - test_id: 1

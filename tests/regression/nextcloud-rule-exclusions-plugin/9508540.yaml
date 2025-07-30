@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Built in CODE Server"
-  enabled: true
   rule_id: 9508540
 tests:
   - test_id: 1

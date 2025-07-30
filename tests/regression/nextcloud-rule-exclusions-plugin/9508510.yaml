@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Sending request token"
-  enabled: true
   rule_id: 9508510
 tests:
   - test_id: 1

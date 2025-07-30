@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks: Syncing bookmarks via extension"
-  enabled: true
   rule_id: 9508211
 tests:
   - test_id: 1

@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Adding/removing trusted senders/internal addresses"
-  enabled: true
   rule_id: 9508988
 tests:
   - test_id: 1

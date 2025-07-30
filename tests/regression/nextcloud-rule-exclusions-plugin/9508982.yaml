@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Configuring mail account provisioning"
-  enabled: true
   rule_id: 9508982
 tests:
   - test_id: 1

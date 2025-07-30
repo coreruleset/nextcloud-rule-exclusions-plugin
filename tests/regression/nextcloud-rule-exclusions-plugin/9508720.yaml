@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Cookbook"
-  enabled: true
   rule_id: 9508720
 tests:
   - test_id: 1

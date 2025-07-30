@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Custom CSS app"
-  enabled: true
   rule_id: 9508930
 tests:
   - test_id: 1

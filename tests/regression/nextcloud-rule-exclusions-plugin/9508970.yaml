@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Obtaining autoconfig information from a mailbox"
-  enabled: true
   rule_id: 9508970
 tests:
   - test_id: 1

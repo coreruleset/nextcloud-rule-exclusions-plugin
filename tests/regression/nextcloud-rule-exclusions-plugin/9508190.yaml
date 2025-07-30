@@ -6,7 +6,6 @@ meta:
     there were multiple (Way too many) rules that solely handled allowing
     the required request methods. This test is a compilation of old
     tests from rules that no longer exist.
-  enabled: true
   rule_id: 9508190
 tests:
   - test_id: 1

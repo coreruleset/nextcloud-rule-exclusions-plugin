@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Setting up a fresh Nextcloud server"
-  enabled: true
   rule_id: 9508520
 tests:
   - test_id: 1

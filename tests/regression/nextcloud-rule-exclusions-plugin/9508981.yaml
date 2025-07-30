@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Changing settings"
-  enabled: true
   rule_id: 9508981
 tests:
   - test_id: 1

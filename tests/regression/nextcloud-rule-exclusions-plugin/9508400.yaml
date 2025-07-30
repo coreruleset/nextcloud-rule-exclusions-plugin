@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login/reauthentication"
-  enabled: true
   rule_id: 9508400
 tests:
   - test_id: 1

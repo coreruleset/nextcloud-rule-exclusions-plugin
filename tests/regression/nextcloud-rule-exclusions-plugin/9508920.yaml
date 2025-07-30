@@ -2,7 +2,6 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Notes: Classic editor web GUI"
-  enabled: true
   rule_id: 9508920
 tests:
   - test_id: 1
