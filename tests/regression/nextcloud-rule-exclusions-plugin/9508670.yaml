@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508670
+rule_id: 9508670
 tests:
   - test_id: 1
     desc: Displaying discover page in the app store

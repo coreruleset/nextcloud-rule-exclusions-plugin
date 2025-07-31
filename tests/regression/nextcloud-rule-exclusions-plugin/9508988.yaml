@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Adding/removing trusted senders/internal addresses"
-  rule_id: 9508988
+rule_id: 9508988
 tests:
   - test_id: 1
     desc: Adding a trusted domain (.com TLD)

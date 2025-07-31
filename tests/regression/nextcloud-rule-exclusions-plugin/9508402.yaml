@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login with FIDO2"
-  rule_id: 9508402
+rule_id: 9508402
 tests:
   - test_id: 1
     desc: Logging in via webauthn with pretty URLs

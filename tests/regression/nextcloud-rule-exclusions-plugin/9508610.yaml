@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Personal Settings: Changing password"
-  rule_id: 9508610
+rule_id: 9508610
 tests:
   - test_id: 1
     stages:

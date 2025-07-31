@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Configuring mail account provisioning"
-  rule_id: 9508982
+rule_id: 9508982
 tests:
   - test_id: 1
     desc: Creating a new mail account provison config

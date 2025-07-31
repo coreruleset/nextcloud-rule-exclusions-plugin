@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring CPU cores for Recognize"
-  rule_id: 9508649
+rule_id: 9508649
 tests:
   - test_id: 1
     stages:

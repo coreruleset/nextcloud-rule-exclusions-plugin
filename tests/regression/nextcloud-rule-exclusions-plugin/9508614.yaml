@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508614
+rule_id: 9508614
 tests:
   - test_id: 1
     desc: Changing the ordering of apps in the menu

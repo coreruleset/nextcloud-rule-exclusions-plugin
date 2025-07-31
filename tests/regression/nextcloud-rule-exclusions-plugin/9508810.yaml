@@ -2,7 +2,7 @@
 meta:
   author: "Jean-Kevin Kpadey, Esad Cetiner"
   description: "Nextcloud Deck"
-  rule_id: 9508810
+rule_id: 9508810
 tests:
   - test_id: 1
     desc: |

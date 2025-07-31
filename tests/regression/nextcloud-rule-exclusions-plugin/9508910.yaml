@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Notes: Classic editor mobile app"
-  rule_id: 9508910
+rule_id: 9508910
 tests:
   - test_id: 1
     desc: Editing a markdown note

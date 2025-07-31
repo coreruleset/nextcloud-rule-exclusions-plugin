@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Teams: Setting a unique password for all shares sent to a team"
-  rule_id: 9508941
+rule_id: 9508941
 tests:
   - test_id: 1
     stages:

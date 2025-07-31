@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring password policy"
-  rule_id: 9508641
+rule_id: 9508641
 tests:
   - test_id: 1
     desc: Configuring a password policy for shares

@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Configuring SMTP server credentials"
-  rule_id: 9508646
+rule_id: 9508646
 tests:
   - test_id: 1
     stages:

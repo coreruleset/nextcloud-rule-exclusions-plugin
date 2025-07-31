@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508830
+rule_id: 9508830
 tests:
   - test_id: 1
     desc: Enabling/disabling status/weather widget

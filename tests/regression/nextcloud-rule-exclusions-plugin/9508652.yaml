@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508652
+rule_id: 9508652
 tests:
   - test_id: 1
     desc: Viewing Nextcloud log files via web GUI

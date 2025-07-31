@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508137
+rule_id: 9508137
 tests:
   - test_id: 1
     desc: Creating a password protected file upload request and emailing the recipient

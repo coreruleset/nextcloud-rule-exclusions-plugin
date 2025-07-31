@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks: External Sites"
-  rule_id: 9508240
+rule_id: 9508240
 tests:
   - test_id: 1
     desc: Adding an external link

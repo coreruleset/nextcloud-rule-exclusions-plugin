@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508135
+rule_id: 9508135
 tests:
   - test_id: 1
     desc: Creating a new share for a file/folder

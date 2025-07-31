@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508655
+rule_id: 9508655
 tests:
   - test_id: 1
     desc: Specifying a redirect URL for oauth clients

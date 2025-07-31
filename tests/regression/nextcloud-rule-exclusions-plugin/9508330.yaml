@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508330
+rule_id: 9508330
 tests:
   - test_id: 1
     desc: Creating/modifying an calendar

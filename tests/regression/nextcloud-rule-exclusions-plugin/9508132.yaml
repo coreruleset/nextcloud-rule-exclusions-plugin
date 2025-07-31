@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508132
+rule_id: 9508132
 tests:
   - test_id: 1
     desc: Posting a comment on a file

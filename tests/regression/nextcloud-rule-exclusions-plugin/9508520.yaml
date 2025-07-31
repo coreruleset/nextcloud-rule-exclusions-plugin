@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Setting up a fresh Nextcloud server"
-  rule_id: 9508520
+rule_id: 9508520
 tests:
   - test_id: 1
     desc: SQLite database selected

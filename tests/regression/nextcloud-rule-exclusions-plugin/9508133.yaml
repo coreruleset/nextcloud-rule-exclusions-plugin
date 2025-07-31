@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508133
+rule_id: 9508133
 tests:
   - test_id: 1
     desc: Viewing files stored in the trashbin

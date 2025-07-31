@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508986
+rule_id: 9508986
 tests:
   - test_id: 1
     desc: Setting a password for a sieve server

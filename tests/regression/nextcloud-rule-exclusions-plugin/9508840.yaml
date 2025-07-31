@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud News"
-  rule_id: 9508840
+rule_id: 9508840
 tests:
   - test_id: 1
     desc: Subscribing to an RSS feed via mobile app

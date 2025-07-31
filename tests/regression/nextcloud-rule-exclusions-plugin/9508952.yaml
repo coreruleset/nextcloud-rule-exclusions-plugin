@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Photos"
-  rule_id: 9508952
+rule_id: 9508952
 tests:
   - test_id: 1
     desc: Creating/viewing a photo album

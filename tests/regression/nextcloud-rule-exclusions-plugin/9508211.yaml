@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Bookmarks: Syncing bookmarks via extension"
-  rule_id: 9508211
+rule_id: 9508211
 tests:
   - test_id: 1
     desc: Connecting floccus extension to Nextcloud

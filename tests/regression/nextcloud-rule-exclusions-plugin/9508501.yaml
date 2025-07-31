@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Admin setting a password for a user"
-  rule_id: 9508501
+rule_id: 9508501
 tests:
   - test_id: 1
     stages:

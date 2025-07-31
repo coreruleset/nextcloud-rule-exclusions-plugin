@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail"
-  rule_id: 9508974
+rule_id: 9508974
 tests:
   - test_id: 1
     desc: Searching for messages

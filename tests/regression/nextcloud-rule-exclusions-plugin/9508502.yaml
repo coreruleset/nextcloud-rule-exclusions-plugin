@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Being redirected to login page"
-  rule_id: 9508502
+rule_id: 9508502
 tests:
   - test_id: 1
     stages:

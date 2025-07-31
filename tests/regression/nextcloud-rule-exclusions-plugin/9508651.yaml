@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508651
+rule_id: 9508651
 tests:
   - test_id: 1
     desc: Setting log reader time to local time

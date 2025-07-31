@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508530
+rule_id: 9508530
 tests:
   - test_id: 1
     desc: Creating/modifying documents in Nextcloud Office

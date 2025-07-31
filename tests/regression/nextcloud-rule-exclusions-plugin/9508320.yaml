@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508320
+rule_id: 9508320
 tests:
   - test_id: 1
     desc: Creating/editing a contact via an dav client

@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Administration Settings: Nextcloud Bookmarks"
-  rule_id: 9508643
+rule_id: 9508643
 tests:
   - test_id: 1
     desc: Enabling "accessing and collecting information about the web pages you add"

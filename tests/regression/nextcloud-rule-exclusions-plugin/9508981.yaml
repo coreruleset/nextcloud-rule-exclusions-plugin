@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Changing settings"
-  rule_id: 9508981
+rule_id: 9508981
 tests:
   - test_id: 1
     desc: Collapsing/uncollapsing mailbox (Nextcloud 25 and older)

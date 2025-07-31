@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Dedicated Collabora Server"
-  rule_id: 9508551
+rule_id: 9508551
 tests:
   - test_id: 1
     desc: Nextcloud Office advertisement with dedicated Collabora server

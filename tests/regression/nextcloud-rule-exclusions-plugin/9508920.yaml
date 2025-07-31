@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Notes: Classic editor web GUI"
-  rule_id: 9508920
+rule_id: 9508920
 tests:
   - test_id: 1
     desc: Creating a sample markdown note for new Notes users

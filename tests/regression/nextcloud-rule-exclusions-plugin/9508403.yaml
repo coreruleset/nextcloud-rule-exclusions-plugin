@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login from desktop app"
-  rule_id: 9508403
+rule_id: 9508403
 tests:
   - test_id: 1
     desc: Logging in via desktop app with pretty URLs

@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Dav client scanning for Dav path"
-  rule_id: 9508191
+rule_id: 9508191
 tests:
   - test_id: 1
     stages:

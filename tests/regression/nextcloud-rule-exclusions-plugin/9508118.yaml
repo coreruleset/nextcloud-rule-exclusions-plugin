@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508118
+rule_id: 9508118
 tests:
   - test_id: 1
     desc: WebDAV client searching for files

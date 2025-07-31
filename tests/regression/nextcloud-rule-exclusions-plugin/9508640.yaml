@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Rule Exclusions Plugin"
-  rule_id: 9508640
+rule_id: 9508640
 tests:
   - test_id: 1
     desc: Configuring an RSS explorer feed for Nextcloud News

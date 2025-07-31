@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs when registering webauthn devices"
-  rule_id: 9508609
+rule_id: 9508609
 tests:
   - test_id: 1
     desc: Registering webauthn device with pretty URLs

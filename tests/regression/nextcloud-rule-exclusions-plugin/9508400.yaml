@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "FPs during login/reauthentication"
-  rule_id: 9508400
+rule_id: 9508400
 tests:
   - test_id: 1
     desc: Logging in to Nextcloud
