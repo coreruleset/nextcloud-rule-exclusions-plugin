@@ -2,36 +2,35 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Mail: Clicking on an email address"
-  enabled: true
-  name: 9508979.yaml
+rule_id: 9508979
 tests:
-  - test_title: 9508979-1
+  - test_id: 1
     stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: GET
-            uri: /apps/mail/api/contactIntegration/match/user%40example.com
-            version: HTTP/1.1
-          output:
-            no_log_contains: id "920440"
-  - test_title: 9508979-1
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          port: 80
+          method: GET
+          uri: /apps/mail/api/contactIntegration/match/user%40example.com
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids: [920440]
+  - test_id: 1
     stages:
-      - stage:
-          input:
-            dest_addr: 127.0.0.1
-            headers:
-              Host: localhost
-              User-Agent: OWASP CRS test agent
-              Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            port: 80
-            method: GET
-            uri: /apps/mail/api/contactIntegration/match/user%40example.inc
-            version: HTTP/1.1
-          output:
-            no_log_contains: id "920440"
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          port: 80
+          method: GET
+          uri: /apps/mail/api/contactIntegration/match/user%40example.inc
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids: [920440]
