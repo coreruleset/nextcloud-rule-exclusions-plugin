@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Office: Saving changes to settings (XML data)"
+  description: "Nextcloud Office: Saving changes to settings (JSON data)"
 rule_id: 9508552
 tests:
   - test_id: 1
