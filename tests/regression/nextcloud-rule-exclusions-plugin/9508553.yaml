@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Saving changes to settings (XML data)"
-rule_id: 9508552
+rule_id: 9508553
 tests:
   - test_id: 1
     desc: Saving changes to settings for users
