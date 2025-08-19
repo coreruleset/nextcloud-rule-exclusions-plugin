@@ -5,7 +5,7 @@ meta:
 rule_id: 9508210
 tests:
   - test_id: 1
-    desc: Creating a bookmark
+    desc: Creating a bookmark via Web GUI
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -25,8 +25,20 @@ tests:
             no_expect_ids:
               - 920273
               - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 2
-    desc: Editing an existing bookmark
+    desc: Editing an existing bookmark via Web GUI
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -47,8 +59,20 @@ tests:
             no_expect_ids:
               - 920273
               - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
   - test_id: 3
-    desc: Clicking a bookmark entry
+    desc: Clicking a bookmark entry via Web GUI
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -68,3 +92,111 @@ tests:
             no_expect_ids:
               - 920273
               - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
+  - test_id: 4
+    desc: Connecting floccus extension to Nextcloud
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
+          port: 80
+          method: POST
+          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark
+          data: |-
+            {"url":"javascript:void(0)","title":"floccus","folders":["-1"]}
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
+  - test_id: 5
+    desc: Syncing a bookmark entry via an extension
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          port: 80
+          method: GET
+          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark?url=https%3A%2F%2Fexample.com%2F
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
+  - test_id: 6
+    desc: Creating an bookmark entry via an extension
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
+          port: 80
+          method: POST
+          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark
+          data: |-
+            {"url":"https://iplists.firehol.org/","title":"FireHOL IP Lists | IP Blacklists | IP Blocklists | IP Reputation","folders":[23]}
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
