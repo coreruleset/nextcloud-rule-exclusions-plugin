@@ -2,7 +2,7 @@
 meta:
   author: "Esad Cetiner"
   description: "Nextcloud Office: Getting settings"
-rule_id: 9508553
+rule_id: 9508554
 tests:
   - test_id: 1
     desc: User Settings
