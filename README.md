@@ -58,7 +58,7 @@ Nextcloud frequently releases new major versions with breaking changes and featu
 |  Nextcloud 29 (Hub 8)    |   Tested ✅  |
 |  Nextcloud 30 (Hub 9)    |   Tested ✅  |
 |  Nextcloud 31 (Hub 10)   |   Tested ✅  |
-|  Nextcloud 32 (Hub 11)   |   Tested ✅  |
+|  Nextcloud 32 (Hub 25)   |   Tested ✅  |
 
 ## Installation
 
