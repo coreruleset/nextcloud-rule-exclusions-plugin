@@ -167,7 +167,7 @@ tests:
               - 942431
               - 942432
               - 942440
-  - test_id: 6
+  - test_id: 7
     desc: Creating an bookmark entry via an extension
     stages:
       - input:
@@ -182,6 +182,39 @@ tests:
           uri: /index.php/apps/bookmarks/public/rest/v2/bookmark
           data: |-
             {"url":"https://iplists.firehol.org/","title":"FireHOL IP Lists | IP Blacklists | IP Blocklists | IP Reputation","folders":[23]}
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920273
+              - 931130
+              - 932200
+              - 932240
+              - 932220
+              - 932236
+              - 932240
+              - 932260
+              - 941170
+              - 941210
+              - 942430
+              - 942431
+              - 942432
+              - 942440
+  - test_id: 7
+    desc: Creating an bookmark entry via an extension
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
+          port: 80
+          method: PUT
+          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark/178
+          data: |-
+            {"url":"https://0xinfection.xyz/posts/breaking-the-waf-wall-modsecurity-crs/","title":"Breaking the WAF Wall: ModSecurity CRS :: 0xInfection's Blog — Ramblings of an Infected Geek","folders":[47],"tags":[]}
           version: HTTP/1.1
         output:
           log:
