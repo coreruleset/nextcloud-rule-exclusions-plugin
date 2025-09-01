@@ -167,7 +167,7 @@ tests:
               - 942431
               - 942432
               - 942440
-  - test_id: 7
+  - test_id: 6
     desc: Creating an bookmark entry via an extension
     stages:
       - input:
