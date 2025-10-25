@@ -47,18 +47,18 @@ Additional apps may be supported if there is enough demand from the community, b
 
 Nextcloud frequently releases new major versions with breaking changes and features that are likely to cause false positives that haven't been discovered/resolved. It's recommended to wait until new feature releases have been tested before upgrading to prevent functionality from being impaired by the plugin. If you do upgrade and encounter issues, please [open an issue](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/issues/new) or [PR](https://github.com/coreruleset/nextcloud-rule-exclusions-plugin/compare).
 
-|       **Version**        |  **Status**   |
-|--------------------------|---------------|
-|  Nextcloud 24 (Hub 3)    |   Tested ✅  |
-|  Nextcloud 25 (Hub 3)    |   Tested ✅  |
-|  Nextcloud 26 (Hub 4)    |   Tested ✅  |
-|  Nextcloud 27 (Hub 5)    |   Tested ✅  |
-|  Nextcloud 27.1 (Hub 6)  |   Tested ✅  |
-|  Nextcloud 28 (Hub 7)    |   Tested ✅  |
-|  Nextcloud 29 (Hub 8)    |   Tested ✅  |
-|  Nextcloud 30 (Hub 9)    |   Tested ✅  |
-|  Nextcloud 31 (Hub 10)   |   Tested ✅  |
-|  Nextcloud 32 (Hub 25)   |   Tested ✅  |
+|           **Version**           |  **Status**   |
+|---------------------------------|---------------|
+|  Nextcloud 24 (Hub 3)           |   Tested ✅  |
+|  Nextcloud 25 (Hub 3)           |   Tested ✅  |
+|  Nextcloud 26 (Hub 4)           |   Tested ✅  |
+|  Nextcloud 27 (Hub 5)           |   Tested ✅  |
+|  Nextcloud 27.1 (Hub 6)         |   Tested ✅  |
+|  Nextcloud 28 (Hub 7)           |   Tested ✅  |
+|  Nextcloud 29 (Hub 8)           |   Tested ✅  |
+|  Nextcloud 30 (Hub 9)           |   Tested ✅  |
+|  Nextcloud 31 (Hub 10)          |   Tested ✅  |
+|  Nextcloud 32 (Hub 25 Autumn)   |   Tested ✅  |
 
 ## Installation
 
