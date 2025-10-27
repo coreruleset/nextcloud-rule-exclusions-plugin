@@ -84,7 +84,7 @@ The process of increasing the value is slightly different depending on your web 
 
 Apache with ModSecurity2:
 ```
-<LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
+<LocationMatch "/remote\.php/dav/(?:bulk|files/|uploads/)">
     SecRequestBodyLimit 10737418240
     SecRequestBodyNoFilesLimit 10737418240
 </LocationMatch>
@@ -93,7 +93,7 @@ Apache with ModSecurity2:
 nginx with libModSecurity3:
 
 ```
-location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/)) { 
+location ~ /remote\.php/dav/(?:bulk|files/|uploads/) { 
     modsecurity_rules 'SecRequestBodyLimit 10737418240
     SecRequestBodyNoFilesLimit 10737418240'; 
 }
@@ -101,9 +101,38 @@ location ~ (?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|f
 
 Apache with libmodsecurity3:
 ```
-<LocationMatch "(?:/index\.php/apps/files/ajax/upload\.php|/remote\.php/dav/(?:bulk|files/|uploads/))">
+<LocationMatch "/remote\.php/dav/(?:bulk|files/|uploads/)">
     modsecurity_rules 'SecRequestBodyLimit 10737418240
     SecRequestBodyNoFilesLimit 10737418240';
+</LocationMatch>
+```
+
+#### Increasing max upload size for example content (Optional)
+
+If you upload large example contacts in the admin settings then you'll need to increase the max allowed file size.
+The below config will increase the max request body size to 20MB.
+
+Feel free to ignore this if you don't care about this feature.
+
+Apache with ModSecurity2:
+```
+<LocationMatch "/apps/dav/api/(?:defaultcontact/contact|exampleEvent/event)$">
+    SecRequestBodyNoFilesLimit 23107200
+</LocationMatch>
+```
+
+nginx with libModSecurity3:
+
+```
+location ~ /apps/dav/api/(?:defaultcontact/contact|exampleEvent/event)$ { 
+    SecRequestBodyNoFilesLimit 23107200'; 
+}
+```
+
+Apache with libmodsecurity3:
+```
+<LocationMatch "/apps/dav/api/(?:defaultcontact/contact|exampleEvent/event)$">
+    SecRequestBodyNoFilesLimit 23107200';
 </LocationMatch>
 ```
 
