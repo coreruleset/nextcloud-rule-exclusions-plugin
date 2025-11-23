@@ -5,7 +5,9 @@ meta:
 rule_id: 9508139
 tests:
   - test_id: 1
-    desc: Viewing comments on a file
+    desc: |
+      Viewing comments on a file
+      This request is not sent with a Content Type header
     stages:
       - input:
           dest_addr: 127.0.0.1
