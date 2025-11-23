@@ -5,7 +5,7 @@ meta:
 rule_id: 9508533
 tests:
   - test_id: 1
-    desc: Built in CODE Server
+    desc: Built-in CODE Server
     stages:
       - input:
           dest_addr: 127.0.0.1
