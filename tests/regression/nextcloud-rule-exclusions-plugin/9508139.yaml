@@ -4,13 +4,12 @@ meta:
   description: "Nextcloud Rule Exclusions Plugin: Viewing Comments on iOS"
 rule_id: 9508139
 tests:
-  # Note: This test currently relies on the Content Type header not being set but
-  # go-ftw will set a Content Type of application/x-www-form-urlencoded by default even not explicitly set.
   - test_id: 1
     desc: Viewing comments on a file
     stages:
       - input:
           dest_addr: 127.0.0.1
+          autocomplete_headers: false
           headers:
             Host: localhost
             User-Agent: Mozilla/5.0 (iOS) Nextcloud-iOS/7.1.9
