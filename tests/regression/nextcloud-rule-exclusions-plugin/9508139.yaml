@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Nextcloud Rule Exclusions Plugin: Viewing Comments on iOS"
 rule_id: 9508139
 tests:
   # Note: This test currently relies on the Content Type header not being set but

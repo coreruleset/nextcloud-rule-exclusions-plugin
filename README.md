@@ -125,14 +125,14 @@ nginx with libModSecurity3:
 
 ```
 location ~ /apps/dav/api/(?:defaultcontact/contact|exampleEvent/event)$ { 
-    SecRequestBodyNoFilesLimit 23107200'; 
+    modsecurity_rules 'SecRequestBodyNoFilesLimit 23107200'; 
 }
 ```
 
 Apache with libmodsecurity3:
 ```
 <LocationMatch "/apps/dav/api/(?:defaultcontact/contact|exampleEvent/event)$">
-    SecRequestBodyNoFilesLimit 23107200';
+    modsecurity_rules 'SecRequestBodyNoFilesLimit 23107200';
 </LocationMatch>
 ```
 
