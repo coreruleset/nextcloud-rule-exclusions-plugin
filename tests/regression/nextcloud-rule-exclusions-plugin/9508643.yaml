@@ -23,6 +23,7 @@ tests:
         output:
           log:
             no_expect_ids:
+             - 920273
              - 920440
              - 930130
   - test_id: 2
@@ -44,5 +45,6 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920273
               - 920440
               - 930130

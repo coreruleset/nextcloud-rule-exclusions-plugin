@@ -1,11 +1,11 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Bookmarks: Syncing bookmarks via extension"
-rule_id: 9508211
+  description: "Nextcloud Mail: Creating/editing text blocks"
+rule_id: 9508975
 tests:
   - test_id: 1
-    desc: Connecting floccus extension to Nextcloud
+    desc: Creating an text block
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -16,20 +16,17 @@ tests:
             Content-Type: application/json
           port: 80
           method: POST
-          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark
+          uri: /apps/mail/api/textBlocks
           data: |-
-            {"url":"javascript:void(0)","title":"floccus","folders":["-1"]}
+            {"title":"test","content":"<p style=\"margin:0;\">&lt;script&gt;</p>"}
           version: HTTP/1.1
         output:
           log:
             no_expect_ids:
               - 920273
-              - 931130
-              - 941170
-              - 941210
-              - 942440
+              - 941100
   - test_id: 2
-    desc: Syncing a bookmark entry via an extension
+    desc: Editing an text block
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -37,15 +34,16 @@ tests:
             Host: localhost
             User-Agent: OWASP CRS test agent
             Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
           port: 80
-          method: GET
-          uri: /index.php/apps/bookmarks/public/rest/v2/bookmark?url=https%3A%2F%2Fexample.com%2F
+          method: PUT
+          uri: /apps/mail/api/textBlocks/1
+          data: |-
+            {"title":"test1","content":"<p style=\"margin:0;\">&lt;script&gt;1</p>"}
           version: HTTP/1.1
         output:
           log:
             no_expect_ids:
+              - 911100
               - 920273
-              - 931130
-              - 941170
-              - 941210
-              - 942440
+              - 941100

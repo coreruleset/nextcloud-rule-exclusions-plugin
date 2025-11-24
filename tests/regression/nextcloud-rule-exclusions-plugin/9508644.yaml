@@ -1,10 +1,10 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Teams: Setting a unique password for all shares sent to a team"
-rule_id: 9508941
+  description: "Administration Settings: Admin Permissions"
 tests:
   - test_id: 1
+    desc: Enabling "accessing and collecting information about the web pages you add"
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -14,13 +14,13 @@ tests:
             Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             Content-Type: application/json
           port: 80
-          method: PUT
-          uri: /ocs/v2.php/apps/circles/circles/pRJL8yTlPWkl6ftuNws7o3HcqjiQXWw/setting
+          method: POST
+          uri: /apps/settings//settings/authorizedgroups/saveSettings
           data: |-
-            {"setting":"password_single","value":"<script>Al3rt(test)"}
+            {"newGroups":[{"displayName":"Guests","gid":"guest_app"}],"class":"OCA\\Support\\Settings\\Admin"}
           version: HTTP/1.1
         output:
           log:
             no_expect_ids:
-              - 920273
-              - 941100
+             - 920273
+             - 932240

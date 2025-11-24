@@ -108,3 +108,46 @@ tests:
               - 942431
               - 942432
               - 942440
+  - test_id: 4
+    desc: |
+      Editing an existing contact via the GUI
+      This false positive specifically happens when editing the default contact (Leon Green)
+      The stock photo is excluded from this test
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: text/vcard; charset=UTF-8; charset=UTF-8
+          port: 80
+          method: PUT
+          uri: /remote.php/dav/addressbooks/users/esadc/contacts/default
+          data: |-
+            BEGIN:VCARD
+            VERSION:3.0
+            PRODID:-//Sabre//Sabre VObject 4.5.6//EN
+            UID:91458dfa-a0f7-4c68-83cd-af3c953df35f
+            FN:Leon Green
+            ADR;TYPE=HOME:;;123 Street Street;City;State;;Country
+            EMAIL;TYPE=HOME:leon@example.com
+            TEL;TYPE=HOME,VOICE:+999999999999
+            TITLE:Manager
+            ORG:Company
+            BDAY;VALUE=DATE:20000101
+            URL:www.nextcloud.com
+            REV:20251025T122122Z
+            END:VCARD
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 911100
+              - 920420
+              - 920530
+              - 921110
+              - 942430
+              - 942431
+              - 942432
+              - 942440
