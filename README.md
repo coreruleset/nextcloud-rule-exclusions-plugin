@@ -170,7 +170,7 @@ SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
 
 ### Coraza/CrowdSec AppSec default body processor
 
-By default, Coraza (Used by CrowdSec AppSec) will use the `URLENCODED` body processor when no other request body processor has been configured. Which body processor Coraza uses is defined in the `coraza.conf` file. The default behavior is not desirable for Nextcloud since Nextcloud is used to upload files which may include raw binary data or pretty much anything. The following rule can be used to enable the `RAW` body processor when no other parser has been configured.
+By default, Coraza (used by CrowdSec AppSec) will use the `URLENCODED` body processor when no other request body processor has been configured. Which body processor Coraza uses is defined in the `coraza.conf` file. The default behavior is not desirable for Nextcloud since Nextcloud is used to upload files which may include raw binary data or pretty much anything. The following rule can be used to enable the `RAW` body processor when no other parser has been configured.
 
 ```
 SecRule REQBODY_PROCESSOR "!@rx (?:URLENCODED|MULTIPART|XML|JSON)" \
