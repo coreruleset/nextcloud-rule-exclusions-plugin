@@ -5,7 +5,7 @@ meta:
 rule_id: 9508752
 tests:
   - test_id: 1
-    desc: Participating in an voice/video call via the built-in signaling server
+    desc: Participating in a voice/video call via the built-in signaling server
     stages:
       - input:
           dest_addr: 127.0.0.1
