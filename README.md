@@ -12,36 +12,37 @@ Due to how feature rich Nextcloud is, not all apps in Nextcloud can be supported
 
 Additional apps may be supported if there is enough demand from the community, but in general, support for apps made by 3rd parties (not Nextcloud) won't be added.
 
-|             *App Name*              |      *Status*      |
-|------------------------------------ |--------------------|
-| Nextcloud Files                     |  Supported ✅     |
-| Nextcloud Photos                    |  Supported ✅     |
-| Nextcloud Calendar                  |  Supported ✅     |
-| Nextcloud Contacts                  |  Supported ✅     |
-| Nextcloud Teams (Formerly Circles)  |  Supported ✅     |
-| Nextcloud Mail                      |  Supported ✅     |
-| Nextcloud Deck                      |  Supported ✅     |
-| Nextcloud Office                    |  Supported ✅     |
-| Nextcloud Notes                     |  Supported ✅     |
-| Nextcloud Text Editor               |  Supported ✅     |
-| Nextcloud Recognize                 |  Supported ✅     |
-| Nextcloud Cookbook                  |  Supported ✅     |
-| Nextcloud Files HPB (Notify_Push)   |  Supported ✅     |
-| Nextcloud News                      |  Supported ✅     |
-| Nextcloud Bookmarks                 |  Supported ✅     |
-| Nextcloud External                  |  Supported ✅     |
-| Nextcloud Talk                      |  Not supported ❌ |
-| Nextcloud Forms                     |  Not supported ❌ |
-| Nextcloud Polls                     |  Not supported ❌ |
-| Nextcloud Unspash                   |  Not supported ❌ |
-| Nextcloud Collectives               |  Not supported ❌ |
-| Nextcloud Maps                      |  Not supported ❌ |
-| Cospend                             |  Not supported ❌ |
-| Breeze Dark                         |  Not supported ❌ |
-| OnlyOffice                          |  Not supported ❌ |
-| Nextcloud Tables                    |  Not supported ❌ |
-| Nextcloud Assistant                 |  Not supported ❌ |
-| ownCloud Music                      |  Not supported ❌ |
+|              *App Name*               |      *Status*      |
+|---------------------------------------|--------------------|
+| Nextcloud Files                       |  Supported ✅     |
+| Nextcloud Files HPB (Notify_Push)     |  Supported ✅     |
+| Nextcloud Photos                      |  Supported ✅     |
+| Nextcloud Calendar                    |  Supported ✅     |
+| Nextcloud Contacts                    |  Supported ✅     |
+| Nextcloud Teams (Formerly Circles)    |  Supported ✅     |
+| Nextcloud Mail                        |  Supported ✅     |
+| Nextcloud Deck                        |  Supported ✅     |
+| Nextcloud Office                      |  Supported ✅     |
+| Nextcloud Notes                       |  Supported ✅     |
+| Nextcloud Text Editor                 |  Supported ✅     |
+| Nextcloud Recognize                   |  Supported ✅     |
+| Nextcloud Cookbook                    |  Supported ✅     |
+| Nextcloud News                        |  Supported ✅     |
+| Nextcloud Bookmarks                   |  Supported ✅     |
+| Nextcloud External Apps               |  Supported ✅     |
+| Nextcloud Talk                        |  Supported ✅     |
+| Nextcloud Talk HPB (Signaling Server) |  Supported ✅     |
+| Nextcloud Forms                       |  Not supported ❌ |
+| Nextcloud Polls                       |  Not supported ❌ |
+| Nextcloud Unspash                     |  Not supported ❌ |
+| Nextcloud Collectives                 |  Not supported ❌ |
+| Nextcloud Maps                        |  Not supported ❌ |
+| Cospend                               |  Not supported ❌ |
+| Breeze Dark                           |  Not supported ❌ |
+| OnlyOffice                            |  Not supported ❌ |
+| Nextcloud Tables                      |  Not supported ❌ |
+| Nextcloud Assistant                   |  Not supported ❌ |
+| ownCloud Music                        |  Not supported ❌ |
 
 ## Tested Versions
 
