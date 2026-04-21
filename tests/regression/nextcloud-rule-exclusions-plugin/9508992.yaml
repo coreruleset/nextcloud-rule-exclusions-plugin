@@ -7,6 +7,7 @@ tests:
   - test_id: 1
     desc: Allow any response body when viewing an email
     stages:
+
       - input:
           dest_addr: 127.0.0.1
           headers:
@@ -20,6 +21,7 @@ tests:
           data: |-
             { "endpoints": [{"method": "GET", "url": "/apps/mail/api/messages/1/html"}], "body": "SqlException" }
           version: HTTP/1.1
+
       - input:
           dest_addr: 127.0.0.1
           headers:
@@ -33,6 +35,7 @@ tests:
         output:
           log:
             no_match_regex: \[id "\d+"\]
+
       - input:
           dest_addr: 127.0.0.1
           headers:
