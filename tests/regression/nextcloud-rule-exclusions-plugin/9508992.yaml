@@ -5,7 +5,7 @@ meta:
 rule_id: 9508992
 tests:
   - test_id: 1
-    desc: Configure Albedo for next test
+    desc: Allow any response body when viewing an email
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -20,9 +20,6 @@ tests:
           data: |-
             { "endpoints": [{"method": "GET", "url": "/apps/mail/api/messages/1/html"}], "body": "SqlException" }
           version: HTTP/1.1
-  - test_id: 2
-    desc: Allow any response body when viewing an email
-    stages:
       - input:
           dest_addr: 127.0.0.1
           headers:
@@ -36,9 +33,6 @@ tests:
         output:
           log:
             no_match_regex: \[id "\d+"\]
-  - test_id: 3
-    desc: Reset Albedo for next tests
-    stages:
       - input:
           dest_addr: 127.0.0.1
           headers:
