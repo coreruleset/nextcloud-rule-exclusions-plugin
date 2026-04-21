@@ -5,7 +5,7 @@ meta:
 rule_id: 9508757
 tests:
   - test_id: 1
-    desc: Sending an message in an room via an bot
+    desc: Sending a message in a room via a bot
     stages:
       - input:
           dest_addr: 127.0.0.1

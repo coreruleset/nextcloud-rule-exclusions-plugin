@@ -50,7 +50,7 @@ tests:
               - 942390
               - 942432
   - test_id: 3
-    desc: False positive with requesttoken for Shares, used for any action within nextcloud.
+    desc: False positive with requesttoken for shares, used for any action within nextcloud.
     stages:
       - input:
           dest_addr: 127.0.0.1

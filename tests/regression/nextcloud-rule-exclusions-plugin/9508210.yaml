@@ -241,7 +241,7 @@ tests:
               - 942432
               - 942440
   - test_id: 8
-    desc: Creating an bookmark entry via an extension
+    desc: Creating a bookmark entry via an extension
     stages:
       - input:
           dest_addr: 127.0.0.1
