@@ -31,6 +31,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -64,6 +65,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -97,6 +99,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -130,6 +133,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -163,6 +167,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -194,6 +199,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -227,6 +233,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -260,6 +267,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -293,6 +301,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -326,6 +335,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -359,6 +369,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -392,6 +403,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -425,6 +437,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -458,6 +471,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -491,6 +505,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -524,6 +539,7 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
               - 942390
               - 942432
               - 942450
@@ -559,6 +575,43 @@ tests:
               - 941100
               - 942120
               - 942210
+              - 942340
+              - 942390
+              - 942432
+              - 942450
+              - 943120
+  - test_id: 18
+    desc: |
+      Nextcloud 28 and newer
+      Public Share: no
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
+          port: 80
+          method: POST
+          uri: /apps/text/session/1359272/push
+          data: >-
+            {"documentId":1359272,"sessionId":7361,"sessionToken":"1SbY1cdxFtL/xkI0LZj6Taj+9LlYpxPx98X0xhpruIKMeuDAoqDpL47dd5yyLnvj",
+            "token":null,"filePath":"/Readme.md","baseVersionEtag":"672057b0ec5cf","steps":["A/uRTOR+KT0DQBAAr+7qWQCgN+t4JCBUCdgLT75X+A"],"version":0,
+            "awareness":"AWQBiK6c2wgBXHsidXNlciI6eyJuYW1lIjoidGVzdHVzZXIiLCJjbGllbnRJZCI6MjMzODc4OTEyOCwiY29sb3IiOiIjNzk1YWFiIiwibGFzdFVwZGF0ZSI6MTczMDE3Mjg0N319"}
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920272
+              - 920273
+              - 921110
+              - 932236
+              - 932250
+              - 941100
+              - 942120
+              - 942210
+              - 942340
               - 942390
               - 942432
               - 942450

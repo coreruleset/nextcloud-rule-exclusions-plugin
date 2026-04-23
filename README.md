@@ -147,27 +147,10 @@ See: https://github.com/nextcloud/ios/issues/1942
 ### Nextcloud Server Crawler
 
 The Nextcloud Server Crawler is used by Nextcloud for various functions of Nextcloud such as generating document previews with Collabora, and testing the functionality of Nextcloud (for example, when setting up the high performance backend for files).
-Copy this rule and replace `your-server-ip` with your Nextcloud Server's IP address.
+Uncomment and edit the rule `9508012` in `nextcloud-rule-exclusions-config.conf` and add your Nextcloud Server's IP address to the rule.
 Your Nextcloud Server's IP address will either be your server's WAN IP, or if your server is behind a NAT firewall then it's either your server's private IP address or your default gateway's IP address (Depending on your NAT configuration).
-```
-# Allow Nextcloud Server Crawler to crawl Nextcloud
-# Generating document previews with Collabora
-# Sometimes the server crawler's user agent will be missing/empty or an accept header is missing
-SecRule REMOTE_ADDR "@ipMatch your-server-ip" \
-    "id:9508032,\
-    phase:1,\
-    pass,\
-    t:none,\
-    nolog,\
-    ctl:ruleRemoveById=920300,\
-    ctl:ruleRemoveById=920320,\
-    ctl:ruleRemoveById=920330,\
-    ctl:ruleRemoveTargetById=920120;FILES:data,\
-    ctl:ruleRemoveTargetById=920121;FILES:data,\
-    ctl:ruleRemoveTargetById=920120;FILES_NAMES,\
-    ctl:ruleRemoveTargetById=920121;FILES_NAMES,\
-    ctl:ruleRemoveTargetById=922130;MULTIPART_PART_HEADERS"
-```
+
+**Note:** Previous versions of this plugin required you to copy-paste a rule from the readme and manually update it each release. You no longer need to do that since a solution has been found that allows us to ship the rule with the plugin.
 
 ### Coraza/CrowdSec AppSec default body processor
 
@@ -190,6 +173,6 @@ After the plugin is enabled, Nextcloud should work without problems caused by CR
 
 ## License
 
-Copyright (c) 2022-2025 OWASP CRS project. All rights reserved.
+Copyright (c) 2022-2026 OWASP CRS project. All rights reserved.
 
 The OWASP CRS and its official plugins are distributed under Apache Software License (ASL) version 2. Please see the enclosed LICENSE file for full details.
