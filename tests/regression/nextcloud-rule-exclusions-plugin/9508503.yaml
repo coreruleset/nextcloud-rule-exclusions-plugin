@@ -15,7 +15,7 @@ tests:
           headers:
             Host: localhost
             User-Agent: Mozilla/5.0 (iOS) Nextcloud-iOS/33.0.7
-            Accept: Accept: */*
+            Accept: */*
             Content-Length: 0
           port: 80
           method: POST
@@ -23,5 +23,4 @@ tests:
         version: HTTP/1.1
         output:
           log:
-            no_expect_ids:
-              - 920180
+            no_expect_ids: [920180]
