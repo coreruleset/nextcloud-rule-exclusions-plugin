@@ -20,7 +20,7 @@ tests:
           port: 80
           method: POST
           uri: /index.php/login/v2/poll?token=mL9ackQ9Kv4n03OoUsT048ctWE0Fn6LGm7POWx2Fh8wn1TfnjZPS6MqqpKYoLW3aSxv6nHqM63wItq123mtepcTt0K8rJLIFL67M5GKaabblInw321zbBLh2fQKQm0Ac
-        version: HTTP/1.1
+          version: HTTP/1.1
         output:
           log:
             no_expect_ids: [920180]
