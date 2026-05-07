@@ -7,7 +7,7 @@ tests:
   - test_id: 1
     desc: |
       iOS app authentication flow using polling during initial setup
-      This POST request is sent without content-length and a random polling token
+      This POST request is sent w/o content-length and a random polling token
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -15,7 +15,7 @@ tests:
           headers:
             Host: localhost
             User-Agent: Mozilla/5.0 (iOS) Nextcloud-iOS/33.0.7
-            Accept: */*
+            Accept: "*/*"
             Content-Length: 0
           port: 80
           method: POST
