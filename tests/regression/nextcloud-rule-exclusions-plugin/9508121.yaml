@@ -21,9 +21,7 @@ tests:
             Oc-Checksum: SHA1:9bcc49f899d6c97d9dadbf484ee5fe4f5b6b2f41
             Host: localhost
             X-Request-Id: 14a16b47-73eb-4ed0-9999-da177733dfcc
-            Content-Length: 9332
             Accept-Encoding: zstd, br, gzip, deflate
-            Connection: Keep-Alive
             Accept-Language: en-AU,*
           port: 80
           method: PUT
