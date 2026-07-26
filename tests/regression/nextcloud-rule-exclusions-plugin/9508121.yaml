@@ -10,7 +10,7 @@ tests:
       - input:
           dest_addr: 127.0.0.1
           headers:
-            Accept: */*
+            Accept: "*/*"
             X-Oc-Mtime: 1785031392
             Oc-Total-Length: 9332
             If-Match: "6a656ad1001ba"
