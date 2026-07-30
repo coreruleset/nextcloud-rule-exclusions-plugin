@@ -1,11 +1,10 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Rule Exclusions Plugin"
+  description: "Nextcloud Rule Exclusions Plugin: Dav client locking a file"
 rule_id: 9508121
 tests:
   - test_id: 1
-    desc: Make sure iOS file upload workaround is disabled by default
     stages:
       - input:
           dest_addr: 127.0.0.1
