@@ -5,6 +5,7 @@ meta:
 rule_id: 9508557
 tests:
   - test_id: 1
+    desc: Ensure rule-exclusion is disabled by default
     stages:
       - input:
           dest_addr: 127.0.0.1
