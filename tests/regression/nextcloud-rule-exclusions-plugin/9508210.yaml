@@ -23,6 +23,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -32,8 +33,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -51,13 +54,13 @@ tests:
           port: 80
           method: PUT
           uri: /apps/bookmarks/bookmark/4
-          data: >-
-            {"id":4,"url":"https://example.com/","target":"https://example.com/","title":"https://example.com/1","description":"","lastmodified":1743007234,"added":1743007234,
-            "clickcount":0,"lastPreview":0,"available":true,"archivedFile":null,"userId":"esadc","tags":[],"folders":[-1,3],"textContent":null,"htmlContent":null}
+          data: |-
+            {"id":4,"url":"https://example.com/","target":"https://example.com/","title":"https://example.com/1","description":"","lastmodified":1743007234,"added":1743007234,"clickcount":0,"lastPreview":0,"available":true,"archivedFile":null,"userId":"esadc","tags":[],"folders":[-1,3],"textContent":null,"htmlContent":null}
           version: HTTP/1.1
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -67,8 +70,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -92,6 +97,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -101,8 +107,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -126,6 +134,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -135,8 +144,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -157,6 +168,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -166,8 +178,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -191,6 +205,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -200,8 +215,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -225,6 +242,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -234,8 +252,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432
@@ -259,6 +279,7 @@ tests:
         output:
           log:
             no_expect_ids:
+              - 920272
               - 920273
               - 931100
               - 931130
@@ -268,8 +289,10 @@ tests:
               - 932236
               - 932240
               - 932260
+              - 932350
               - 941170
               - 941210
+              - 942200
               - 942430
               - 942431
               - 942432

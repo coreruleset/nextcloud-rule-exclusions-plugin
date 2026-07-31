@@ -1,8 +1,8 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Administration Settings: Configuring CPU cores for Recognize"
-rule_id: 9508649
+  description: "Nextcloud Rule Exclusions Plugin: Loading avatars"
+rule_id: 9508516
 tests:
   - test_id: 1
     stages:
@@ -12,15 +12,10 @@ tests:
             Host: localhost
             User-Agent: OWASP CRS test agent
             Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            Content-Type: application/json
           port: 80
-          method: PUT
-          uri: /apps/recognize/admin/settings/node_binary
-          data: |-
-            {"value":"/var/www/nextcloud/apps/recognize/bin/node"}
+          method: GET
+          uri: /avatar/guest/Felipe%20Zipitr%C3%ADa/44
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids:
-              - 930120
-              - 932160
+            no_expect_ids: [920272]

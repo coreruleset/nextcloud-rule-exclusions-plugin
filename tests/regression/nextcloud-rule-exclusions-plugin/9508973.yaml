@@ -23,8 +23,10 @@ tests:
               - 920230
               - 920273
               - 931130
+              - 932190
               - 932235
               - 932236
+              - 932350
               - 942421
               - 942430
               - 942431
@@ -48,8 +50,37 @@ tests:
               - 920230
               - 920273
               - 931130
+              - 932190
               - 932235
               - 932236
+              - 932350
+              - 942421
+              - 942430
+              - 942431
+              - 942432
+  - test_id: 3
+    desc: Loading a remote image in Nextcloud Mail
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS test agent
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          port: 80
+          method: GET
+          uri: /apps/mail/proxy?hmac=1234567890abcdef&id=91923&src=https://avatars.githubusercontent.com/u/3012076?s%3D20%26v%3D4
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids:
+              - 920230
+              - 920273
+              - 931130
+              - 932190
+              - 932235
+              - 932236
+              - 932350
               - 942421
               - 942430
               - 942431
