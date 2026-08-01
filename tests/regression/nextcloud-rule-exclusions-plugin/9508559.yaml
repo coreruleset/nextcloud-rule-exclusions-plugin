@@ -4,7 +4,8 @@ meta:
   description: "Nextcloud Office: Loading font file for Collabora Admin panel"
 rule_id: 9508559
 tests:
-
+  - test_id: 1
+    stages:
       - input:
           dest_addr: 127.0.0.1
           headers:
