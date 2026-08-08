@@ -25,6 +25,7 @@ tests:
             no_expect_ids:
               - 920273
               - 931130
+              - 932350
               - 942432
   - test_id: 2
     desc: Modifying an external link
@@ -47,4 +48,5 @@ tests:
             no_expect_ids:
               - 920273
               - 931130
+              - 932350
               - 942432

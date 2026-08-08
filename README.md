@@ -22,7 +22,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Teams (Formerly Circles)    |  Supported ✅     |
 | Nextcloud Mail                        |  Supported ✅     |
 | Nextcloud Deck                        |  Supported ✅     |
-| Nextcloud Office                      |  Supported ✅     |
+| Nextcloud Office (Collabora Online)   |  Supported ✅     |
 | Nextcloud Notes                       |  Supported ✅     |
 | Nextcloud Text Editor                 |  Supported ✅     |
 | Nextcloud Recognize                   |  Supported ✅     |
@@ -37,6 +37,7 @@ Additional apps may be supported if there is enough demand from the community, b
 | Nextcloud Unspash                     |  Not supported ❌ |
 | Nextcloud Collectives                 |  Not supported ❌ |
 | Nextcloud Maps                        |  Not supported ❌ |
+| Nextcloud Office (Euro-Office)        |  Not supported ❌ |
 | Cospend                               |  Not supported ❌ |
 | Breeze Dark                           |  Not supported ❌ |
 | OnlyOffice                            |  Not supported ❌ |
@@ -61,6 +62,7 @@ Nextcloud frequently releases new major versions with breaking changes and featu
 |  Nextcloud 31 (Hub 10)          |   Tested ✅  |
 |  Nextcloud 32 (Hub 25 Autumn)   |   Tested ✅  |
 |  Nextcloud 33 (Hub 26 Winter)   |   Tested ✅  |
+|  Nextcloud 34 (Hub 26 Spring)   |   Tested ✅  |
 
 ## Installation
 
@@ -166,7 +168,7 @@ SecRule REQBODY_PROCESSOR "!@rx (?:URLENCODED|MULTIPART|XML|JSON)" \
     ctl:requestBodyProcessor=RAW"
 ```
 
-**NOTE:** This issue can also happen if you enable the `enforce body processor` option in `crs-setup.conf` which isn't recommended for Nextcloud.
+**NOTE:** `tx.enforce_bodyproc_urlencoded` is effectively the same thing as described, `tx.enforce_bodyproc_urlencoded` is supported by this plugin and contains rule-exclusions to handle false positives resulting from forcing a body processsor.
 
 ## Testing
 

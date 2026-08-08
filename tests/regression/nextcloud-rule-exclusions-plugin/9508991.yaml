@@ -30,6 +30,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -60,6 +61,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -90,6 +92,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -120,6 +123,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -150,6 +154,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -180,6 +185,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -210,6 +216,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -239,6 +246,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -268,6 +276,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -297,6 +306,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -326,6 +336,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -354,6 +365,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -382,6 +394,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -410,6 +423,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -438,6 +452,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431
@@ -457,11 +472,8 @@ tests:
           port: 80
           method: POST
           uri: /apps/mail/api/drafts
-          data: >-
-            {"account":1,"accountId":1,"aliasId":null,"to":[{"email":"user1@example.com user2@example.com user3@example.com user4@example.com user5@example.com
-             user6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com","label":"user1@example.com user2@example.com
-             user3@example.com user4@example.com user5@example.com user6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com"}],
-            "cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p>&lt;script&gt;</p>"},"attachments":[],"isHtml":false,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p>&lt;script&gt;</p>","bodyPlain":"<script>"}
+          # yamllint disable-line rule:line-length
+          data: '{"account":1,"accountId":1,"aliasId":null,"to":[{"email":"user1@example.com user2@example.com user3@example.com user4@example.com user5@example.comuser6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com","label":"user1@example.com user2@example.comuser3@example.com user4@example.com user5@example.com user6@example.com user7@example.com user8@example.com user9@example.com user10@example.com user11@example.com user12@example.com"}],"cc":[],"bcc":[],"subject":"<script>","body":{"format":"html","value":"<p>&lt;script&gt;</p>"},"attachments":[],"isHtml":false,"requestMdn":false,"smimeSign":false,"smimeEncrypt":false,"isPgpMime":false,"editorBody":"<p>&lt;script&gt;</p>","bodyPlain":"<script>"}'
           version: HTTP/1.1
         output:
           log:
@@ -469,6 +481,7 @@ tests:
               - 920272
               - 920273
               - 932236
+              - 932350
               - 941100
               - 942430
               - 942431

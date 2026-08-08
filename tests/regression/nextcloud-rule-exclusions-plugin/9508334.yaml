@@ -17,15 +17,15 @@ tests:
           port: 80
           method: PUT
           uri: /apps/calendar/v1/appointment_configs/3
-          data: >-
-            {"id":3,"token":"n4H3GzMz66YL","name":"test","description":"<script>1","location":"test","visibility":"PRIVATE",
-            "targetCalendarUri":"personal-1","availability":{"timezoneId":"Australia/Melbourne","slots":{"MO":[],"TU":[],"WE":[],
-            "TH":[],"FR":[],"SA":[],"SU":[]}},"length":300,"increment":900,"preparationDuration":0,"followupDuration":0,
-            "timeBeforeNextSlot":0,"futureLimit":5184000,"calendarFreeBusyUris":[],"createTalkRoom":false}
+          # yamllint disable-line rule:line-length
+          data: '{"id":3,"token":"n4H3GzMz66YL","name":"test","description":"<script>1","location":"test","visibility":"PRIVATE","targetCalendarUri":"personal-1","availability":{"timezoneId":"Australia/Melbourne","slots":{"MO":[],"TU":[],"WE":[],"TH":[],"FR":[],"SA":[],"SU":[]}},"length":300,"increment":900,"preparationDuration":0,"followupDuration":0,"timeBeforeNextSlot":0,"futureLimit":5184000,"calendarFreeBusyUris":[],"createTalkRoom":false}'
           version: HTTP/1.1
         output:
           log:
             no_expect_ids:
+              - 920273
+              - 911100
+              - 932350
               - 911100
               - 941100
   - test_id: 2
@@ -57,12 +57,14 @@ tests:
           port: 80
           method: POST
           uri: /apps/calendar/v1/appointment_configs
-          data: >-
-            {"name":"test","description":"<script>","location":"test","visibility":"PRIVATE","targetCalendarUri":
-            "personal-1","availability":{"timezoneId":"Australia/Melbourne","slots":{"MO":[],"TU":[],"WE":[],
-            "TH":[],"FR":[],"SA":[],"SU":[]}},"length":300,"increment":900,"preparationDuration":0,"followupDuration":0,
-            "timeBeforeNextSlot":0,"futureLimit":5184000,"calendarFreeBusyUris":[]}
+          # yamllint disable-line rule:line-length
+          data: '{"name":"test","description":"<script>","location":"test","visibility":"PRIVATE","targetCalendarUri":"personal-1","availability":{"timezoneId":"Australia/Melbourne","slots":{"MO":[],"TU":[],"WE":[],"TH":[],"FR":[],"SA":[],"SU":[]}},"length":300,"increment":900,"preparationDuration":0,"followupDuration":0,"timeBeforeNextSlot":0,"futureLimit":5184000,"calendarFreeBusyUris":[]}'
           version: HTTP/1.1
         output:
           log:
-            no_expect_ids: [941100]
+            no_expect_ids:
+              - 920273
+              - 911100
+              - 932350
+              - 911100
+              - 941100
