@@ -1,11 +1,11 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Office: Creating a document from an template file"
+  description: "Nextcloud Office: Creating a document from a template file"
 rule_id: 9508560
 tests:
   - test_id: 1
-    desc: Rule should be disabled out of the box
+    desc: This rule should be disabled by default (expect detections)
     stages:
       - input:
           dest_addr: 127.0.0.1
