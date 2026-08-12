@@ -168,7 +168,7 @@ SecRule REQBODY_PROCESSOR "!@rx (?:URLENCODED|MULTIPART|XML|JSON)" \
     ctl:requestBodyProcessor=RAW"
 ```
 
-**NOTE:** `tx.enforce_bodyproc_urlencoded` is effectively the same thing as described, `tx.enforce_bodyproc_urlencoded` is supported by this plugin and contains rule-exclusions to handle false positives resulting from forcing a body processsor.
+**NOTE:** `tx.enforce_bodyproc_urlencoded` is effectively the same thing as described above, `tx.enforce_bodyproc_urlencoded` is supported by this plugin and contains rule-exclusions to handle false positives resulting from forcing a body processsor.
 
 ## Testing
 
