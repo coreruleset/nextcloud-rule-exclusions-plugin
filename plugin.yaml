@@ -36,10 +36,6 @@ rule_id_range:
 
 compatibility:
   crs_version: ">=4.0.0"
-  engines:
-    - "modsecurity2"
-    - "modsecurity3"
-    - "coraza"
 
 configuration:
   file: "plugins/nextcloud-rule-exclusions-config.conf"
