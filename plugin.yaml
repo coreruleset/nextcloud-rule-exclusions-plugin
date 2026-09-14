@@ -51,4 +51,4 @@ configuration:
     - name: "tx.nextcloud-rule-exclusions-plugin_server_crawler_rules_enabled"
       type: "boolean"
       default: 0
-      description: "Enable rule exclusions for the Nextcloud Server Crawler (disabled by default; also requires setting the crawler's IP address)"
+      description: "Enable rule exclusions for the Nextcloud Server Crawler (disabled by default; Should only be enabled via a SecRule scoped to server's IP address)"
