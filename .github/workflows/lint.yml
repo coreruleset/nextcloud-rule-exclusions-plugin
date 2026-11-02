@@ -3,4 +3,4 @@ on: [push, pull_request]
 
 jobs:
   plugin-lint:
-    uses: coreruleset/crs-plugin-test-action/.github/workflows/lint.yaml@765fc621341567bbde488bfee46b18da4cac7870 # main
+    uses: coreruleset/crs-plugin-test-action/.github/workflows/lint.yaml@b9b1fbbc2de8b102ff77cc6c2224585ba8451ba6 # main
