@@ -42,7 +42,7 @@ tests:
           port: 80
           method: PUT
           uri: /index.php/apps/notes/api/v1/notes/1234
-          data: '{"accountId":1,"category":"","content":"<script>",","etag":"0123456789abcdef","excerpt":"<script>","favorite":false,"localId":48,"isShared":false,"modified":1774614889,"readonly":false,"id":1731483,"scrollY":8651,"status":"LOCAL_EDITED","title":"test"}'
+          data: '{"accountId":1,"category":"","content":"<script>","etag":"0123456789abcdef","excerpt":"<script>","favorite":false,"localId":48,"isShared":false,"modified":1774614889,"readonly":false,"id":1731483,"scrollY":8651,"status":"LOCAL_EDITED","title":"test"}'
           version: HTTP/1.1
         output:
           log:
