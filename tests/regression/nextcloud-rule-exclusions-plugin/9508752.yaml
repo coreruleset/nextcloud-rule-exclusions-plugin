@@ -17,10 +17,7 @@ tests:
           port: 80
           method: POST
           uri: /ocs/v2.php/apps/spreed/api/v3/signaling/roomid123
-          data: >-
-            {"messages":"[{\"ev\":\"message\",\"fn\":\"{\\\"to\\\":\\\"ic/random/random+random/random+random+random/random/IM/random\\\",
-            \\\"roomType\\\":\\\"video\\\",\\\"type\\\":\\\"nickChanged\\\",\\\"payload\\\":{\\\"name\\\":\\\"test\\\"}}\",
-            \"sessionId\":\"random+random+random+random/u+random+random/random/random\"}]"}
+          data: '{"messages":"[{\"ev\":\"message\",\"fn\":\"{\\\"to\\\":\\\"ic/random/random+random/random+random+random/random/IM/random\\\",\\\"roomType\\\":\\\"video\\\",\\\"type\\\":\\\"nickChanged\\\",\\\"payload\\\":{\\\"name\\\":\\\"test\\\"}}\",\"sessionId\":\"random+random+random+random/u+random+random/random/random\"}]"}'
           version: HTTP/1.1
         output:
           log:

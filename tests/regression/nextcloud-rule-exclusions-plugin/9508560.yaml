@@ -18,9 +18,11 @@ tests:
           method: POST
           uri: /cool/transform-document-structure
           data: |-
+            --6b65063fa6040c0d730ad9ba5ff8e0481b895151
             Content-Type: multipart/form-data
             Content-Disposition: form-data; name="data"; filename="Invoice.odt"
             Content-Length: 21946
+
             raw document goes here
             --6b65063fa6040c0d730ad9ba5ff8e0481b895151
             Content-Type: application/json
