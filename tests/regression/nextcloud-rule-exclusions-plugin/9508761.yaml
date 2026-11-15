@@ -1,7 +1,7 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Talk: Uploading an attachment to an room."
+  description: "Nextcloud Talk: Uploading an attachment to a room."
 rule_id: 9508761
 tests:
   - test_id: 1
