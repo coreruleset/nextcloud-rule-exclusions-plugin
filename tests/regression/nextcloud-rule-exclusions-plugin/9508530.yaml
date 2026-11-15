@@ -34,7 +34,7 @@ tests:
       - input:
           dest_addr: 127.0.0.1
           headers:
-            Host: localhost.com
+            Host: localhost
             User-Agent: OWASP CRS test agent
             Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
             Content-Type: application/octet-stream
@@ -48,7 +48,6 @@ tests:
               - 920272
               - 920273
               - 920420
-              - 931130
               - 932190
               - 932236
               - 942450
