@@ -22,7 +22,7 @@ tests:
           method: POST
           uri: /ocs/v2.php/apps/spreed/api/v1/chat/b63osjgj/attachment
           data: '{"allowUpdate":false,"fileName":"test","filePath":"/Talk/Note to self-b63osjgj/Draft/e2a90c75-f28e-46a4-8f20-1b97e48efba2-test","referenceId":"9b8e4681d15094438a837bb483fd4a0048969c6311ec15cb1bf55fd2d883-001","talkMetaData":"{\"caption\":\"test\",\"referenceId\":\"9b8e4681d15094438a837bb483fd4a0048969c6311ec15cb1bf55fd2d883-001\"}"}'
-          version: HTTP/1.1 # Original request was HTTP/2.0
+          version: HTTP/2.0
         output:
           log:
             no_expect_ids:
