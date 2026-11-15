@@ -13,7 +13,7 @@ tests:
             User-Agent: COOLWSD HTTP Agent 26.04.6.1
             Date: Tue, 10 Nov 2026 07:56:29
             Authorization: Bearer random-secret
-            Host: cloud.example.com
+            Host: localhost
             X-WOPI-TimeStamp: 639298941899498367
             Content-Length: 1660
             X-WOPI-Proof: U3uadfBDVx/tnEPAOHA15HxQRtE2kZZoFXHuZcLrRus/BEgJ1DjzZUDdrRN41/UMw/B+vLYuSNuKB7vZ1m8p8pDLZ3jtitmgPUZeH1gQxDyeGXRTmUnGA/rGPUdBmnTEiYCbDGkwdgtqDeOAQ/Ut2l9niTxBvPrXPQkZsmZ9wPWRC+Tb0PtWJhwsoI3mWqaeHHH3tDdaS0PUhTnVZgfAr1NAB+rVlKE4Xnx2XXjIPH/vLu1ix5UNPYnISOwEFzAy7VU/mDIMFOgwUIuPiekb8ma/xqZPFxfeBNBXLHTc94aF9/Vi6k952ipCOWdxnd3CkArwZYvf129n2Z/ZI3zh6g==
