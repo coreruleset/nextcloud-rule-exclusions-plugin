@@ -29,7 +29,7 @@ tests:
           port: 80
           method: POST
           uri: /apps/mail/api/mailboxes/152/sync
-          version: HTTP/1.1 # Original request was HTTP/2.0
+          version: HTTP/2.0
           data: '{"ids":[],"lastMessageTimestamp":null,"init":false,"sortOrder":"newest","query":"to:undefined from:no-reply@example.com body:Lost body:connection body:with body:manager. body:Setting body:lock mentions:false match:allof"}'
         output:
           log:
