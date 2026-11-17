@@ -19,11 +19,8 @@ tests:
           port: 80
           method: PUT
           uri: /apps/deck/cards/1/reorder
-          data: |-
-            {"description:": "This is a description.
-
-              Use this [link](https://github.com/microsoft/vscode/issues?page=3&q=is%3Aissue+is%3Aopen)."}
-            version: HTTP/1.1
+          data: '{"description:": "This is a description. Use this [link](https://github.com/microsoft/vscode/issues?page=3&q=is%3Aissue+is%3Aopen)."}'
+          version: HTTP/1.1
           output:
             log:
               no_expect_ids:
