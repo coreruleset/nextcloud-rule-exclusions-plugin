@@ -63,6 +63,7 @@ Nextcloud frequently releases new major versions with breaking changes and featu
 |  Nextcloud 32 (Hub 25 Autumn)   |   Tested ✅  |
 |  Nextcloud 33 (Hub 26 Winter)   |   Tested ✅  |
 |  Nextcloud 34 (Hub 26 Spring)   |   Tested ✅  |
+|  Nextcloud 35 (Hub 26 Summer)   |   Tested ✅  |
 
 ## Installation
 

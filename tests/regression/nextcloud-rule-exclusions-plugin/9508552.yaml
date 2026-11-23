@@ -41,3 +41,28 @@ tests:
         output:
           log:
             no_expect_ids: [920420]
+  - test_id: 3
+    desc: Saving changes to settings for users
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            User-Agent: COOLWSD HTTP Agent 26.04.5.1
+            Date: Thu, 15 Oct 2026 03:32:16
+            Authorization: Bearer randomtoken
+            Host: cloud.ecetiner.com
+            X-WOPI-TimeStamp: 639276319367716000
+            Content-Length: 70
+            X-COOL-WOPI-ServerId: 91E199DB
+            X-WOPI-ProofOld: randomtoken
+            X-WOPI-Proof: randomtoken
+            Content-Type: application/octet-stream
+          port: 80
+          method: POST
+          uri: /apps/richdocuments/wopi/settings/upload?fileId=%2Fsettings%2Fsystemconfig%2Fserverprivateinfo%2Fserverprivateinfo.json&access_token=randomtoken
+          data: |-
+            {"ESignatureBaseUrl":"","ESignatureClientId":"","ESignatureSecret":""}
+          version: HTTP/1.1
+        output:
+          log:
+            no_expect_ids: [920420]
