@@ -17,10 +17,7 @@ tests:
           port: 80
           method: POST
           uri: /apps/notes/notes
-          data: >-
-            {"category":"","content":"# Sample note\n\n* 📅 15 January 2021, via Nextcloud Notes\n* 👥 Me, you, and all our friends!\n\n## Tasks ✅\n\n* [ ] Write nice todo lists\n* [ ] Buy Fries\n* [ ]
-            …\n\n## Birthdays\n\n* Jen, in three days!\n* Moss, 21.03.1973\n* Roy, 1979\n\n## Review Steps 🔁\n\n1. Turn PC off\n2. Turn PC on\n3. Then call IT
-            \n\n## Quotes 💬\n\n> Nextcloud, a safe home for all your data\n","title":"Sample note"}
+          data: '{"category":"","content":"# Sample note\n\n* 📅 15 January 2021, via Nextcloud Notes\n* 👥 Me, you, and all our friends!\n\n## Tasks ✅\n\n* [ ] Write nice todo lists\n* [ ] Buy Fries\n* [ ] …\n\n## Birthdays\n\n* Jen, in three days!\n* Moss, 21.03.1973\n* Roy, 1979\n\n## Review Steps 🔁\n\n1. Turn PC off\n2. Turn PC on\n3. Then call IT \n\n## Quotes 💬\n\n> Nextcloud, a safe home for all your data\n","title":"Sample note"}'
           version: HTTP/1.1
         output:
           log:
