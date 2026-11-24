@@ -1,11 +1,13 @@
 ---
 meta:
   author: "Esad Cetiner"
-  description: "Nextcloud Talk: Sending room settings change to signalling server"
+  description: "Nextcloud Talk: Sending messages to dedicated signalling server"
 rule_id: 9508759
 tests:
   - test_id: 1
-    desc: This rule should be disabled by default (expect detections)
+    desc: |
+      This rule should be disabled by default (expect detections)
+      Changing settings
     stages:
       - input:
           dest_addr: 127.0.0.1
@@ -30,3 +32,30 @@ tests:
               - 920300
               - 932200
               - 932240
+  - test_id: 2
+    desc: |
+      This rule should be disabled by default (expect detections)
+      Editing a message
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            content-type: application/json
+            spreed-signaling-random: xo+r5/CKXjipmy7mnMcMVvh7p98REBcYVMITB8ADWHedlN7hUexK4JFQWsUk2UDa
+            spreed-signaling-checksum: 96e2dc9646e19f7d066e678ea6b5d640896d45ddabce3619ea1025fa3a868592
+            spreed-signaling-backend: https://cloud.example.com/
+            user-agent: Nextcloud-Server-Crawler/35.0.3
+            accept-encoding: br, gzip
+            host: cloud.example.com
+          port: 80
+          method: POST
+          uri: /standalone-signaling/api/v1/room/7ut9dvgc
+          # yamllint disable-line rule:line-length
+          data: '{"type":"message","message":{"data":{"type":"chat","chat":{"refresh":true,"comment":{"id":5014,"token":"1234","actorType":"users","actorId":"esadc","actorDisplayName":"Esad Cetiner","timestamp":1795433031,"message":"{actor} edited a message","messageParameters":{"actor":{"type":"user","id":"esadc","name":"Esad Cetiner","mention-id":"esadc"}},"systemMessage":"message_edited","messageType":"system","isReplyable":false,"referenceId":"","reactions":{},"expirationTimestamp":0,"markdown":false,"threadId":5013,"lastCommonRead":5011,"parent":{"id":5013,"token":"uz8xnzhh","actorType":"users","actorId":"esadc","actorDisplayName":"Esad Cetiner","timestamp":1795433009,"message":"<script>","messageParameters":[],"systemMessage":"","messageType":"comment","isReplyable":true,"referenceId":"42cf8bb073ae137b9b6d087bec03c466df84457e55b6a8d16a116b6771b5e39b","reactions":{},"expirationTimestamp":0,"markdown":true,"threadId":5013,"lastEditActorType":"users","lastEditActorId":"esadc","lastEditActorDisplayName":"Esad Cetiner","lastEditTimestamp":1795433031}}}}}}'
+          version: HTTP/1.1
+        output:
+          log:
+            expect_ids:
+              - 920273
+              - 920300
+              - 941100

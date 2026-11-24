@@ -30,3 +30,54 @@ tests:
               - 920273
               - 932200
               - 932240
+  - test_id: 2
+    desc: This rule should be disabled by default (expect detections)
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: cloud.example.com
+            User-Agent: nextcloud-spreed-signaling/2.2.0~docker
+            Ocs-Apirequest: true
+            Spreed-Signaling-Random: BUHV5U4XHABR3B56GTQJDH47NGH5Q5WBCDXOMBSDSK2FIDITXYVPSJGI72GAH6UK
+            Accept: application/json
+            Content-Type: application/json
+            Spreed-Signaling-Checksum: 868afe7dfc1ab66eb1112b55e786219bc8075d11fdd80df28d1f15aadcbb0514
+            X-Spreed-Signaling-Features: audio-video-permissions, changed-users, chat-relay, dialout, federation, hello-v2, incall-all, join-features, mcu, offer-codecs, recipient-call, serverinfo, simulcast, switchto, transient-data, transient-sessiondata, update-sdp, welcome
+            Accept-Encoding: gzip
+          port: 80
+          method: POST
+          uri: /ocs/v2.php/apps/spreed/api/v3/signaling/backend
+          data: '{"type":"room","room":{"version":"1.0","roomid":"1234","userid":"user","sessionid":"SCY1C3X7JHnqowc/hcN8qHhId893ss2JXS4nUfj9xCB1axbeaZT5NegcBR20xLRFR6OSxr3KIyx5X4mEl+UUYXDtiCkw6MqfQ1hC+xmusnsQdq6W3H/vwlQ7XEB/0lOxRI4+Nx5+hEe7RWudqgXVS4q+i9tIDxrREpxQvXfBLn4FAoj7fH7LkD9OBB+tc2xK1XHFyLm9A1J2bUYdyFynY7ET0bPqA9RpvACjQdObzhJDB+pHqmdpJbjT74QpK8K$0pwYkd3nuteFTnuGBUdpoaIKTbgGwONq1n6dlSl9rK5HvOg3hQ9dHhUXa0vQfhUA"}}'
+          version: HTTP/1.1
+        output:
+          log:
+            expect_ids:
+              - 920273
+              - 932240
+              - 932400
+  - test_id: 3
+    desc: This rule should be disabled by default (expect detections)
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: cloud.example.com
+            User-Agent: nextcloud-spreed-signaling/2.2.0~docker
+            Ocs-Apirequest: true
+            Spreed-Signaling-Random: 6MBFWJDRLBI7ZUTVS6OAAJJUN6U7U6JRQO4JLWOC4KR5G3FZTU6626BW3MJTJEED
+            Accept: application/json
+            Content-Type: application/json
+            Spreed-Signaling-Checksum: 8c76c707ef0780494660192da84673226d63da421f66c42aa5e257e61aa2b78d
+            X-Spreed-Signaling-Features: audio-video-permissions, changed-users, chat-relay, dialout, federation, hello-v2, incall-all, join-features, mcu, offer-codecs, recipient-call, serverinfo, simulcast, switchto, transient-data, transient-sessiondata, update-sdp, welcome
+            Accept-Encoding: gzip
+          port: 80
+          method: POST
+          uri: /ocs/v2.php/apps/spreed/api/v3/signaling/backend
+          data: '{"type":"auth","auth":{"version":"1.0","params":{"ticket":"12345+BMdmaSVogo:1795448275:esadc:ab8845fg4","userid":"esadc"}}}'
+          version: HTTP/1.1
+        output:
+          log:
+            expect_ids:
+              - 920273
+              - 934120
