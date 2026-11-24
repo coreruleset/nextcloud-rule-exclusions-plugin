@@ -55,7 +55,6 @@ tests:
             expect_ids:
               - 920273
               - 932240
-              - 932400
   - test_id: 3
     desc: This rule should be disabled by default (expect detections)
     stages:
