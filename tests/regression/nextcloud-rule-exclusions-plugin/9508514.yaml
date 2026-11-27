@@ -19,3 +19,30 @@ tests:
         output:
           log:
             expect_ids: [920320]
+  - test_id: 2
+    desc: |
+      Make sure server crawler rule exclusions are disabled out of the box
+      Deleting a message from talk
+      URL path could be anything.
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            content-type: application/json
+            x-nextcloud-talk-random: 2S01/qx0JNnwMrV0/R2jWIJxub8KJ70Dnb39wMx9QiR459P2UU4HxY7iG2YaYOSF
+            user-agent: Nextcloud-Server-Crawler/35.0.3
+            x-nextcloud-talk-signature: 02860e64e0032a66845596f4a1796c20ed894692c23f4c9b8fd24543336b652d
+            x-nextcloud-talk-backend: https://cloud.example.com/
+            accept-encoding: br, gzip
+            ocs-apirequest: true
+            host: cloud.example.com
+          port: 80
+          method: POST
+          uri: /
+          # yamllint disable-line rule:line-length
+          # Decoded data: {"type":"Activity","actor":{"type":"Person","id":"users\/esadc","name":"Esad Cetiner"},"object":{"type":"Note","id":"5040","name":"message_deleted","content":"{\"message\":\"{actor} deleted a message\",\"parameters\":{\"actor\":{\"type\":\"user\",\"id\":\"esadc\",\"name\":\"Esad Cetiner\",\"mention-id\":\"esadc\"}}}","mediaType":"text\/markdown"},"target":{"type":"Collection","id":"1234abc","name":"removed"},"published":"2026-11-26T02:05:50+00:00"}
+          encoded_data: eyJ0eXBlIjoiQWN0aXZpdHkiLCJhY3RvciI6eyJ0eXBlIjoiUGVyc29uIiwiaWQiOiJ1c2Vyc1wvZXNhZGMiLCJuYW1lIjoiRXNhZCBDZXRpbmVyIn0sIm9iamVjdCI6eyJ0eXBlIjoiTm90ZSIsImlkIjoiNTA0MCIsIm5hbWUiOiJtZXNzYWdlX2RlbGV0ZWQiLCJjb250ZW50Ijoie1wibWVzc2FnZVwiOlwie2FjdG9yfSBkZWxldGVkIGEgbWVzc2FnZVwiLFwicGFyYW1ldGVyc1wiOntcImFjdG9yXCI6e1widHlwZVwiOlwidXNlclwiLFwiaWRcIjpcImVzYWRjXCIsXCJuYW1lXCI6XCJFc2FkIENldGluZXJcIixcIm1lbnRpb24taWRcIjpcImVzYWRjXCJ9fX0iLCJtZWRpYVR5cGUiOiJ0ZXh0XC9tYXJrZG93biJ9LCJ0YXJnZXQiOnsidHlwZSI6IkNvbGxlY3Rpb24iLCJpZCI6IjEyMzRhYmMiLCJuYW1lIjoicmVtb3ZlZCJ9LCJwdWJsaXNoZWQiOiIyMDI2LTExLTI2VDAyOjA1OjUwKzAwOjAwIn0NCg==
+          version: HTTP/1.1 # Original request is HTTP/2.0
+        output:
+          log:
+            expect_ids: [942460]
